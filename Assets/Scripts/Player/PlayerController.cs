@@ -8,10 +8,12 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public bool isGrounded = false;
 
+    private int speed2;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        speed2 = 1;
     }
 
     // Update is called once per frame
