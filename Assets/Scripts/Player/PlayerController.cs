@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public float jumpForce;
-    public bool isGrounded = false;
+    private bool isCrouch = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private BoxCollider2D collide2D;
+
+    void Awake()
     {
-
+        collide2D = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -24,9 +24,29 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if (Input.GetKey(KeyCode.Q)) {
+            if (!isCrouch)
+            {
+                Crouch(true);
+                isCrouch = true;
+            }
+            else
+            {
+                Crouch(false);
+                isCrouch = false;
+            }     
+        }
+    }
+
+    public void Crouch(bool pressed) 
+    {
+        if (pressed)
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            collide2D.size = new Vector2(collide2D.size.x, 0.3f);
+        }
+        else
+        {
+            collide2D.size = new Vector2(collide2D.size.x, 0.6f);
         }
     }
 }
