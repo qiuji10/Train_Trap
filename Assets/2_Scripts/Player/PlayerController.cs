@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            collide2D.size = new Vector2(collide2D.size.x, 1f);
+            collide2D.size = new Vector2(collide2D.size.x, 0.6f);
         }
     }
 }
