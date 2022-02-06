@@ -887,7 +887,7 @@ MonoBehaviour:
   speed: 4
   isMoving: 0
   collide2D: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 1957354576}
 --- !u!61 &1957354581
 BoxCollider2D:
   m_ObjectHideFlags: 0
