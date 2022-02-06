@@ -27,13 +27,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*
         if (Input.GetKey(KeyCode.S)) {
             transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
         }
         else if (Input.GetKey(KeyCode.A)) {
             transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.Q)) {
             if (!playerCore.IsCrouch)
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            collide2D.size = new Vector2(collide2D.size.x, 0.6f);
+            collide2D.size = new Vector2(collide2D.size.x, 1f);
         }
     }
 }
