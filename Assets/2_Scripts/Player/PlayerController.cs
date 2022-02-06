@@ -6,26 +6,34 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    
+    public bool isMoving;
+
     PlayerCore playerCore;
+    Rigidbody2D rb;
+    Vector2 movement;
+
     public BoxCollider2D collide2D;
+    public Animator animator;
+
 
 
     void Awake()
     {
         collide2D = GetComponent<BoxCollider2D>();
         playerCore = GetComponent<PlayerCore>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKey(KeyCode.S)) {
             transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
         }
         else if (Input.GetKey(KeyCode.A)) {
             transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.Q)) {
             if (!playerCore.IsCrouch)
@@ -39,6 +47,23 @@ public class PlayerController : MonoBehaviour
                 playerCore.IsCrouch = false;
             }     
         }
+        movement.x = Input.GetAxisRaw("Horizontal");
+
+        if (movement.x != 0)
+        {
+            isMoving = true;
+            animator.SetBool("IsWalking", isMoving);
+        }
+        else
+        {
+            isMoving = false;
+            animator.SetBool("IsWalking", isMoving);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
     }
 
     public void Crouch(bool pressed)
@@ -49,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            collide2D.size = new Vector2(collide2D.size.x, 0.6f);
+            collide2D.size = new Vector2(collide2D.size.x, 1f);
         }
     }
 }
