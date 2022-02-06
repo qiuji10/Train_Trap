@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
         }
 
-        if (Input.GetKey(KeyCode.Q)) {
+        if (Input.GetKeyDown(KeyCode.Q)) {
             if (!isCrouch)
             {
                 Crouch(true);

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCore : MonoBehaviour
 {
+    private bool isCrouch = false;
     void Awake()
     {
 
