@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public bool isMoving;
+    public bool isMoving = false;
 
     PlayerCore playerCore;
     Rigidbody2D rb;
