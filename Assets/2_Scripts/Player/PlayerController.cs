@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerCore))]
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    private bool isCrouch = false;
+    
+    PlayerCore playerCore;
+    public BoxCollider2D collide2D;
 
-    private BoxCollider2D collide2D;
 
     void Awake()
     {
         collide2D = GetComponent<BoxCollider2D>();
+        playerCore = GetComponent<PlayerCore>();
     }
 
     // Update is called once per frame
@@ -25,20 +28,20 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Q)) {
-            if (!isCrouch)
+            if (!playerCore.IsCrouch)
             {
                 Crouch(true);
-                isCrouch = true;
+                playerCore.IsCrouch = true;
             }
             else
             {
                 Crouch(false);
-                isCrouch = false;
+                playerCore.IsCrouch = false;
             }     
         }
     }
 
-    public void Crouch(bool pressed) 
+    public void Crouch(bool pressed)
     {
         if (pressed)
         {
