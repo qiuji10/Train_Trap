@@ -8,6 +8,13 @@ public class Timer : MonoBehaviour
     public float timeValue = 90;
     public Text timeText;
 
+    public GameSceneManager gsm;
+
+    void Awake()
+    {
+        gsm = GetComponent<GameSceneManager>();
+    }
+
     void Update()
     {
         if(timeValue > 0)
@@ -17,6 +24,7 @@ public class Timer : MonoBehaviour
         else
         {
             timeValue = 0;
+            gsm.SwitchScene(0);
         }
         DisplayTime(timeValue);
     }
