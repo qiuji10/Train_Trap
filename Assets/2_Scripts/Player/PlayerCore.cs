@@ -11,14 +11,4 @@ public class PlayerCore : MonoBehaviour
         get => isCrouch;
         set => isCrouch = value;
     }
-
-    void Awake()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
 }

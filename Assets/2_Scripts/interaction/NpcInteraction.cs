@@ -7,6 +7,7 @@ public class NpcInteraction : MonoBehaviour
 {
     public bool isInRange, isInteracted = false;
     public KeyCode interactKey;
+
     public UnityEvent interactAction, interactAction2;
 
     void Update()

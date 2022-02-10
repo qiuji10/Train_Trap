@@ -15,8 +15,6 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D collide2D;
     public Animator animator;
 
-
-
     void Awake()
     {
         collide2D = GetComponent<BoxCollider2D>();
@@ -24,18 +22,10 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKey(KeyCode.S)) {
-            transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
-        }
-        else if (Input.GetKey(KeyCode.A)) {
-            transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
-        }*/
-
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
             if (!playerCore.IsCrouch)
             {
                 Crouch(true);
@@ -45,9 +35,10 @@ public class PlayerController : MonoBehaviour
             {
                 Crouch(false);
                 playerCore.IsCrouch = false;
-            }     
+            }
         }
         movement.x = Input.GetAxisRaw("Horizontal");
+
 
         if (movement.x != 0)
         {
