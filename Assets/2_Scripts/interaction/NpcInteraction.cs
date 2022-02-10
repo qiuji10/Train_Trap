@@ -3,26 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Interaction : MonoBehaviour
+public class NpcInteraction : MonoBehaviour
 {
-    public bool isInRange;
+    public bool isInRange, isInteracted = false;
     public KeyCode interactKey;
-    public UnityEvent interactAction;
+    public UnityEvent interactAction, interactAction2;
 
 
-     void Start()
+    void Start()
     {
-       
+
     }
 
 
-     void Update()
+    void Update()
     {
         if(isInRange)
         {
             if(Input.GetKeyDown(interactKey))
             {
-                interactAction.Invoke();
+                if (!isInteracted)
+                {
+                    interactAction.Invoke();
+                    isInteracted = true;
+                }
+                else
+                {
+                    interactAction2.Invoke();
+                }
             }
         }
     }
