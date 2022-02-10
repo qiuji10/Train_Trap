@@ -1589,6 +1589,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5129594702937961910, guid: 6cc9c7d083d37764cb3c8611abbb053c, type: 3}
+      propertyPath: dialogue.name
+      value: NPC2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129594702937961910, guid: 6cc9c7d083d37764cb3c8611abbb053c, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
       value: be careful!
       objectReference: {fileID: 0}
@@ -1796,6 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d7a30060c0da541b580ecef2b0fb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracted: 0
 --- !u!114 &1957354583
 MonoBehaviour:
   m_ObjectHideFlags: 0
