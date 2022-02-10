@@ -14,7 +14,7 @@ public class Pickup : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -25,7 +25,7 @@ public class Pickup : MonoBehaviour
                 { // check whether the slot is EMPTY
                    
                     inventory.isFull[i] = true; // makes sure that the slot is now considered FULL
-                    Instantiate(itemButton, inventory.slots[i].transform, true); // spawn the button so that the player can interact with it
+                    Instantiate(itemButton, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
                     Destroy(gameObject);
                     break;
                 }
