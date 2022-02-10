@@ -5,12 +5,23 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager instance;
+
     public Text nameText;
     public Text dialogueText;
     public GameObject dialogueBox;
+    public bool isInteracted = false;
 
     private Queue<string> sentences;
-    
+
+    void Awake()
+    {
+        if (instance != null)
+            Destroy(this.gameObject);
+        else
+            instance = this;
+    }
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -18,6 +29,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue) 
     {
+        isInteracted = true;
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
         dialogueBox.SetActive(true);
         nameText.text = dialogue.name;
@@ -42,7 +54,6 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -58,6 +69,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
+        isInteracted = false;
         Debug.Log("there is no sentences alr");
     }
 }

@@ -1429,6 +1429,7 @@ MonoBehaviour:
   nameText: {fileID: 1707694026}
   dialogueText: {fileID: 813804436}
   dialogueBox: {fileID: 702789683}
+  isInteracted: 0
 --- !u!4 &1705265843
 Transform:
   m_ObjectHideFlags: 0
@@ -1800,7 +1801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d7a30060c0da541b580ecef2b0fb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteracted: 0
 --- !u!114 &1957354583
 MonoBehaviour:
   m_ObjectHideFlags: 0
