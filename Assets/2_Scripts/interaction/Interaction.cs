@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class NpcInteraction : MonoBehaviour
+public class Interaction : MonoBehaviour
 {
-    public bool isInRange, isInteracted = false;
+    public bool isInRange;
     public KeyCode interactKey;
-    public UnityEvent interactAction, interactAction2;
+    public UnityEvent interactAction;
 
     void Update()
     {
@@ -15,15 +15,7 @@ public class NpcInteraction : MonoBehaviour
         {
             if(Input.GetKeyDown(interactKey))
             {
-                if (!isInteracted)
-                {
-                    interactAction.Invoke();
-                    isInteracted = true;
-                }
-                else
-                {
-                    interactAction2.Invoke();
-                }
+                interactAction.Invoke();
             }
         }
     }
