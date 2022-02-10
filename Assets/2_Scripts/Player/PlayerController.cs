@@ -39,17 +39,13 @@ public class PlayerController : MonoBehaviour
         }
         movement.x = Input.GetAxisRaw("Horizontal");
 
-
         if (movement.x != 0)
-        {
             isMoving = true;
-            animator.SetBool("IsWalking", isMoving);
-        }
         else
-        {
             isMoving = false;
-            animator.SetBool("IsWalking", isMoving);
-        }
+
+        animator.SetBool("IsWalking", isMoving);
+
     }
 
     void FixedUpdate()

@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue) 
     {
+        GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
         dialogueBox.SetActive(true);
         nameText.text = dialogue.name;
         sentences.Clear();
@@ -56,6 +57,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
         Debug.Log("End of sentences");
     }
 }

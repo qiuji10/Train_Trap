@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(PlayerCore))]
 public class NpcInteraction : MonoBehaviour
 {
-    public bool isInRange, isInteracted = false;
+    public bool isInRange; //isInteracted = false;
     public KeyCode interactKey;
 
     public UnityEvent interactAction, interactAction2;
+    PlayerCore playerCore;
+
+    void Awake()
+    {
+        playerCore = GetComponent<PlayerCore>();
+    }
 
     void Update()
     {
@@ -16,10 +23,10 @@ public class NpcInteraction : MonoBehaviour
         {
             if(Input.GetKeyDown(interactKey))
             {
-                if (!isInteracted)
+                if (!playerCore.IsInteracted)
                 {
                     interactAction.Invoke();
-                    isInteracted = true;
+                    playerCore.IsInteracted = true;
                 }
                 else
                 {
