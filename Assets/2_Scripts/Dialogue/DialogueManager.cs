@@ -58,5 +58,6 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
+        Debug.Log("there is no sentences alr");
     }
 }
