@@ -24,37 +24,39 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (!PauseMenu.isPaused)
         {
-            if (!playerCore.IsCrouch)
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                Crouch(true);
-                playerCore.IsCrouch = true;
+                if (!playerCore.IsCrouch)
+                {
+                    Crouch(true);
+                    playerCore.IsCrouch = true;
+                }
+                else
+                {
+                    Crouch(false);
+                    playerCore.IsCrouch = false;
+                }
             }
+            movement.x = Input.GetAxisRaw("Horizontal");
+
+            if (movement.x != 0)
+                isMoving = true;
             else
+                isMoving = false;
+
+            animator.SetBool("IsWalking", isMoving);
+
+            if (movement.x > 0)
             {
-                Crouch(false);
-                playerCore.IsCrouch = false;
+                gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (movement.x < 0)
+            {
+                gameObject.transform.localScale = new Vector3(1, 1, 1);
             }
         }
-        movement.x = Input.GetAxisRaw("Horizontal");
-
-        if (movement.x != 0)
-            isMoving = true;
-        else
-            isMoving = false;
-
-        animator.SetBool("IsWalking", isMoving);
-
-        if (movement.x > 0)
-        {
-            gameObject.transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (movement.x < 0)
-        {
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }
-
     }
 
     void FixedUpdate()
