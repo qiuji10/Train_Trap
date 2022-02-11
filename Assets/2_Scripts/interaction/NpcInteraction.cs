@@ -5,10 +5,8 @@ using UnityEngine.Events;
 
 public class NpcInteraction : MonoBehaviour
 {
-    public bool isInRange;//, isInteracted = false;
+    public bool isInRange;
     public KeyCode interactKey;
-
-    //DialogueManager dm;
 
     public UnityEvent interactAction, interactAction2;
 
