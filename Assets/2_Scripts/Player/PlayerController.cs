@@ -46,6 +46,15 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("IsWalking", isMoving);
 
+        if (movement.x > 0)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (movement.x < 0)
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+
     }
 
     void FixedUpdate()
