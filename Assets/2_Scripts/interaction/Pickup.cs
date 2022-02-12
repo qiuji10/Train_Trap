@@ -8,6 +8,7 @@ public class Pickup : MonoBehaviour
     private Inventory inventory;
     public GameObject itemButton;
     
+    
 
     private void Start()
     {
@@ -19,18 +20,19 @@ public class Pickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // spawn item at the first available inventory slot ! 
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false)
-                { // check whether the slot is EMPTY
-                   
-                    inventory.isFull[i] = true; // makes sure that the slot is now considered FULL
-                    Instantiate(itemButton, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
-                    Destroy(gameObject);
-                    break;
-                }
-            }
-        }
+                for (int i = 0; i < inventory.slots.Length; i++)
+                {
+                    if (inventory.isFull[i] == false)
+                    { // check whether the slot is EMPTY
 
-    }
-}
+                        inventory.isFull[i] = true; // makes sure that the slot is now considered FULL
+                        Instantiate(itemButton, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
+                        Destroy(gameObject);
+                        break;
+                    }
+                }
+         }
+     }
+
+ }
+
