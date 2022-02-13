@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public GameObject dialogueBox;
+    public GameObject slot;
     public bool isInteracted = false;
 
     private Queue<string> sentences;
@@ -32,6 +33,7 @@ public class DialogueManager : MonoBehaviour
         isInteracted = true;
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
         dialogueBox.SetActive(true);
+        slot.SetActive(false);
         nameText.text = dialogue.name;
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)
@@ -48,6 +50,7 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
             dialogueBox.SetActive(false);
+            slot.SetActive(true);
             return;
         }
 
