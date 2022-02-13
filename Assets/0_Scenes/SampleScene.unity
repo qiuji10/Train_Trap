@@ -2501,6 +2501,7 @@ MonoBehaviour:
   nameText: {fileID: 1707694026}
   dialogueText: {fileID: 813804436}
   dialogueBox: {fileID: 702789683}
+  slot: {fileID: 316268770}
   isInteracted: 0
 --- !u!4 &1705265843
 Transform:
@@ -3222,7 +3223,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1988969929204832526, guid: 684bb7ffe4b14c14e9973111a9957a84, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2499989103954850536, guid: 684bb7ffe4b14c14e9973111a9957a84, type: 3}
       propertyPath: m_AnchorMax.y
