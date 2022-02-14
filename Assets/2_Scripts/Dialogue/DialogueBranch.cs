@@ -28,21 +28,18 @@ public class DialogueBranch : MonoBehaviour
 {
     [SerializeField]
     List<GameObject> npc = new List<GameObject>();
-
-
     public AllBranches allBranches;
     int i = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         foreach (Transform child in transform) 
         {
-            var queue = new Queue<string>(allBranches.npcs[i].options[0].conversation.ToArray());
-            string[] array = allBranches.npcs[i].options[0].conversation.ToArray();
-            child.gameObject.GetComponent<DialogueTrigger>().dialogue.sentences = array;
             npc.Add(child.gameObject);
-            child.gameObject.name = allBranches.npcs[i++].npcName;
-            Debug.Log(child);
+            child.gameObject.name = allBranches.npcs[i].npcName;
+            string[] array = allBranches.npcs[i++].options[0].conversation.ToArray();
+            child.gameObject.GetComponent<DialogueTrigger>().dialogue.sentences = array;
         }
     }
 
