@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        var list = sentences.ToList();
     }
 
     public void StartDialogue(Dialogue dialogue) 
