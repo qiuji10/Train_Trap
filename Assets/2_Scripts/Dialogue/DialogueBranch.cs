@@ -39,11 +39,9 @@ public class DialogueBranch : MonoBehaviour
         {
             var queue = new Queue<string>(allBranches.npcs[i].options[0].conversation.ToArray());
             string[] array = allBranches.npcs[i].options[0].conversation.ToArray();
-            //var list = child.gameObject.GetComponent<DialogueTrigger>().dialogue.sentences.ToList();
-            //allBranches.npcs[i].options[0].conversation = list;
             child.gameObject.GetComponent<DialogueTrigger>().dialogue.sentences = array;
             npc.Add(child.gameObject);
-            allBranches.npcs[i++].npcName = child.gameObject.name;
+            child.gameObject.name = allBranches.npcs[i++].npcName;
             Debug.Log(child);
         }
     }
