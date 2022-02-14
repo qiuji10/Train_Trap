@@ -6,6 +6,7 @@ using System.Linq;
 [System.Serializable]
 public class Options
 {
+    [TextArea(3, 10)]
     public List<string> conversation;
     public List<string> readingMinds;
 }
