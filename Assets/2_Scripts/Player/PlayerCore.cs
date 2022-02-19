@@ -22,9 +22,4 @@ public class PlayerCore : MonoBehaviour
         get => isCrouch;
         set => isCrouch = value;
     }
-
-    public void deleteArray(int i)
-    {
-        
-    }
 }
