@@ -5,7 +5,7 @@ using UnityEngine;
 public class VendingMachine : MonoBehaviour
 {
     public bool isInRange = false;
-    public int i;
+    private int i;
     public GameObject coke;
 
     void Start()
