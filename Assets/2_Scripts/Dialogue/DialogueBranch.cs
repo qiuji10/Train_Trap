@@ -8,7 +8,10 @@ public class Options
 {
     [TextArea(3, 10)]
     public List<string> conversation;
+    [TextArea(3, 10)]
     public List<string> readingMinds;
+    [TextArea(3, 10)]
+    public List<string> specialDialogue;
 }
 
 [System.Serializable]

@@ -1198,12 +1198,16 @@ PrefabInstance:
       value: i want a coke
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[1].options.Array.data[0].conversation.Array.data[0]
       value: Hi sir, do you have the tickets?
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[1].options.Array.data[0].conversation.Array.data[1]
-      value: we only allowed people with ticket enter here
+      value: we only allowed people with upper-class ticket enter here
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[1].options.Array.data[0].conversation.Array.data[2]
@@ -1288,6 +1292,18 @@ PrefabInstance:
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[22].options.Array.data[0].conversation.Array.data[0]
       value: bye
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.data[0]
+      value: Oh my god thank you so much!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.data[1]
+      value: 'I finally can drink coke '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.data[2]
+      value: here's your ticket
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314399, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: m_Name
