@@ -15,8 +15,6 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D collide2D;
     public Animator animator;
 
-
-
     void Awake()
     {
         collide2D = GetComponent<BoxCollider2D>();
@@ -24,40 +22,40 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKey(KeyCode.S)) {
-            transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
-        }
-        else if (Input.GetKey(KeyCode.A)) {
-            transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
-        }*/
-
-        if (Input.GetKeyDown(KeyCode.Q)) {
-            if (!playerCore.IsCrouch)
+        if (!PauseMenu.isPaused)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                Crouch(true);
-                playerCore.IsCrouch = true;
+                if (!playerCore.IsCrouch)
+                {
+                    Crouch(true);
+                    playerCore.IsCrouch = true;
+                }
+                else
+                {
+                    Crouch(false);
+                    playerCore.IsCrouch = false;
+                }
             }
-            else
-            {
-                Crouch(false);
-                playerCore.IsCrouch = false;
-            }     
-        }
-        movement.x = Input.GetAxisRaw("Horizontal");
+            movement.x = Input.GetAxisRaw("Horizontal");
 
-        if (movement.x != 0)
-        {
-            isMoving = true;
+            if (movement.x != 0)
+                isMoving = true;
+            else
+                isMoving = false;
+
             animator.SetBool("IsWalking", isMoving);
-        }
-        else
-        {
-            isMoving = false;
-            animator.SetBool("IsWalking", isMoving);
+
+            if (movement.x > 0)
+            {
+                gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (movement.x < 0)
+            {
+                gameObject.transform.localScale = new Vector3(1, 1, 1);
+            }
         }
     }
 

@@ -9,14 +9,7 @@ public class Interaction : MonoBehaviour
     public KeyCode interactKey;
     public UnityEvent interactAction;
 
-
-     void Start()
-    {
-       
-    }
-
-
-     void Update()
+    void Update()
     {
         if(isInRange)
         {
