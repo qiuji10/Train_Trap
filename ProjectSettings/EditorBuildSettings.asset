@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0_Scenes/GameOver.unity
     guid: a971bfe4c0e805e42b5e5f8b6f63265d
+  - enabled: 1
+    path: Assets/0_Scenes/Blockout.unity
+    guid: f06b9538bfa7ef646b16bc425e33034e
   m_configObjects: {}
