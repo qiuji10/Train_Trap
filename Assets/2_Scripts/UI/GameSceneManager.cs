@@ -17,6 +17,6 @@ public class GameSceneManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Blockout");
     }
 }
