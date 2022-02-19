@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-
     private Inventory inventory;
     public GameObject itemButton;
-    
-    
 
     private void Start()
     {
@@ -24,7 +21,7 @@ public class Pickup : MonoBehaviour
                 {
                     if (inventory.isFull[i] == false)
                     { // check whether the slot is EMPTY
-
+                        PlayerCore.instance.inventoryName[i] = gameObject.tag;
                         inventory.isFull[i] = true; // makes sure that the slot is now considered FULL
                         Instantiate(itemButton, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
                         Destroy(gameObject);

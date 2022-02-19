@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - NPC
+  - ticket
+  - coin
+  - coke
   layers:
   - Default
   - TransparentFX

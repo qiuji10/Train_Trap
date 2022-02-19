@@ -42,10 +42,4 @@ public class DialogueBranch : MonoBehaviour
             child.gameObject.GetComponent<DialogueTrigger>().dialogue.sentences = array;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
