@@ -22,6 +22,8 @@ public class VendingMachine : MonoBehaviour
                     PlayerCore.instance.inventoryName.RemoveAt(i);
                     Instantiate(coke);
                     PlayerCore.instance.inventoryName.Add("");
+                    Destroy(GameObject.FindGameObjectWithTag("coin"));          
+                    
                     // here should be destroy the coin from iventory slot, but not sure how to do
                     break;
                 }

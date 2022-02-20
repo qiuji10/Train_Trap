@@ -20,8 +20,10 @@ public class TriggerQuest : MonoBehaviour
             triggerQuest.Invoke();
             if (Input.GetKeyDown(KeyCode.E))
             {
+                
                 Instantiate(ticketPrefab);
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount);
+                Destroy(GameObject.FindGameObjectWithTag("Coke"));
                 isInRange = false;
             }
         }
@@ -34,6 +36,7 @@ public class TriggerQuest : MonoBehaviour
             if (item == "coke")
             {
                 hasCoke = true;
+                
                 break;
             }
             i++;

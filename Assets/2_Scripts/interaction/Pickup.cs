@@ -25,6 +25,7 @@ public class Pickup : MonoBehaviour
                         PlayerCore.instance.inventoryName[i] = gameObject.tag;
                         inventory.isFull[i] = true; // makes sure that the slot is now considered FULL
                         Instantiate(itemButton, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
+                        
                         Destroy(gameObject);
                         break;
                     }
