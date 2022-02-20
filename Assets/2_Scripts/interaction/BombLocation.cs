@@ -46,7 +46,7 @@ public class BombLocation : MonoBehaviour
     {
         foreach (string item in PlayerCore.instance.inventoryName)
         {
-            if (item == "ticket")
+            if (item == "toolbox")
             {
                 hasTool = true;
                 break;

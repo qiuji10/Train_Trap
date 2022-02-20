@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
         else
         {
             timeValue = 0;
-            gsm.SwitchScene(2);
+            gsm.SwitchScene(1);
         }
         DisplayTime(timeValue);
     }
