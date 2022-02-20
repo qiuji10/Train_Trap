@@ -8467,7 +8467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.size
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[2].npcName

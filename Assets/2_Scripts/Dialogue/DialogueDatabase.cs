@@ -34,6 +34,12 @@ public class DialogueDatabase : MonoBehaviour
     public AllBranches allBranches;
     int i = 0;
 
+    private void Awake()
+    {
+        string res = PlayerPrefs.GetString("SaveData");
+        allBranches = JsonUtility.FromJson<AllBranches>(res);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +67,6 @@ public class DialogueDatabase : MonoBehaviour
     //    {
     //        string res = PlayerPrefs.GetString("SaveData");
     //        allBranches = JsonUtility.FromJson<AllBranches>(res);
-
     //    }
     //}
 

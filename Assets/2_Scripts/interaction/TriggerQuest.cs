@@ -27,13 +27,13 @@ public class TriggerQuest : MonoBehaviour
         {
             triggerQuest.Invoke();
             Destroy(GameObject.FindGameObjectWithTag("coke"));
+            inventory.slots[loopCount].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[loopCount];
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Instantiate(ticketPrefab);
                 inventory.isFull[loopCount] = false;
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount);
                 PlayerCore.instance.inventoryName.Add("");
-                inventory.slots[loopCount].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[loopCount];
                 isInRange = false;
                 takenCola = true;
             }
