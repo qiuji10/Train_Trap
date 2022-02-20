@@ -11,6 +11,7 @@ public class BombLocation : MonoBehaviour
     private float holdTimer;
     private int i = 0;
 
+    public GameObject toolbox;
     public GameObject defuseBar;
     public Slider db;
 
@@ -24,7 +25,7 @@ public class BombLocation : MonoBehaviour
     void Update()
     {
         checkItem(i);
-        if (isInRange && Input.GetKey(KeyCode.E))
+        if (isInRange && hasTool && Input.GetKey(KeyCode.E))
         {
             defuseBar.SetActive(true);
             holdTimer -= Time.deltaTime;
