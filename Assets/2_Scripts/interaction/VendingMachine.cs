@@ -1,17 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class VendingMachine : MonoBehaviour
 {
     public bool isInRange = false;
     private int i;
     public GameObject coke;
-
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -23,8 +19,9 @@ public class VendingMachine : MonoBehaviour
                 if (item == "coin")
                 {
                     //display msg and instantiate coke
-                    Instantiate(coke);
                     PlayerCore.instance.inventoryName.RemoveAt(i);
+                    Instantiate(coke);
+                    PlayerCore.instance.inventoryName.Add("");
                     // here should be destroy the coin from iventory slot, but not sure how to do
                     break;
                 }
