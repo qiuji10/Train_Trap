@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class BombLocation : MonoBehaviour
 {
@@ -14,7 +13,6 @@ public class BombLocation : MonoBehaviour
 
     public GameObject defuseBar;
     public Slider db;
-    GameSceneManager gsm;
 
     void Awake()
     {
@@ -34,8 +32,7 @@ public class BombLocation : MonoBehaviour
             if (holdTimer < 0)
             {
                 PlayerCore.instance.inventoryName.RemoveAt(i);
-                //SceneManager.LoadScene("Win");
-                GameSceneManager.instance.SwitchScene(4);
+                GameSceneManager.instance.SwitchScene(3);
             }
         }
         else
