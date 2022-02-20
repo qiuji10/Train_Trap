@@ -1,32 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class BombLocation : MonoBehaviour
 {
     public bool isInRange = false;
-    private int i;
- 
+    public bool hasTool = false;
+    public float setTimer = 5f;
+    private float holdTimer;
+    private int i = 0;
+
+    public GameObject defuseBar;
+    public Slider db;
+
+    void Start()
+    {
+        db = defuseBar.GetComponent<Slider>();
+        db.maxValue = setTimer;
+    }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (isInRange && Input.GetKeyDown(KeyCode.E))
+        checkItem(i);
+        if (isInRange && Input.GetKey(KeyCode.E))
         {
-            foreach (string item in PlayerCore.instance.inventoryName)
+            defuseBar.SetActive(true);
+            holdTimer -= Time.deltaTime;
+            db.value = holdTimer;
+            if (holdTimer < 0)
             {
-                if (item == "ticket")
-                {
-                    
-                    PlayerCore.instance.inventoryName.RemoveAt(i);
-                    SceneManager.LoadScene("Win");
-                    break;
-                }
-                i++;
+                PlayerCore.instance.inventoryName.RemoveAt(i);
+                SceneManager.LoadScene("Win");
             }
-            
+        }
+        else
+        {
+            holdTimer = setTimer;
+            db.value = setTimer;
+        }            
+    }
+
+    void checkItem(int loop)
+    {
+        foreach (string item in PlayerCore.instance.inventoryName)
+        {
+            if (item == "ticket")
+            {
+                hasTool = true;
+                break;
+            }
+            loop++;
         }
     }
 

@@ -1103,7 +1103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].conversation.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[1].options.Array.data[0].conversation.Array.size
@@ -1191,11 +1191,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].conversation.Array.data[0]
-      value: uaaaaa
+      value: Uuuuuuuuaaaaaaah
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].conversation.Array.data[1]
-      value: i want a coke
+      value: I want a coke!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].conversation.Array.data[2]
+      value: I WANT A COKE!!!
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.size
@@ -1299,11 +1303,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.data[1]
-      value: 'I finally can drink coke '
+      value: I finally can drink coke!
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314398, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.data[2]
-      value: here's your ticket
+      value: I don't have anything except this, an upper class ticket!
       objectReference: {fileID: 0}
     - target: {fileID: 3566947519111314399, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: m_Name
@@ -2553,7 +2557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &752387298
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2674,7 +2678,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4985,6 +4989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
+  defuseBar: {fileID: 752387297}
 --- !u!61 &1496438545
 BoxCollider2D:
   m_ObjectHideFlags: 0
