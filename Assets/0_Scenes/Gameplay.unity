@@ -760,7 +760,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5412080954951751401, guid: 4b934ca0c0d7689449c4b68edc18f45c, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412080954951751401, guid: 4b934ca0c0d7689449c4b68edc18f45c, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5412080954951751402, guid: 4b934ca0c0d7689449c4b68edc18f45c, type: 3}
       propertyPath: m_SortingOrder
@@ -8457,6 +8461,10 @@ PrefabInstance:
       propertyPath: dialogue.name
       value: Kid
       objectReference: {fileID: 0}
+    - target: {fileID: 9061730432408568169, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9061730432408568170, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -8466,8 +8474,24 @@ PrefabInstance:
       value: ALL_NPC
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: jsonText
+      value: 
+      objectReference: {fileID: 4900000, guid: 1c3d3b70381a293419648551f194b06b, type: 3}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: npc.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].npcName
+      value: Kid
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[1].npcName
+      value: Guard
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[2].npcName
@@ -8482,6 +8506,14 @@ PrefabInstance:
       value: Karen
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[1].options.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[2].options.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -8492,6 +8524,14 @@ PrefabInstance:
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[4].options.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].conversation.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[1].options.Array.data[0].conversation.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[2].options.Array.data[0].conversation.Array.size
@@ -8506,16 +8546,44 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].conversation.Array.data[0]
+      value: Uuuuaaaaaaa?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].conversation.Array.data[1]
+      value: I wank drink the coke!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].conversation.Array.data[2]
+      value: I WANT DRINK THE COKE!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[1].options.Array.data[0].conversation.Array.data[0]
+      value: Do you have upper-class ticket?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[1].options.Array.data[0].conversation.Array.data[1]
+      value: Only people with upper-class ticket are allowed to enter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[2].options.Array.data[0].conversation.Array.data[0]
-      value: Welcome to Rocky playtest!
+      value: Welcome to Rocky's Train Trap playtest.
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[2].options.Array.data[0].conversation.Array.data[1]
-      value: Press E to interact with NPC or Item......
+      value: Press E to interact with anything.
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[2].options.Array.data[0].conversation.Array.data[2]
-      value: Ops, seem like you already did it
+      value: Ops... seem like you already figured out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[2].options.Array.data[0].conversation.Array.data[3]
+      value: No we can't
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[3].options.Array.data[0].conversation.Array.data[0]
@@ -8523,11 +8591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[3].options.Array.data[0].conversation.Array.data[1]
-      value: 'He damn sus....... '
+      value: He damm sus....
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[3].options.Array.data[0].conversation.Array.data[2]
-      value: Really really reallyyyyyyy sus....
+      value: Really really reallyyyyyy sus........
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[3].options.Array.data[0].conversation.Array.data[3]
@@ -8536,11 +8604,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[4].options.Array.data[0].conversation.Array.data[0]
-      value: The seat is not comfy!
+      value: This seat is not comfy..
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[4].options.Array.data[0].conversation.Array.data[1]
-      value: It's unacceptable!!
+      value: It's unacceptable!
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[4].options.Array.data[0].conversation.Array.data[2]
@@ -8549,6 +8617,18 @@ PrefabInstance:
     - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: allBranches.npcs.Array.data[4].options.Array.data[0].conversation.Array.data[3]
       value: ' weird ticking noise.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.data[0]
+      value: OH MY GOD, thank you so much!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.data[1]
+      value: Finally I can drink coke.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061730433195209681, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: allBranches.npcs.Array.data[0].options.Array.data[0].specialDialogue.Array.data[2]
+      value: I have nothing except this, an upper-class ticket!
       objectReference: {fileID: 0}
     - target: {fileID: 9061730433195209682, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: m_RootOrder

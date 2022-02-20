@@ -32,25 +32,19 @@ public class DialogueDatabase : MonoBehaviour
     [SerializeField]
     List<GameObject> npc = new List<GameObject>();
     public AllBranches allBranches;
+    public TextAsset jsonText;
     int i = 0;
 
-    private void Awake()
-    {
-        string res = PlayerPrefs.GetString("SaveData");
-        allBranches = JsonUtility.FromJson<AllBranches>(res);
-    }
-
-    // Start is called before the first frame update
     void Start()
     {
-        foreach (Transform child in transform) 
+        allBranches = JsonUtility.FromJson<AllBranches>(jsonText.text);
+        foreach (Transform child in transform)
         {
             npc.Add(child.gameObject);
             child.gameObject.name = allBranches.npcs[i].npcName;
             string[] array = allBranches.npcs[i++].options[0].conversation.ToArray();
             child.gameObject.GetComponent<DialogueTrigger>().dialogue.sentences = array;
         }
-        Debug.Log(allBranches.npcs[0].options[0].specialDialogue[0]);
     }
 
     //void Update()

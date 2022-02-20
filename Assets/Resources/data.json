@@ -1,0 +1,96 @@
+{
+    "npcs":[
+        {
+            "npcName":"Kid",
+            "options":[
+                {
+                    "conversation":[
+                        "Uuuuaaaaaaa?!",
+                        "I wank drink the coke!",
+                        "I WANT DRINK THE COKE!!"
+                    ],
+                    "readingMinds":[
+                        
+                    ],
+                    "specialDialogue":[
+                        "OH MY GOD, thank you so much!",
+                        "Finally I can drink coke.",
+                        "I have nothing except this, an upper-class ticket!"
+                    ]
+                }
+            ]
+        },
+        {
+            "npcName":"Guard",
+            "options":[
+                {
+                    "conversation":[
+                        "Do you have upper-class ticket?",
+                        "Only people with upper-class ticket are allowed to enter."
+                    ],
+                    "readingMinds":[
+                        
+                    ],
+                    "specialDialogue":[
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "npcName":"Bob",
+            "options":[
+                {
+                    "conversation":[
+                        "Welcome to Rocky's Train Trap playtest.",
+                        "Press E to interact with anything.",
+                        "Ops... seem like you already figured out."
+                    ],
+                    "readingMinds":[
+                        
+                    ],
+                    "specialDialogue":[
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "npcName":"Thomas",
+            "options":[
+                {
+                    "conversation":[
+                        "There's someone suspicious",
+                        "He damm sus....",
+                        "Really really reallyyyyyy sus........",
+                        "He dressed like the winter soldier, carrying a black backpack and it does this weird ticking noise."
+                    ],
+                    "readingMinds":[
+                        
+                    ],
+                    "specialDialogue":[
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "npcName":"Karen",
+            "options":[
+                {
+                    "conversation":[
+                        "This seat is not comfy..",
+                        "It's unacceptable!",
+                        "I want to speak to the manager!"
+                    ],
+                    "readingMinds":[
+                        
+                    ],
+                    "specialDialogue":[
+                        
+                    ]
+                }
+            ]
+        }
+    ]
+}
