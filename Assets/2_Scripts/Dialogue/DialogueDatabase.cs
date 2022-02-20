@@ -47,6 +47,24 @@ public class DialogueDatabase : MonoBehaviour
         Debug.Log(allBranches.npcs[0].options[0].specialDialogue[0]);
     }
 
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.S))
+    //    {
+    //        //this is to generate a template for editing later not intended for in-game
+    //        string json = JsonUtility.ToJson(allBranches);
+    //        PlayerPrefs.SetString("SaveData", json); // can convert to a textfile instead of player pref
+    //        Debug.Log(json);
+    //    }
+
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        string res = PlayerPrefs.GetString("SaveData");
+    //        allBranches = JsonUtility.FromJson<AllBranches>(res);
+
+    //    }
+    //}
+
     public void changeDialogue()
     {
         //allBranches.npcs[0].options[0].conversation = allBranches.npcs[0].options[0].specialDialogue;
