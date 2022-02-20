@@ -26,9 +26,9 @@ public class TriggerQuest : MonoBehaviour
         if (isInRange && hasCoke && takenCola==false)
         {
             triggerQuest.Invoke();
+            Destroy(GameObject.FindGameObjectWithTag("coke"));
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Destroy(GameObject.FindGameObjectWithTag("Coke"));
                 Instantiate(ticketPrefab);
                 inventory.isFull[loopCount] = false;
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount);
