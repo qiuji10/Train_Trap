@@ -38,9 +38,13 @@ public class BombLocation : MonoBehaviour
         }
         else
         {
+          
             holdTimer = setTimer;
             db.value = setTimer;
-        }            
+            
+        }
+        
+            
     }
 
     void checkItem(int loop)
@@ -71,6 +75,8 @@ public class BombLocation : MonoBehaviour
         {
             isInRange = false;
             Debug.Log("Player is not in Range");
+            defuseBar.SetActive(false);
+
         }
     }
 }

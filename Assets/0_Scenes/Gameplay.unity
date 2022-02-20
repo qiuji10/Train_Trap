@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752387297}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f12ec8cfb3429ba4786c40218eb52771, type: 3}
   m_Name: 
@@ -7408,6 +7408,22 @@ PrefabInstance:
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7571401879728251200}
+    - target: {fileID: 3868956983529197622, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0191587
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868956983529197622, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.10613924
+      objectReference: {fileID: 0}
+    - target: {fileID: 8259233193523814902, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2115893
+      objectReference: {fileID: 0}
+    - target: {fileID: 8259233193523814902, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.07932928
+      objectReference: {fileID: 0}
     - target: {fileID: 8491216458103351678, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
