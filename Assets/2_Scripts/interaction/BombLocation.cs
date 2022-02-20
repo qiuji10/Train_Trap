@@ -14,6 +14,7 @@ public class BombLocation : MonoBehaviour
 
     public GameObject defuseBar;
     public Slider db;
+    GameSceneManager gsm;
 
     void Awake()
     {
@@ -33,7 +34,8 @@ public class BombLocation : MonoBehaviour
             if (holdTimer < 0)
             {
                 PlayerCore.instance.inventoryName.RemoveAt(i);
-                SceneManager.LoadScene("Win");
+                //SceneManager.LoadScene("Win");
+                GameSceneManager.instance.SwitchScene(4);
             }
         }
         else

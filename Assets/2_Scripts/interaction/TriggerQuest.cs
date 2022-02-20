@@ -15,12 +15,15 @@ public class TriggerQuest : MonoBehaviour
     void Update()
     {
         checkItem(loopCount);
-        if (isInRange && hasCoke && Input.GetKeyDown(KeyCode.E))
+        if (isInRange && hasCoke)
         {
             triggerQuest.Invoke();
-            Instantiate(ticketPrefab);
-            PlayerCore.instance.inventoryName.RemoveAt(loopCount);
-            isInRange = false;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Instantiate(ticketPrefab);
+                PlayerCore.instance.inventoryName.RemoveAt(loopCount);
+                isInRange = false;
+            }
         }
     }
 
