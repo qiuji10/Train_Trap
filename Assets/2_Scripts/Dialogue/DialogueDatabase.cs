@@ -27,7 +27,7 @@ public class AllBranches
     public List<NPCs> npcs;
 }
 
-public class DialogueBranch : MonoBehaviour
+public class DialogueDatabase : MonoBehaviour
 {
     [SerializeField]
     List<GameObject> npc = new List<GameObject>();
