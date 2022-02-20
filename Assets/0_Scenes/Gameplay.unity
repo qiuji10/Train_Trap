@@ -8431,11 +8431,11 @@ PrefabInstance:
       objectReference: {fileID: 7571401879728251200}
     - target: {fileID: 3868956983529197622, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: m_Size.x
-      value: 1.3151155
+      value: 0.8754669
       objectReference: {fileID: 0}
     - target: {fileID: 3868956983529197622, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: m_Offset.x
-      value: -0.5245867
+      value: -0.46560934
       objectReference: {fileID: 0}
     - target: {fileID: 4246402851042177193, guid: 73f3edb1df5504a438e13a5b7cc29dc1, type: 3}
       propertyPath: dialogue.name
