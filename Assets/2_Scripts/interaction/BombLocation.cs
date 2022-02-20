@@ -15,7 +15,7 @@ public class BombLocation : MonoBehaviour
     public GameObject defuseBar;
     public Slider db;
 
-    void Start()
+    void Awake()
     {
         db = defuseBar.GetComponent<Slider>();
         db.maxValue = setTimer;
