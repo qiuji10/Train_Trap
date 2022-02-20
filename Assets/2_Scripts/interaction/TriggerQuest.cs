@@ -7,7 +7,9 @@ public class TriggerQuest : MonoBehaviour
 {
     public bool hasCoke = false;
     private bool isInRange;
+    private bool takenCola = false;
     private int loopCount = 0;
+
 
     public GameObject ticketPrefab;
     public UnityEvent triggerQuest;
@@ -15,16 +17,16 @@ public class TriggerQuest : MonoBehaviour
     void Update()
     {
         checkItem(loopCount);
-        if (isInRange && hasCoke)
+        if (isInRange && hasCoke && takenCola==false)
         {
             triggerQuest.Invoke();
             if (Input.GetKeyDown(KeyCode.E))
             {
-                
                 Instantiate(ticketPrefab);
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount);
                 Destroy(GameObject.FindGameObjectWithTag("Coke"));
                 isInRange = false;
+                takenCola = true;
             }
         }
     }
