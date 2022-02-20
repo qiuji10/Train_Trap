@@ -11,6 +11,7 @@ TagManager:
   - coke
   - toolbox
   - Coke
+  - 7up
   layers:
   - Default
   - TransparentFX

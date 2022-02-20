@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class TriggerQuest : MonoBehaviour
 {
@@ -10,9 +11,14 @@ public class TriggerQuest : MonoBehaviour
     private bool takenCola = false;
     private int loopCount = 0;
 
-
+    private Inventory inventory;
     public GameObject ticketPrefab;
     public UnityEvent triggerQuest;
+
+    private void Awake()
+    {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
 
     void Update()
     {
@@ -22,9 +28,12 @@ public class TriggerQuest : MonoBehaviour
             triggerQuest.Invoke();
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Instantiate(ticketPrefab);
-                PlayerCore.instance.inventoryName.RemoveAt(loopCount);
                 Destroy(GameObject.FindGameObjectWithTag("Coke"));
+                Instantiate(ticketPrefab);
+                inventory.isFull[loopCount] = false;
+                PlayerCore.instance.inventoryName.RemoveAt(loopCount);
+                PlayerCore.instance.inventoryName.Add("");
+                inventory.slots[loopCount].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[loopCount];
                 isInRange = false;
                 takenCola = true;
             }
@@ -38,7 +47,6 @@ public class TriggerQuest : MonoBehaviour
             if (item == "coke")
             {
                 hasCoke = true;
-                
                 break;
             }
             i++;

@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.UI;
 
 public class VendingMachine : MonoBehaviour
 {
     public bool isInRange = false;
     private int i;
     public GameObject coke;
+    private Inventory inventory;
+
+    private void Awake()
+    {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -18,12 +24,15 @@ public class VendingMachine : MonoBehaviour
             {
                 if (item == "coin")
                 {
-                    //display msg and instantiate coke
                     PlayerCore.instance.inventoryName.RemoveAt(i);
+                    inventory.isFull[i] = false;
                     Instantiate(coke);
                     PlayerCore.instance.inventoryName.Add("");
-                    Destroy(GameObject.FindGameObjectWithTag("coin"));          
-                    
+                    Destroy(GameObject.FindGameObjectWithTag("coin"));
+                    for (int i = 0; i < inventory.slots.Length; i++)
+                    {
+                        inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
+                    }
                     // here should be destroy the coin from iventory slot, but not sure how to do
                     break;
                 }
