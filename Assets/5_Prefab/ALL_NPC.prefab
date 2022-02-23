@@ -269,6 +269,7 @@ MonoBehaviour:
         - we only allowed people with upper-class ticket enter here
         readingMinds: []
         specialDialogue: []
+  jsonText: {fileID: 0}
 --- !u!1001 &8211700467011249728
 PrefabInstance:
   m_ObjectHideFlags: 0

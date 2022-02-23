@@ -6,24 +6,37 @@ using UnityEngine.Events;
 public class NpcInteraction : MonoBehaviour
 {
     public bool isInRange;
-    public KeyCode interactKey;
+    public KeyCode dialogueKey, readMindKey;
 
-    public UnityEvent interactAction, interactAction2;
+    public UnityEvent dialogueAction, readMindsAction, nextSentence;
 
     void Update()
     {
         if(isInRange)
         {
-            if(Input.GetKeyDown(interactKey))
+            if(Input.GetKeyDown(dialogueKey))
             {
                 if (!DialogueManager.instance.isInteracted)
                 {
-                    interactAction.Invoke();
+                    dialogueAction.Invoke();
                     DialogueManager.instance.isInteracted = true;
                 }
                 else
                 {
-                    interactAction2.Invoke();
+                    nextSentence.Invoke();
+                }
+            }
+
+            if (Input.GetKeyDown(readMindKey))
+            {
+                if (!DialogueManager.instance.isInteracted)
+                {
+                    readMindsAction.Invoke();
+                    DialogueManager.instance.isInteracted = true;
+                }
+                else
+                {
+                    nextSentence.Invoke();
                 }
             }
         }

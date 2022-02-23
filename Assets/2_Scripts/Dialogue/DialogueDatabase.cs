@@ -42,8 +42,12 @@ public class DialogueDatabase : MonoBehaviour
         {
             npc.Add(child.gameObject);
             child.gameObject.name = allBranches.npcs[i].npcName;
-            string[] array = allBranches.npcs[i++].options[0].conversation.ToArray();
+            child.gameObject.GetComponent<DialogueTrigger>().dialogue.name = child.gameObject.name;
+            child.gameObject.GetComponent<DialogueTrigger>().readMinds.name = child.gameObject.name;
+            string[] array = allBranches.npcs[i].options[0].conversation.ToArray();
             child.gameObject.GetComponent<DialogueTrigger>().dialogue.sentences = array;
+            string[] array2 = allBranches.npcs[i++].options[0].readingMinds.ToArray();
+            child.gameObject.GetComponent<DialogueTrigger>().readMinds.sentences = array2;
         }
     }
 
