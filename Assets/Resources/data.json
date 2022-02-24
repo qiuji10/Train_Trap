@@ -22,19 +22,32 @@
         },
         {
             "npcName":"Guard",
-            "options":[
+            "options": [
                 {
-                    "conversation":[
+                    "conversation": [
                         "Do you have upper-class ticket?",
                         "Only people with upper-class ticket are allowed to enter."
                     ],
-                    "readingMinds":[
+                    "readingMinds": [
                         "Who the heck is this ugly guy?",
                         "Why is he keep staring me?"
 
                     ],
-                    "specialDialogue":[
-                        
+                    "specialDialogue": [
+                        "There're workers calling me?",
+                        "Let me go check that out quick"
+                    ]
+                },
+                {
+                    "conversation": [
+
+                    ],
+                    "readingMinds": [
+
+                    ],
+                    "specialDialogue": [
+                        "Who allowed you to go in!",
+                        "Get out!"
                     ]
                 }
             ]

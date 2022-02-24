@@ -73,4 +73,10 @@ public class DialogueDatabase : MonoBehaviour
         string[] array = allBranches.npcs[0].options[0].specialDialogue.ToArray();
         gameObject.transform.GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
+
+    public void changeDialogue2()
+    {
+        string[] array = allBranches.npcs[1].options[0].specialDialogue.ToArray();
+        gameObject.transform.GetChild(1).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
+    }
 }

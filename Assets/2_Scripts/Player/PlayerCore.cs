@@ -7,6 +7,7 @@ public class PlayerCore : MonoBehaviour
 {
     public static PlayerCore instance;
     private bool isCrouch = false;
+    private bool activateDistract = false;
     public List<string> inventoryName = new List<string>();
 
     void Awake()
@@ -21,5 +22,11 @@ public class PlayerCore : MonoBehaviour
     {
         get => isCrouch;
         set => isCrouch = value;
+    }
+
+    public bool ActivateDistract
+    {
+        get => activateDistract;
+        set => activateDistract = value;
     }
 }

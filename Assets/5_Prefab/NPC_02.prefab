@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1515518211748947056}
   - component: {fileID: 246399205873502134}
   - component: {fileID: 5412080954951751402}
+  - component: {fileID: 2059412125476516792}
+  - component: {fileID: 8039771352582693895}
   - component: {fileID: 298097876182896446}
   - component: {fileID: 5412080954951751401}
   m_Layer: 0
@@ -113,6 +115,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2059412125476516792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8250249333740920743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ee30ce3e9ab9d4983a5582d57cdfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRange: 0
+--- !u!114 &8039771352582693895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8250249333740920743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548ee62802b3c9d4f8c57104975c9923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRange: 0
+  changeGuardDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &298097876182896446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,37 +157,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
-  interactKey: 101
-  interactAction:
+  dialogueKey: 0
+  readMindKey: 0
+  dialogueAction:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5412080954951751401}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  interactAction2:
+      m_Calls: []
+  readMindsAction:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  nextSentence:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5412080954951751401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,3 +186,6 @@ MonoBehaviour:
     - be careful!
     - there is dog at back
     - he will fight u !
+  readMinds:
+    name: 
+    sentences: []
