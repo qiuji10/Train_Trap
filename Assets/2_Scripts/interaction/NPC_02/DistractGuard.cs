@@ -33,6 +33,7 @@ public class DistractGuard : MonoBehaviour
         passAccess.Invoke();
         yield return new WaitForSeconds(25f);
         guardAnimator.SetBool("activateDistract", false);
+        //should close again the passAccess and check if player still in upper train the guard should kick him off
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
