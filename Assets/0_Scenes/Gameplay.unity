@@ -7088,7 +7088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9088466769411506749, guid: 8d7249a1cb142ff4b917df7eeb7be5ad, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9088466770282278343, guid: 8d7249a1cb142ff4b917df7eeb7be5ad, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8794,7 +8794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8250249333340394283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: -1.2026435, z: -1}
+  m_LocalPosition: {x: -34.1, y: -1.2026435, z: -1}
   m_LocalScale: {x: 1.1047387, y: 0.97, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9372,21 +9372,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   passAccess:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1293386157}
-        m_TargetAssemblyTypeName: TicketGuard, Assembly-CSharp
-        m_MethodName: AllowAccess
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  passAccess2:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1293386157}
