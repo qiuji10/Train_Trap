@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class DistractGuard : MonoBehaviour
 {
     private bool isInRange;
-    public UnityEvent changeGuardDialogue, passAccess, passAccess2;
+    public UnityEvent changeGuardDialogue, passAccess;
     public Animator guardAnimator;
 
     void Update()
