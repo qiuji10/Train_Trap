@@ -2792,7 +2792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 2f4a85e974c28e743b6451f3fb598067, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 2f4a85e974c28e743b6451f3fb598067, type: 3}
       propertyPath: m_LocalScale.x
@@ -3974,15 +3974,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505592, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505592, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505592, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505592, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5567,6 +5567,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514052513}
   m_CullTransparentMesh: 1
+--- !u!1 &1533330560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533330561}
+  m_Layer: 0
+  m_Name: AttackPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1533330561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533330560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.059, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1005050767}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1549863534
 GameObject:
   m_ObjectHideFlags: 0
@@ -9566,6 +9597,7 @@ GameObject:
   - component: {fileID: 4149838834753356683}
   - component: {fileID: 8552244341261212252}
   - component: {fileID: 2136907332}
+  - component: {fileID: 8552244341261212256}
   m_Layer: 0
   m_Name: NPC_02
   m_TagString: Untagged
@@ -9902,6 +9934,98 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8552244341261212256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749680622846186258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439e231acbd4ec748ad77f837f8fe015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  isInRange: 0
+  guardAnimator: {fileID: 2136907332}
+  cfAnimator: {fileID: 0}
+  dazedTime: 0
+  startDazedTime: 10
+  allowAccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1293386157}
+        m_TargetAssemblyTypeName: TicketGuard, Assembly-CSharp
+        m_MethodName: AllowAccess
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  denyAccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1293386157}
+        m_TargetAssemblyTypeName: TicketGuard, Assembly-CSharp
+        m_MethodName: DenyAccess
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  getCaught:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3566947519300196644}
+        m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
+        m_MethodName: changeDialogue3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8552244341261212252}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  changeBackDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3566947519300196644}
+        m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
+        m_MethodName: changeDialogue4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  player: {fileID: 1005050758}
+  crossFade: {fileID: 1155613024}
 --- !u!61 &8786707518243830467
 BoxCollider2D:
   m_ObjectHideFlags: 0
