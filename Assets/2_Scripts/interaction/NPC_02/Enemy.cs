@@ -7,15 +7,12 @@ public class Enemy : MonoBehaviour
     
     
     public Animator guardAnimator, cfAnimator;
-    public float KOTime;
-    public float startKOTime;
     public UnityEvent allowAccess, denyAccess, getCaught, changeBackDialogue;
     public GameObject player, crossFade;
     public bool gotHit ;
     void Start()
     {
         cfAnimator = crossFade.GetComponent<Animator>();
-        KOTime = startKOTime;
     }
 
     // Update is called once per frame
@@ -23,17 +20,9 @@ public class Enemy : MonoBehaviour
     {
      if (gotHit == true)
         {
-            
-            
-            if (KOTime <= 0)
-            {
-                    StartWake();
-            }
-                else { KOTime -= Time.deltaTime; }
+                    StartWake();   
         }
-        
-        
-       
+
 
     }
 
@@ -46,11 +35,11 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator Wakey()
     {
-        yield return new WaitForSeconds(3f);
-        guardAnimator.SetBool("activateDistract", true);
+        gotHit = false;
+        guardAnimator.SetBool("isKnocked", true);
         allowAccess.Invoke();
-        yield return new WaitForSeconds(25f);
-        guardAnimator.SetBool("activateDistract", false);
+        yield return new WaitForSeconds(10f);
+        guardAnimator.SetBool("isKnocked", false);
         //should close again the passAccess and check if player still in upper train the guard should kick him off
         if (player.transform.position.x > transform.position.x)
         {
@@ -70,6 +59,7 @@ public class Enemy : MonoBehaviour
         }
         changeBackDialogue.Invoke();
         denyAccess.Invoke();
+        
     }
 
 
