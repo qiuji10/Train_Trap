@@ -12,6 +12,8 @@ TagManager:
   - toolbox
   - Coke
   - 7up
+  - Weapon
+  - guard
   layers:
   - Default
   - TransparentFX

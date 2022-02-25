@@ -4,42 +4,48 @@ using UnityEngine;
 using UnityEngine.Events;
 public class Enemy : MonoBehaviour
 {
-    public int health;
-    public bool isInRange;
+    
+    
     public Animator guardAnimator, cfAnimator;
-    public float dazedTime;
-    public float startDazedTime;
+    public float KOTime;
+    public float startKOTime;
     public UnityEvent allowAccess, denyAccess, getCaught, changeBackDialogue;
     public GameObject player, crossFade;
+    public bool gotHit ;
     void Start()
     {
         cfAnimator = crossFade.GetComponent<Animator>();
-
+        KOTime = startKOTime;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if (isInRange)
+     if (gotHit == true)
         {
             
-            if (Input.GetKeyDown(KeyCode.F))
+            
+            if (KOTime <= 0)
             {
-                StartWake();
+                    StartWake();
             }
+                else { KOTime -= Time.deltaTime; }
         }
-
+        
+        
+       
 
     }
 
-    private void StartWake()
+  
+
+    public void StartWake()
     {
         StartCoroutine(Wakey());
     }
 
     private IEnumerator Wakey()
     {
-        PlayerCore.instance.ActivateDistract = false;
         yield return new WaitForSeconds(3f);
         guardAnimator.SetBool("activateDistract", true);
         allowAccess.Invoke();
@@ -67,22 +73,5 @@ public class Enemy : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            isInRange = true;
-            Debug.Log("Player is in Range");
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            isInRange = false;
-            Debug.Log("Player is not in Range");
-        }
-    }
 
 }
