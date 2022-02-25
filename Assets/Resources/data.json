@@ -46,8 +46,7 @@
 
                     ],
                     "specialDialogue": [
-                        "Who allowed you to go in!",
-                        "Get out!"
+                        "Who allowed you to go in! Get out!"
                     ]
                 }
             ]
@@ -76,14 +75,16 @@
             "npcName":"Thomas",
             "options":[
                 {
-                    "conversation":[
+                    "conversation": [
+                        "Hey, can you help me call the guard to here?",
                         "There's someone suspicious",
                         "He damm sus....",
                         "Really really reallyyyyyy sus........",
                         "He dressed like the winter soldier, carrying a black backpack and it does this weird ticking noise."
                     ],
-                    "readingMinds":[
-                        "even though that people is damm sus",
+                    "readingMinds": [
+                        "Where is the guard...",
+                        "I really need him now",
                         "but i kinda forgot how he looks like"
                     ],
                     "specialDialogue":[

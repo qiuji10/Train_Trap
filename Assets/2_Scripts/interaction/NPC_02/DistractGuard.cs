@@ -6,8 +6,15 @@ using UnityEngine.Events;
 public class DistractGuard : MonoBehaviour
 {
     private bool isInRange;
-    public UnityEvent changeGuardDialogue, passAccess;
+    public UnityEvent changeGuardDialogue, allowAccess, denyAccess, getCaught, changeBackDialogue;
     public Animator guardAnimator;
+    public Animator cfAnimator;
+    public GameObject player, crossFade;
+
+    private void Awake()
+    {
+        cfAnimator = crossFade.GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -28,12 +35,31 @@ public class DistractGuard : MonoBehaviour
 
     private IEnumerator StorySequence()
     {
+        PlayerCore.instance.ActivateDistract = false;
         yield return new WaitForSeconds(3f);
         guardAnimator.SetBool("activateDistract", true);
-        passAccess.Invoke();
+        allowAccess.Invoke();
         yield return new WaitForSeconds(25f);
         guardAnimator.SetBool("activateDistract", false);
         //should close again the passAccess and check if player still in upper train the guard should kick him off
+        if (player.transform.position.x > transform.position.x)
+        {
+            GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+            guardAnimator.SetBool("caughtPlayer", true);
+            yield return new WaitForSeconds(1f);
+            getCaught.Invoke();
+            //cutscene animation
+            yield return new WaitForSeconds(3f);
+            crossFade.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            player.transform.position = new Vector3(41.23f, player.transform.position.y, player.transform.position.z);
+            yield return new WaitForSeconds(1f);
+            guardAnimator.SetBool("caughtPlayer", false);
+            crossFade.SetActive(false);
+            GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
+        }
+        changeBackDialogue.Invoke();
+        denyAccess.Invoke();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

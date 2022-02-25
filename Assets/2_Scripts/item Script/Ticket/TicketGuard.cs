@@ -16,4 +16,9 @@ public class TicketGuard : MonoBehaviour
         gameObject.SetActive(false);// removes collision 
     }
 
+    public void DenyAccess()
+    {
+        gameObject.SetActive(true);
+    }
+
 }
