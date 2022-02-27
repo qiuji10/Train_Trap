@@ -5560,7 +5560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1512536698}
   m_Layer: 0
-  m_Name: GuardKickOut
+  m_Name: ExtraUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
