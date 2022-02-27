@@ -7,6 +7,7 @@ public class GameOverScreen : MonoBehaviour
 {
     public void ReviveButton()
     {
+        
         SceneManager.LoadScene("Gameplay");
     }
 
