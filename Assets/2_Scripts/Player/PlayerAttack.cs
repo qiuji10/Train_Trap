@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public bool isInRange;
-    public bool hasWeapon = false;
+    public bool hasWrench = false;
     private int loopCount = 0;
     public Enemy boolBoy;
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         checkItem(loopCount);
-        if (isInRange && hasWeapon == true)
+        if (isInRange && hasWrench == true)
         {
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -40,9 +40,9 @@ public class PlayerAttack : MonoBehaviour
     {
         foreach (string item in PlayerCore.instance.inventoryName)
         {
-            if (item == "Weapon")
+            if (item == "wrench")
             {
-                hasWeapon = true;
+                hasWrench = true;
                 break;
             }
             i++;

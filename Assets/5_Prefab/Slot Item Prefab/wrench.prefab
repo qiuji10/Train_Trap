@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7809547086143322042}
   - component: {fileID: 3578166513908188190}
   m_Layer: 5
-  m_Name: weapon
+  m_Name: wrench
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 899259995f72d554da0dd95dc6180f01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 94f96d573ee898b458b58e90b16d1ef7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
