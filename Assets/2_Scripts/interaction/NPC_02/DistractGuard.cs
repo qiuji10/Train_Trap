@@ -9,7 +9,7 @@ public class DistractGuard : MonoBehaviour
     public UnityEvent changeGuardDialogue, allowAccess, denyAccess, getCaught, changeBackDialogue;
     public Animator guardAnimator;
     public Animator cfAnimator;
-    public GameObject player, crossFade;
+    public GameObject player, crossFade, hintText;
 
     private void Awake()
     {
@@ -23,6 +23,7 @@ public class DistractGuard : MonoBehaviour
             changeGuardDialogue.Invoke();
             if (Input.GetKeyDown(KeyCode.E))
             {
+                hintText.SetActive(false);
                 StartDistract();
             }
         }

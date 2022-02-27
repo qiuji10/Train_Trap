@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class ActivateDistract : MonoBehaviour
 {
-    public bool isInRange;
+    private bool isInRange;
+    public GameObject hintText;
 
     void Update()
     {
         if (isInRange && PlayerCore.instance.ActivateDistract==false && Input.GetKeyDown(KeyCode.E))
         {
             PlayerCore.instance.ActivateDistract = true;
+            hintText.SetActive(true);
         }
     }
 
