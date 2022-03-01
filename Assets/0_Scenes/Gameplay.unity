@@ -9518,32 +9518,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hintText: {fileID: 2083058106}
---- !u!114 &2059412125326858795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8250249333624174132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74ee30ce3e9ab9d4983a5582d57cdfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hintText: {fileID: 0}
---- !u!114 &2059412125799079488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8250249334500487775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74ee30ce3e9ab9d4983a5582d57cdfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hintText: {fileID: 0}
 --- !u!4 &2935236270505863365
 Transform:
   m_ObjectHideFlags: 0
@@ -10121,7 +10095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0193098236f645941a03d7557712c722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasCoke: 0
   ticketPrefab: {fileID: 7438010882266090855, guid: 474ab31db69187344a2483aa31a8f5f1, type: 3}
   triggerQuest:
     m_PersistentCalls:
@@ -10234,7 +10207,6 @@ GameObject:
   - component: {fileID: 1515518211867266531}
   - component: {fileID: 246399205991706149}
   - component: {fileID: 5412080954801651577}
-  - component: {fileID: 2059412125326858795}
   - component: {fileID: 298097876334782125}
   - component: {fileID: 5412080954801651578}
   m_Layer: 0
@@ -10255,7 +10227,6 @@ GameObject:
   - component: {fileID: 1515518211928639880}
   - component: {fileID: 246399206196865614}
   - component: {fileID: 5412080955139848978}
-  - component: {fileID: 2059412125799079488}
   - component: {fileID: 298097874928149190}
   - component: {fileID: 5412080955139848977}
   m_Layer: 0
@@ -10347,6 +10318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439e231acbd4ec748ad77f837f8fe015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gotHit: 0
   guardAnimator: {fileID: 2136907332}
   cfAnimator: {fileID: 0}
   allowAccess:
@@ -10423,7 +10395,6 @@ MonoBehaviour:
         m_CallState: 2
   player: {fileID: 1005050758}
   crossFade: {fileID: 1155613024}
-  gotHit: 0
 --- !u!61 &8786707518243830467
 BoxCollider2D:
   m_ObjectHideFlags: 0
