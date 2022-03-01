@@ -29,4 +29,17 @@ public class PlayerCore : MonoBehaviour
         get => activateDistract;
         set => activateDistract = value;
     }
+
+    public bool CheckItem(ref int i, string itemName)
+    {
+        foreach (string item in inventoryName)
+        {
+            if (item == itemName)
+            {
+                return true;
+            }
+            i++;
+        }
+        return false;
+    }
 }
