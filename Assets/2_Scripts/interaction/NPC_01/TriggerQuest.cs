@@ -22,7 +22,7 @@ public class TriggerQuest : MonoBehaviour
 
     void Update()
     {
-        if (isInRange && Input.GetKeyDown(KeyCode.E))
+        if (isInRange && Input.GetKeyDown(KeyCode.E) && !takenCola)
         {
             foreach (string item in PlayerCore.instance.inventoryName)
             {
