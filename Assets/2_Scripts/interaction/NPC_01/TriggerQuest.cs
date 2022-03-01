@@ -22,34 +22,29 @@ public class TriggerQuest : MonoBehaviour
 
     void Update()
     {
-        checkItem(loopCount);
-        if (isInRange && hasCoke && takenCola==false)
+        if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            triggerQuest.Invoke();
-            Destroy(GameObject.FindGameObjectWithTag("coke"));
-            PlayerCore.instance.inventoryName.RemoveAt(loopCount);
-            inventory.slots[loopCount].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[loopCount];
-            inventory.isFull[loopCount] = false;
-            PlayerCore.instance.inventoryName.Add("");
-            if (Input.GetKeyDown(KeyCode.E))
+            foreach (string item in PlayerCore.instance.inventoryName)
             {
-                Instantiate(ticketPrefab);
-                isInRange = false;
-                takenCola = true;
+                if (item == "coke")
+                {
+                    triggerQuest.Invoke();
+                    PlayerCore.instance.inventoryName.RemoveAt(loopCount);
+                    inventory.isFull[loopCount] = false;
+                    Instantiate(ticketPrefab);
+                    PlayerCore.instance.inventoryName.Add("");
+                    isInRange = false;
+                    takenCola = true;
+                    Destroy(GameObject.FindGameObjectWithTag("coke"));
+                    for (int i = 0; i < inventory.slots.Length; i++)
+                    {
+                        inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
+                    }
+                    break;
+                }
+                loopCount++;
             }
-        }
-    }
-
-    void checkItem(int i)
-    {
-        foreach (string item in PlayerCore.instance.inventoryName)
-        {
-            if (item == "coke")
-            {
-                hasCoke = true;
-                break;
-            }
-            i++;
+            //display no coin found in inventory
         }
     }
 
