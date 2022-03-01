@@ -22,31 +22,6 @@ public class TriggerQuest : MonoBehaviour
 
     void Update()
     {
-        //if (isInRange && Input.GetKeyDown(KeyCode.E) && !takenCola)
-        //{
-        //    foreach (string item in PlayerCore.instance.inventoryName)
-        //    {
-        //        if (item == "coke")
-        //        {
-        //            triggerQuest.Invoke();
-        //            PlayerCore.instance.inventoryName.RemoveAt(loopCount);
-        //            inventory.isFull[loopCount] = false;
-        //            Instantiate(ticketPrefab);
-        //            PlayerCore.instance.inventoryName.Add("");
-        //            isInRange = false;
-        //            takenCola = true;
-        //            Destroy(GameObject.FindGameObjectWithTag("coke"));
-        //            for (int i = 0; i < inventory.slots.Length; i++)
-        //            {
-        //                inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
-        //            }
-        //            break;
-        //        }
-        //        loopCount++;
-        //    }
-        //    //display no coin found in inventory
-        //}
-
         if (isInRange && Input.GetKeyDown(KeyCode.E) && !takenCola)
         {
             hasCoke = PlayerCore.instance.CheckItem(ref loopCount, "coke");

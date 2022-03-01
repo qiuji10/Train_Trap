@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class VendingMachine : MonoBehaviour
 {
     public bool isInRange = false;
+    private bool hasCoin;
     private int i;
     public GameObject coke;
     private Inventory inventory;
@@ -20,25 +21,19 @@ public class VendingMachine : MonoBehaviour
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            foreach (string item in PlayerCore.instance.inventoryName)
+            hasCoin = PlayerCore.instance.CheckItem(ref i, "coin");
+            if (hasCoin)
             {
-                if (item == "coin")
+                PlayerCore.instance.inventoryName.RemoveAt(i);
+                inventory.isFull[i] = false;
+                Instantiate(coke);
+                PlayerCore.instance.inventoryName.Add("");
+                Destroy(GameObject.FindGameObjectWithTag("coin"));
+                for (int i = 0; i < inventory.slots.Length; i++)
                 {
-                    PlayerCore.instance.inventoryName.RemoveAt(i);
-                    inventory.isFull[i] = false;
-                    Instantiate(coke);
-                    PlayerCore.instance.inventoryName.Add("");
-                    Destroy(GameObject.FindGameObjectWithTag("coin"));
-                    for (int i = 0; i < inventory.slots.Length; i++)
-                    {
-                        inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
-                    }
-                    // here should be destroy the coin from iventory slot, but not sure how to do
-                    break;
+                    inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
                 }
-                i++;
             }
-            //display no coin found in inventory
         }
     }
 
