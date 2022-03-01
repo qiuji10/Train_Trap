@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 public class Enemy : MonoBehaviour
 {
-    
-    
+    public bool gotHit;
+
     public Animator guardAnimator, cfAnimator;
     public UnityEvent allowAccess, denyAccess, getCaught, changeBackDialogue;
     public GameObject player, crossFade;
-    public bool gotHit ;
+
     void Start()
     {
         cfAnimator = crossFade.GetComponent<Animator>();
@@ -18,15 +18,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-     if (gotHit == true)
+        if (gotHit == true)
         {
-                    StartWake();   
+            StartWake();
         }
-
-
     }
-
-  
 
     public void StartWake()
     {
@@ -51,9 +47,9 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(3f);
             crossFade.SetActive(true);
             yield return new WaitForSeconds(2f);
+            guardAnimator.SetBool("caughtPlayer", false);
             player.transform.position = new Vector3(41.23f, player.transform.position.y, player.transform.position.z);
             yield return new WaitForSeconds(1f);
-            guardAnimator.SetBool("caughtPlayer", false);
             crossFade.SetActive(false);
             GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
         }

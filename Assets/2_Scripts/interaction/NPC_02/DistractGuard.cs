@@ -53,9 +53,9 @@ public class DistractGuard : MonoBehaviour
             yield return new WaitForSeconds(3f);
             crossFade.SetActive(true);
             yield return new WaitForSeconds(2f);
+            guardAnimator.SetBool("caughtPlayer", false);
             player.transform.position = new Vector3(41.23f, player.transform.position.y, player.transform.position.z);
             yield return new WaitForSeconds(1f);
-            guardAnimator.SetBool("caughtPlayer", false);
             crossFade.SetActive(false);
             GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
         }
