@@ -47,6 +47,8 @@ public class NpcInteraction : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
+            PlayerCore.instance.KeyE = true;
+            PlayerCore.instance.KeyR = true;
             Debug.Log("Player is in Range");
         }
     }
@@ -56,6 +58,8 @@ public class NpcInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
+            PlayerCore.instance.KeyE = false;
+            PlayerCore.instance.KeyR = false;
             Debug.Log("Player is not in Range");
         }
     }

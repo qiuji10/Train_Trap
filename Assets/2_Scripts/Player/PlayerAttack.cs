@@ -8,19 +8,14 @@ public class PlayerAttack : MonoBehaviour
     public bool hasWrench = false;
     private int loopCount = 0;
     public Enemy boolBoy;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        checkItem(loopCount);
-        if (isInRange && hasWrench == true)
+        hasWrench = PlayerCore.instance.CheckItem(ref loopCount, "wrench");
+        if (isInRange && hasWrench)
         {
-
+            PlayerCore.instance.KeyF = true;
             if (Input.GetKeyDown(KeyCode.F))
             {
 
@@ -32,20 +27,6 @@ public class PlayerAttack : MonoBehaviour
 
 
             }
-        }
-    }
-
-    
-    void checkItem(int i)
-    {
-        foreach (string item in PlayerCore.instance.inventoryName)
-        {
-            if (item == "wrench")
-            {
-                hasWrench = true;
-                break;
-            }
-            i++;
         }
     }
 
@@ -63,6 +44,7 @@ public class PlayerAttack : MonoBehaviour
         if (other.gameObject.CompareTag("guard"))
         {
             isInRange = false;
+            PlayerCore.instance.KeyF = false;
             Debug.Log("Player is not in Range");
         }
     }

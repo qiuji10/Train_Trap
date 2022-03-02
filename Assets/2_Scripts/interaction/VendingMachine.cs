@@ -42,6 +42,7 @@ public class VendingMachine : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
+            PlayerCore.instance.KeyE = true;
             Debug.Log("Player is in Range");
         }
     }
@@ -51,6 +52,7 @@ public class VendingMachine : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
+            PlayerCore.instance.KeyE = false;
             Debug.Log("Player is not in Range");
         }
     }

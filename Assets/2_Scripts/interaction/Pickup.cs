@@ -17,8 +17,7 @@ public class Pickup : MonoBehaviour
 
     private void Update()
     {
-        
-        if (isInRange == true )
+        if (isInRange)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -52,6 +51,7 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            PlayerCore.instance.KeyE = true;
             isInRange = true;
             Debug.Log("Player is in Range");
         }
@@ -61,6 +61,7 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            PlayerCore.instance.KeyE = false;
             isInRange = false;
             Debug.Log("Player is not in Range");
         }
