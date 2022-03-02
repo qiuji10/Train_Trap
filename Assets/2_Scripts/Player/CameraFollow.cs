@@ -10,4 +10,20 @@ public class CameraFollow : MonoBehaviour
     {
         transform.position = new Vector3(target.transform.position.x, transform.position.y, transform.position.z);
     }
+
+    public IEnumerator ShakeScreen(float duration, float magnitude)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            float xOffset = Random.Range(-0.5f, 0.5f) * magnitude;
+            float yOffset = Random.Range(-0.5f, 0.5f) * magnitude;
+
+            transform.localPosition = new Vector3(xOffset, yOffset, transform.position.z);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.localPosition = transform.position;
+    }
 }

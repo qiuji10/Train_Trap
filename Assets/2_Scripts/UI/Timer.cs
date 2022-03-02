@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public float timeValue = 90;
-    public Text timeText;
 
+    public Text timeText;
+    public GameObject crossFade;
+    public GameObject bomb;
     public GameSceneManager gsm;
+    [SerializeField] private GameObject cam;
 
     void Awake()
     {
@@ -24,9 +27,28 @@ public class Timer : MonoBehaviour
         else
         {
             timeValue = 0;
-            gsm.SwitchScene(1);
+            GameOver();
         }
         DisplayTime(timeValue);
+    }
+
+    public void GameOver()
+    {
+        crossFade.SetActive(true);
+        bomb.SetActive(true);
+        StartCoroutine(StartGameOver());
+    }
+
+    IEnumerator StartGameOver()
+    {
+        yield return StartCoroutine(cam.GetComponent<CameraFollow>().ShakeScreen(1f, 0.7f));
+        yield return StartCoroutine(SwitchGameOver());
+    }
+
+    IEnumerator SwitchGameOver()
+    {
+        yield return new WaitForSeconds(1f);
+        gsm.SwitchScene(1);
     }
 
     void DisplayTime(float timeToDisplay) 
