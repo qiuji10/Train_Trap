@@ -40,6 +40,7 @@ public class PlayerCore : MonoBehaviour
             }
             i++;
         }
+        i = 0;
         return false;
     }
 }
