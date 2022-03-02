@@ -5,17 +5,16 @@ using UnityEngine.Events;
 public class Enemy : MonoBehaviour
 {
     public bool gotHit;
-
+    private int num;
     public Animator guardAnimator, cfAnimator;
     public UnityEvent allowAccess, denyAccess, getCaught, changeBackDialogue;
     public GameObject player, crossFade;
 
-    void Start()
+    void Awake()
     {
         cfAnimator = crossFade.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     public void Update()
     {
         if (gotHit == true)
@@ -54,10 +53,7 @@ public class Enemy : MonoBehaviour
             GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
         }
         changeBackDialogue.Invoke();
-        denyAccess.Invoke();
-        
+        if (!PlayerCore.instance.CheckItem(ref num, "ticket"))
+            denyAccess.Invoke();
     }
-
-
-
 }

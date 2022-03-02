@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class DistractGuard : MonoBehaviour
 {
+    private int num;
     private bool isInRange;
     public UnityEvent changeGuardDialogue, allowAccess, denyAccess, getCaught, changeBackDialogue;
     public Animator guardAnimator;
@@ -60,7 +61,8 @@ public class DistractGuard : MonoBehaviour
             GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
         }
         changeBackDialogue.Invoke();
-        denyAccess.Invoke();
+        if (!PlayerCore.instance.CheckItem(ref num, "ticket"))
+            denyAccess.Invoke();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
