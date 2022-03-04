@@ -11,7 +11,7 @@ public class Locker : MonoBehaviour
     public bool keypad = false;
     private Inventory inventory;
     public bool hasToolBox = false;
-    private int loopCount = 0;
+   
 
 
 
