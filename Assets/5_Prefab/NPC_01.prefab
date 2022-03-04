@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1818427343517484847}
   - component: {fileID: 1107616152996979945}
   - component: {fileID: 5129594702937961909}
+  - component: {fileID: 3413889192382815642}
   - component: {fileID: 583048682446253153}
   - component: {fileID: 5129594702937961910}
   m_Layer: 0
@@ -113,6 +114,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3413889192382815642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100279299841080568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0193098236f645941a03d7557712c722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasCoke: 0
+  isInRange: 0
+  triggerQuest:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &583048682446253153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
-  isInteracted: 0
   interactKey: 101
   interactAction:
     m_PersistentCalls:

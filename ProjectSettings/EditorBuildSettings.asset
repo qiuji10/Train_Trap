@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/0_Scenes/MainMenu.unity
     guid: a3c6ee0c63db09e4e92151ba09222496
   - enabled: 1
-    path: Assets/0_Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/0_Scenes/GameOver 1.unity
+    guid: 076774230aafecd4280f8a688f4920d5
   - enabled: 1
-    path: Assets/0_Scenes/GameOver.unity
-    guid: a971bfe4c0e805e42b5e5f8b6f63265d
+    path: Assets/0_Scenes/OpeningScene.unity
+    guid: 2352fa01e7e907142a9d2871f51b7caa
   - enabled: 1
-    path: Assets/0_Scenes/Blockout.unity
+    path: Assets/0_Scenes/Gameplay.unity
     guid: f06b9538bfa7ef646b16bc425e33034e
+  - enabled: 1
+    path: Assets/0_Scenes/Win.unity
+    guid: 5c0d20d29f91139459fa4a852840499a
   m_configObjects: {}

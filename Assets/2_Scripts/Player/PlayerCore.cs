@@ -6,7 +6,7 @@ using System;
 public class PlayerCore : MonoBehaviour
 {
     public static PlayerCore instance;
-    private bool isCrouch = false;
+    private bool isCrouch, activateDistract, keyE, keyR, keyF;
     public List<string> inventoryName = new List<string>();
 
     void Awake()
@@ -21,5 +21,43 @@ public class PlayerCore : MonoBehaviour
     {
         get => isCrouch;
         set => isCrouch = value;
+    }
+
+    public bool ActivateDistract
+    {
+        get => activateDistract;
+        set => activateDistract = value;
+    }
+
+    public bool KeyE
+    {
+        get => keyE;
+        set => keyE = value;
+    }
+
+    public bool KeyR
+    {
+        get => keyR;
+        set => keyR = value;
+    }
+
+    public bool KeyF
+    {
+        get => keyF;
+        set => keyF = value;
+    }
+
+    public bool CheckItem(ref int i, string itemName)
+    {
+        foreach (string item in inventoryName)
+        {
+            if (item == itemName)
+            {
+                return true;
+            }
+            i++;
+        }
+        i = 0;
+        return false;
     }
 }

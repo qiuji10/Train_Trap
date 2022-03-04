@@ -7,7 +7,8 @@ public class GameOverScreen : MonoBehaviour
 {
     public void ReviveButton()
     {
-        SceneManager.LoadScene("Blockout");
+        
+        SceneManager.LoadScene("Gameplay");
     }
 
     public void ExitToMainMenu()

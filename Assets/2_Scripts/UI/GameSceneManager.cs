@@ -4,6 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameSceneManager : MonoBehaviour
 {
+    public static GameSceneManager instance;
+
+    void Awake()
+    {
+        if (instance != null)
+            Destroy(this.gameObject);
+        else
+            instance = this;
+    }
+
     public void SwitchScene(int indexBuild)
     {
         SceneManager.LoadScene(indexBuild);
@@ -17,6 +27,6 @@ public class GameSceneManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Blockout");
+        SceneManager.LoadScene("OpeningScene");
     }
 }

@@ -5,10 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - NPC
-  - ticket
   - coin
+  - toolbox
+  - Newspaper
+  - wrench
+  - guard
+  - ticket
   - coke
+  - 7up
+  - Coke
+  - Panel
   layers:
   - Default
   - TransparentFX
