@@ -9,7 +9,6 @@ public class Locker : MonoBehaviour
     public GameObject toolbox;
     public GameObject Keypad;
     public bool keypad = false;
-    private Inventory inventory;
     public bool hasToolBox = false;
    
 
@@ -23,12 +22,8 @@ public class Locker : MonoBehaviour
         if (isInRange && hasToolBox == false  && Input.GetKeyDown(KeyCode.E))
         {
             Keypad.SetActive(true);
-            hasToolBox = true;
-            PlayerCore.instance.inventoryName.Add("");
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
-            }
+            
+          
         }
 
         if (isInRange && Input.GetKeyDown(KeyCode.Escape))

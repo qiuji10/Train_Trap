@@ -7,6 +7,7 @@ public class DigitalDisplay : MonoBehaviour
 {
     public GameObject toolbox;
     public GameObject Keypad;
+    public Locker boolBoy;
     [SerializeField]
     private Sprite[] digits;
 
@@ -127,6 +128,9 @@ public class DigitalDisplay : MonoBehaviour
             Instantiate(toolbox);
             Debug.Log("IS OPEN");
             Keypad.SetActive(false);
+            GameObject g = GameObject.FindGameObjectWithTag("locker");
+            boolBoy = g.GetComponent<Locker>();
+            boolBoy.hasToolBox = true;
 
         }
         else
