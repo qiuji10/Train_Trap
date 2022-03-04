@@ -34,7 +34,7 @@ public class BombLocation : MonoBehaviour
             if (holdTimer < 0)
             {
                 PlayerCore.instance.inventoryName.RemoveAt(i);
-                GameSceneManager.instance.SwitchScene(3);
+                //Instantiate picture of Mary
             }
         }
         else
