@@ -21,10 +21,11 @@ public class BombLocation : MonoBehaviour
         db.maxValue = setTimer;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        checkItem(i);
+        if (isInRange && Input.GetKeyDown(KeyCode.E))
+            hasTool = PlayerCore.instance.CheckItem(ref i, "toolbox");
+
         if (isInRange && hasTool && Input.GetKey(KeyCode.E))
         {
             defuseBar.SetActive(true);
@@ -38,25 +39,8 @@ public class BombLocation : MonoBehaviour
         }
         else
         {
-          
             holdTimer = setTimer;
             db.value = setTimer;
-            
-        }
-        
-            
-    }
-
-    void checkItem(int loop)
-    {
-        foreach (string item in PlayerCore.instance.inventoryName)
-        {
-            if (item == "toolbox")
-            {
-                hasTool = true;
-                break;
-            }
-            loop++;
         }
     }
 
@@ -65,7 +49,7 @@ public class BombLocation : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            Debug.Log("Player is in Range");
+            PlayerCore.instance.KeyE = PlayerCore.instance.CheckItem(ref i, "toolbox");
         }
     }
 
@@ -74,9 +58,8 @@ public class BombLocation : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-            Debug.Log("Player is not in Range");
+            PlayerCore.instance.KeyE = false;
             defuseBar.SetActive(false);
-
         }
     }
 }
