@@ -15,7 +15,7 @@ public class FixRadio : MonoBehaviour
     public GameObject completebar;
     public Slider db;
 
-    Collider fixcollider;
+    
 
     void Awake()
     {
@@ -23,10 +23,7 @@ public class FixRadio : MonoBehaviour
         db.maxValue = setTimer;
     }
 
-    private void Start()
-    {
-        fixcollider = GetComponent<Collider>();
-    }
+   
 
     void Update()
     {
@@ -42,8 +39,12 @@ public class FixRadio : MonoBehaviour
             {
                 Debug.Log("Radio is fixed");
                 completebar.SetActive(false);
-                fixcollider.enabled = !fixcollider.enabled;
+                GetComponent<BoxCollider2D>().enabled = false;
+             
             }
+           
+
+            
         }
         else
         {
