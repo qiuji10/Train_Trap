@@ -44,25 +44,28 @@ public class DistractGuard : MonoBehaviour
         yield return new WaitForSeconds(25f);
         guardAnimator.SetBool("activateDistract", false);
         //should close again the passAccess and check if player still in upper train the guard should kick him off
-        if (player.transform.position.x > transform.position.x)
-        {
-            GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
-            guardAnimator.SetBool("caughtPlayer", true);
-            yield return new WaitForSeconds(1f);
-            getCaught.Invoke();
-            //cutscene animation
-            yield return new WaitForSeconds(3f);
-            crossFade.SetActive(true);
-            yield return new WaitForSeconds(2f);
-            guardAnimator.SetBool("caughtPlayer", false);
-            player.transform.position = new Vector3(41.23f, player.transform.position.y, player.transform.position.z);
-            yield return new WaitForSeconds(1f);
-            crossFade.SetActive(false);
-            GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
-        }
-        changeBackDialogue.Invoke();
+
         if (!PlayerCore.instance.CheckItem(ref num, "ticket"))
+        {
+            if (player.transform.position.x > transform.position.x)
+            {
+                GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+                guardAnimator.SetBool("caughtPlayer", true);
+                yield return new WaitForSeconds(1f);
+                getCaught.Invoke();
+                //cutscene animation
+                yield return new WaitForSeconds(3f);
+                crossFade.SetActive(true);
+                yield return new WaitForSeconds(2f);
+                guardAnimator.SetBool("caughtPlayer", false);
+                player.transform.position = new Vector3(41.23f, player.transform.position.y, player.transform.position.z);
+                yield return new WaitForSeconds(1f);
+                crossFade.SetActive(false);
+                GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
+            }
+            changeBackDialogue.Invoke();
             denyAccess.Invoke();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
