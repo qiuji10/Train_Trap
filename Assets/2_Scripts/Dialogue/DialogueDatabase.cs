@@ -64,27 +64,21 @@ public class DialogueDatabase : MonoBehaviour
     //    }
     //}
 
-    public void changeDialogue()
+    public void ChangeDialogueTo_Opt0_Special(int NpcNum)
     {
-        string[] array = allBranches.npcs[0].options[0].specialDialogue.ToArray();
-        gameObject.transform.GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
+        string[] array = allBranches.npcs[NpcNum].options[0].specialDialogue.ToArray();
+        gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
 
-    public void changeDialogue2()
+    public void ChangeDialogueTo_Opt1_Special(int NpcNum)
     {
-        string[] array = allBranches.npcs[1].options[0].specialDialogue.ToArray();
-        gameObject.transform.GetChild(1).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
+        string[] array = allBranches.npcs[NpcNum].options[1].specialDialogue.ToArray();
+        gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
 
-    public void changeDialogue3()
+    public void ChangeDialogueTo_Opt0_Conversation(int NpcNum)
     {
-        string[] array = allBranches.npcs[1].options[1].specialDialogue.ToArray();
-        gameObject.transform.GetChild(1).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
-    }
-
-    public void changeDialogue4()
-    {
-        string[] array = allBranches.npcs[1].options[0].conversation.ToArray();
-        gameObject.transform.GetChild(1).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
+        string[] array = allBranches.npcs[NpcNum].options[0].conversation.ToArray();
+        gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
 }

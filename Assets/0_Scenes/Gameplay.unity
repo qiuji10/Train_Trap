@@ -8300,20 +8300,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1583795680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640921975378535122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe9231c08f2bd749afc43871cd02f04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasTicket: 0
-  ticketPrefab: {fileID: 7438010882266090855, guid: 474ab31db69187344a2483aa31a8f5f1, type: 3}
 --- !u!1 &1591948619
 GameObject:
   m_ObjectHideFlags: 0
@@ -12043,7 +12029,6 @@ GameObject:
   - component: {fileID: 6471460221598696368}
   - component: {fileID: 9131271835173007947}
   - component: {fileID: 3566947518533364636}
-  - component: {fileID: 1583795680}
   m_Layer: 0
   m_Name: NPC_01
   m_TagString: Untagged
@@ -12587,12 +12572,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3566947519300196644}
         m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
-        m_MethodName: changeDialogue2
-        m_Mode: 1
+        m_MethodName: ChangeDialogueTo_Opt0_Special
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12632,12 +12617,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3566947519300196644}
         m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
-        m_MethodName: changeDialogue3
-        m_Mode: 1
+        m_MethodName: ChangeDialogueTo_Opt1_Special
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12659,12 +12644,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3566947519300196644}
         m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
-        m_MethodName: changeDialogue4
-        m_Mode: 1
+        m_MethodName: ChangeDialogueTo_Opt0_Conversation
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12673,7 +12658,7 @@ MonoBehaviour:
   cfAnimator: {fileID: 0}
   player: {fileID: 1005050758}
   crossFade: {fileID: 1155613024}
-  hintText: {fileID: 0}
+  hintText: {fileID: 933049035}
 --- !u!114 &6471460221598696368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12691,9 +12676,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3566947519300196644}
-        m_TargetAssemblyTypeName: DialogueBranch, Assembly-CSharp
-        m_MethodName: changeDialogue
-        m_Mode: 1
+        m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
+        m_MethodName: ChangeDialogueTo_Opt0_Special
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
