@@ -64,19 +64,19 @@ public class DialogueDatabase : MonoBehaviour
     //    }
     //}
 
-    public void ChangeDialogueTo_Opt0_Special(int NpcNum)
+    public void DialogueTo_Opt0_Special(int NpcNum)
     {
         string[] array = allBranches.npcs[NpcNum].options[0].specialDialogue.ToArray();
         gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
 
-    public void ChangeDialogueTo_Opt1_Special(int NpcNum)
+    public void DialogueTo_Opt1_Special(int NpcNum)
     {
         string[] array = allBranches.npcs[NpcNum].options[1].specialDialogue.ToArray();
         gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
 
-    public void ChangeDialogueTo_Opt0_Conversation(int NpcNum)
+    public void DialogueTo_Opt0_Conversation(int NpcNum)
     {
         string[] array = allBranches.npcs[NpcNum].options[0].conversation.ToArray();
         gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
