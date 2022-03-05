@@ -15,7 +15,7 @@ public class FixRadio : MonoBehaviour
     public GameObject completebar;
     public Slider db;
 
-    
+    AudioSource audioData;
 
     void Awake()
     {
@@ -40,7 +40,8 @@ public class FixRadio : MonoBehaviour
                 Debug.Log("Radio is fixed");
                 completebar.SetActive(false);
                 GetComponent<BoxCollider2D>().enabled = false;
-             
+                audioData = GetComponent<AudioSource>();
+                audioData.Play(0);
             }
            
 
