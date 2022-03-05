@@ -13494,7 +13494,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3566947519300196644}
         m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
-        m_MethodName: ChangeDialogueTo_Opt0_Special
+        m_MethodName: DialogueTo_Opt0_Special
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
