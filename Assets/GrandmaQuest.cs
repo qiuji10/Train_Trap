@@ -9,18 +9,10 @@ public class GrandmaQuest : MonoBehaviour
     private bool isInRange;
     private bool hasScrew = false;
     public bool isFixed, questInteracted, questComplete;
-
     private int loopCount = 0;
    
-    private Inventory inventory;
     public UnityEvent grandmaQuest, radioFixed, nextSentence;
   
-
-    private void Awake()
-    {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-    }
-
     void Update()
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E) )
@@ -33,7 +25,6 @@ public class GrandmaQuest : MonoBehaviour
                     grandmaQuest.Invoke();
                     questInteracted = true;
                 }
- 
             }
             if (isFixed)
             {

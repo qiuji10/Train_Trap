@@ -8,12 +8,12 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
 
+    public bool isInteracted = false;
+
     public Text nameText;
     public Text dialogueText;
     public GameObject dialogueBox;
     public GameObject slot;
-    public bool isInteracted = false;
-
     private Queue<string> sentences;
 
     void Awake()

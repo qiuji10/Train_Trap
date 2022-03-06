@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public bool isMoving = false;
 
-    PlayerCore playerCore;
-    Rigidbody2D rb;
-    Vector2 movement;
-
     public BoxCollider2D collide2D;
     public Animator animator;
+    PlayerCore playerCore;
+    Rigidbody2D rb;
+
+    Vector2 movement;
 
     void Awake()
     {
