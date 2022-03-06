@@ -17,6 +17,8 @@ TagManager:
   - Panel
   - locker
   - screwdriver
+  - radio
+  - grandma
   layers:
   - Default
   - TransparentFX

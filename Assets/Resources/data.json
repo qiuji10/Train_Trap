@@ -94,20 +94,33 @@
             ]
         },
         {
-            "npcName":"Karen",
+            "npcName":"Grandma",
             "options":[
                 {
-                    "conversation":[
-                        "This seat is not comfy..",
-                        "It's unacceptable!",
-                        "I want to speak to the manager!"
+                    "conversation": [
+                        "It's a long journey",
+                        "I wonder what's on the news."
+
                     ],
-                    "readingMinds":[
-                        "I want change my seat to the upper upper class!",
-                        "this poor seat not fit with me."
+                    "readingMinds": [
+                        "If only the radio's not broken, I could listen to the news."
+
                     ],
-                    "specialDialogue":[
-                        
+                    "specialDialogue": [
+
+                    ]
+                },
+                {
+                    "conversation": [
+                        "Could you take a look at this radio?",
+                        "It's broken and perhaps you could try to fix it!"
+                    ],
+                    "readingMinds": [
+
+                    ],
+                    "specialDialogue": [
+                        "Thank you so much kid...",
+                        "Now I can finally listen to the news!"
                     ]
                 }
             ]

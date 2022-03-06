@@ -10,12 +10,15 @@ public class FixRadio : MonoBehaviour
     public float setTimer = 5f;
     private float holdTimer;
     private int i = 0;
+    
 
     public GameObject screwdriver;
     public GameObject completebar;
     public Slider db;
+    public GrandmaQuest gq;
 
-    AudioSource audioData;
+    AudioSource audioData; 
+    
 
     void Awake()
     {
@@ -38,17 +41,21 @@ public class FixRadio : MonoBehaviour
             if (holdTimer < 0)
             {
                 Debug.Log("Radio is fixed");
+
+                GameObject g = GameObject.FindGameObjectWithTag("grandma");
+                gq = g.GetComponent<GrandmaQuest>();
+                gq.isFixed = true;
+
                 completebar.SetActive(false);
                 GetComponent<BoxCollider2D>().enabled = false;
                 audioData = GetComponent<AudioSource>();
                 audioData.Play(0);
             }
-           
-
-            
+                       
         }
         else
         {
+           
             holdTimer = setTimer;
             db.value = setTimer;
         }

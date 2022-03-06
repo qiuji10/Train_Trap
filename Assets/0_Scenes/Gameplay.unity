@@ -3864,7 +3864,7 @@ GameObject:
   - component: {fileID: 804614612}
   m_Layer: 0
   m_Name: radio
-  m_TagString: Untagged
+  m_TagString: radio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3935,7 +3935,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: cfc30a4e9b655f64a9508bac8b237e90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3980,6 +3980,7 @@ MonoBehaviour:
   screwdriver: {fileID: 0}
   completebar: {fileID: 1715619142}
   db: {fileID: 0}
+  gq: {fileID: 0}
 --- !u!82 &804614612
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11920,226 +11921,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032988300}
   m_CullTransparentMesh: 1
---- !u!1 &2059988151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2059988152}
-  - component: {fileID: 2059988157}
-  - component: {fileID: 2059988156}
-  - component: {fileID: 2059988155}
-  - component: {fileID: 2059988154}
-  - component: {fileID: 2059988153}
-  m_Layer: 0
-  m_Name: dad
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2059988152
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059988151}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.56, y: -1.2026435, z: -1}
-  m_LocalScale: {x: 1.1047387, y: 0.97, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3566947519300196647}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2059988153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059988151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f0ecfd28527c25488dd52343b0d3bc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Kid
-    sentences: []
-  readMinds:
-    name: 
-    sentences: []
---- !u!114 &2059988154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059988151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a03c2aca8710dc94eb574da34a4e1ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInRange: 0
-  dialogueKey: 101
-  readMindKey: 114
-  dialogueAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2059988153}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  readMindsAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2059988153}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerReadMinds
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  nextSentence:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7571401879728251200}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2059988155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059988151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0193098236f645941a03d7557712c722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ticketPrefab: {fileID: 7438010882266090855, guid: 474ab31db69187344a2483aa31a8f5f1, type: 3}
-  triggerQuest:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3566947519300196644}
-        m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
-        m_MethodName: ChangeDialogueTo_Opt0_Special
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!212 &2059988156
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059988151}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 641c95e293bf9e64ea11933bdf86495c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!61 &2059988157
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059988151}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.46560934, y: 0.015084654}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8754669, y: 0.6977765}
-  m_EdgeRadius: 0
 --- !u!1 &2068799048
 GameObject:
   m_ObjectHideFlags: 0
@@ -12846,7 +12627,7 @@ GameObject:
   - component: {fileID: 9131271835173007947}
   - component: {fileID: 3566947518533364636}
   m_Layer: 0
-  m_Name: NPC_01
+  m_Name: NPC_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13045,7 +12826,6 @@ Transform:
   - {fileID: 1515518211867266531}
   - {fileID: 1515518211074943228}
   - {fileID: 1515518211928639880}
-  - {fileID: 2059988152}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13289,7 +13069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Karen
+    name: Grandma
     sentences:
     - be careful!
     - there is dog at back
@@ -13366,7 +13146,7 @@ GameObject:
   - component: {fileID: 2136907332}
   - component: {fileID: 8552244341261212256}
   m_Layer: 0
-  m_Name: NPC_02
+  m_Name: NPC_1
   m_TagString: guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13583,7 +13363,7 @@ GameObject:
   - component: {fileID: 298097876045759410}
   - component: {fileID: 5412080954013506149}
   m_Layer: 0
-  m_Name: NPC_04
+  m_Name: NPC_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13603,7 +13383,7 @@ GameObject:
   - component: {fileID: 298097876334782125}
   - component: {fileID: 5412080954801651578}
   m_Layer: 0
-  m_Name: NPC_03
+  m_Name: NPC_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13622,13 +13402,57 @@ GameObject:
   - component: {fileID: 5412080955139848978}
   - component: {fileID: 298097874928149190}
   - component: {fileID: 5412080955139848977}
+  - component: {fileID: 8250249334500487776}
   m_Layer: 0
-  m_Name: NPC_05
-  m_TagString: Untagged
+  m_Name: NPC_4
+  m_TagString: grandma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8250249334500487776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8250249334500487775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e58264fd161a3c4691d49d82f526e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFixed: 0
+  grandmaQuest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3566947519300196644}
+        m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
+        m_MethodName: DialogueTo_Opt1_Conversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  radioFixed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3566947519300196644}
+        m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
+        m_MethodName: DialogueTo_Opt1_Special
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8552244341261212252
 MonoBehaviour:
   m_ObjectHideFlags: 0
