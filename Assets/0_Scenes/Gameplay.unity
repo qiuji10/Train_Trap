@@ -1768,7 +1768,7 @@ PrefabInstance:
       objectReference: {fileID: 1155613024}
     - target: {fileID: 8037040943836153503, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
       propertyPath: timeValue
-      value: 90
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
@@ -13274,7 +13274,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3566947519300196644}
         m_TargetAssemblyTypeName: DialogueDatabase, Assembly-CSharp
-        m_MethodName: ChangeDialogueTo_Opt0_Special
+        m_MethodName: DialogueTo_Opt0_Special
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
