@@ -12,8 +12,8 @@ public class GameOverScreen : MonoBehaviour
     private void Awake()
     {
         playerDieCount = PlayerPrefs.GetInt("PlayerDieCount");
-        countText.text = playerDieCount.ToString();
         playerDieCount++;
+        countText.text = playerDieCount.ToString();
         PlayerPrefs.SetInt("PlayerDieCount", playerDieCount);
     }
 

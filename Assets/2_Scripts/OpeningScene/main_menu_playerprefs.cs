@@ -6,6 +6,6 @@ public class main_menu_playerprefs : MonoBehaviour
 {
     private void Awake()
     {
-        PlayerPrefs.SetInt("PlayerDieCount", 1);
+        PlayerPrefs.SetInt("PlayerDieCount", 0);
     }
 }
