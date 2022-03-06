@@ -135,25 +135,34 @@
 
                     ],
                     "readingMinds": [
-                       
+
 
                     ],
                     "specialDialogue": [
                         "Here's a newspaper as a token of appreciation!",
                         "Thank you so much!"
                     ]
-                },
+                }
+
+            ]
+        },
+        {
+            "npcName": "Daughter",
+            "options": [
                 {
                     "conversation": [
+                        "Uuuuwaaaa!!! *cries*"
                         
                     ],
                     "readingMinds": [
 
+
                     ],
                     "specialDialogue": [
-                        
+                        "Yippie!!"
                     ]
                 }
+
             ]
         }
     ]

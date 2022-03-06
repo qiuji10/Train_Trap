@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class DadQuest : MonoBehaviour
 {
+    public DaughterDialogue dd;
     public UnityEvent dadQuest, doneQuest;
     private Inventory inventory;
     public GameObject coin, newspaper;
@@ -27,8 +28,6 @@ public class DadQuest : MonoBehaviour
             if (!questInteracted)
             {
                 dadQuest.Invoke();
-                PlayerCore.instance.inventoryName.Insert(loopCount, "");
-                inventory.isFull[loopCount] = false;
                 Instantiate(coin);
                 isInRange = false;
                 questInteracted = true;
@@ -40,6 +39,11 @@ public class DadQuest : MonoBehaviour
                 if (has7up)
                 {
                     doneQuest.Invoke();
+
+                    GameObject d = GameObject.FindGameObjectWithTag("daughter");
+                    dd = d.GetComponent<DaughterDialogue>();
+                    dd.givenDrink = true;
+
                     PlayerCore.instance.inventoryName.Insert(loopCount, "");
                     PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
                     inventory.isFull[loopCount] = false;
@@ -51,7 +55,9 @@ public class DadQuest : MonoBehaviour
                     {
                         inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
                     }
+
                     questDone = true;
+
                 }
             }
 
