@@ -8,14 +8,13 @@ public class GrandmaQuest : MonoBehaviour
 {
     private bool isInRange;
     private bool hasScrew = false;
-    public bool isFixed;
+    public bool isFixed, questInteracted, questComplete;
 
     private int loopCount = 0;
    
     private Inventory inventory;
-    public UnityEvent grandmaQuest;
-    public UnityEvent radioFixed;
-    
+    public UnityEvent grandmaQuest, radioFixed, nextSentence;
+  
 
     private void Awake()
     {
@@ -29,12 +28,21 @@ public class GrandmaQuest : MonoBehaviour
             hasScrew = PlayerCore.instance.CheckItem(ref loopCount, "screwdriver");
             if (hasScrew)
             {
-                grandmaQuest.Invoke();
-               
+                if (!questInteracted)
+                {
+                    grandmaQuest.Invoke();
+                    questInteracted = true;
+                }
+ 
             }
-            if (isFixed == true)
+            if (isFixed)
             {
-                radioFixed.Invoke();
+                if (!questComplete)
+                {
+                    radioFixed.Invoke();
+                    questComplete = true;
+                }
+                    
             }
         }
        
