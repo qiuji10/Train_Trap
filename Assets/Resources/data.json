@@ -94,8 +94,8 @@
             ]
         },
         {
-            "npcName":"Grandma",
-            "options":[
+            "npcName": "Grandma",
+            "options": [
                 {
                     "conversation": [
                         "It's a long journey",
@@ -121,6 +121,37 @@
                     "specialDialogue": [
                         "Thank you so much kid...",
                         "Now I can finally listen to the news!"
+                    ]
+                }
+            ]
+        },
+        {
+            "npcName": "Dad",
+            "options": [
+                {
+                    "conversation": [
+                        "Sorry to bother you kid",
+                        "Here's a dollar, could you help me to get an orange juice?"
+
+                    ],
+                    "readingMinds": [
+                       
+
+                    ],
+                    "specialDialogue": [
+                        "Here's a newspaper as a token of appreciation!",
+                        "Thank you so much!"
+                    ]
+                },
+                {
+                    "conversation": [
+                        
+                    ],
+                    "readingMinds": [
+
+                    ],
+                    "specialDialogue": [
+                        
                     ]
                 }
             ]
