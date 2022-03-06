@@ -7,6 +7,7 @@ public class VendingMachine : MonoBehaviour
 {
     public bool isInRange = false;
     private bool hasCoin;
+    private int loopCount;
     private int i;
     public GameObject coke;
     private Inventory inventory;
@@ -21,17 +22,18 @@ public class VendingMachine : MonoBehaviour
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            hasCoin = PlayerCore.instance.CheckItem(ref i, "coin");
+            hasCoin = PlayerCore.instance.CheckItem(ref loopCount, "coin");
             if (hasCoin)
             {
-                PlayerCore.instance.inventoryName.RemoveAt(i);
-                inventory.isFull[i] = false;
+                PlayerCore.instance.inventoryName.RemoveAt(loopCount);
+                inventory.isFull[loopCount] = false;
                 Instantiate(coke);
                 PlayerCore.instance.inventoryName.Add("");
                 Destroy(GameObject.FindGameObjectWithTag("coin"));
-                for (int i = 0; i < inventory.slots.Length; i++)
+                Debug.Log("destory coinnnnnn");
+                for (int j = 0; j < inventory.slots.Length; j++)
                 {
-                    inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
+                    inventory.slots[j].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[j];
                 }
             }
         }

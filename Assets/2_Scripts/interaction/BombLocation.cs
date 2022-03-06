@@ -10,6 +10,7 @@ public class BombLocation : MonoBehaviour
     public float setTimer = 5f;
     private float holdTimer;
     private int i = 0;
+    private int j;
 
     public GameObject toolbox;
     public GameObject defuseBar;
@@ -49,7 +50,7 @@ public class BombLocation : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            PlayerCore.instance.KeyE = PlayerCore.instance.CheckItem(ref i, "toolbox");
+            PlayerCore.instance.KeyE = PlayerCore.instance.CheckItem(ref j, "toolbox");
         }
     }
 
