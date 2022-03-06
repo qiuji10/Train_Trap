@@ -10,12 +10,7 @@ public class Locker : MonoBehaviour
     public GameObject Keypad;
     public bool keypad = false;
     public bool hasToolBox = false;
-   
 
-
-
-
-    // Update is called once per frame
     void Update()
     {
         

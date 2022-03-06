@@ -25,12 +25,11 @@ public class VendingMachine : MonoBehaviour
             hasCoin = PlayerCore.instance.CheckItem(ref loopCount, "coin");
             if (hasCoin)
             {
-                PlayerCore.instance.inventoryName.RemoveAt(loopCount);
+                PlayerCore.instance.inventoryName.Insert(loopCount, "");
+                PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
                 inventory.isFull[loopCount] = false;
                 Instantiate(coke);
-                PlayerCore.instance.inventoryName.Add("");
                 Destroy(GameObject.FindGameObjectWithTag("coin"));
-                Debug.Log("destory coinnnnnn");
                 for (int j = 0; j < inventory.slots.Length; j++)
                 {
                     inventory.slots[j].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[j];
