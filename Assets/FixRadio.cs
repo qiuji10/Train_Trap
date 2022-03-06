@@ -10,7 +10,7 @@ public class FixRadio : MonoBehaviour
     public float setTimer = 5f;
     private float holdTimer;
     private int i = 0;
-    
+    private int j = 0;
 
     public GameObject screwdriver;
     public GameObject completebar;
@@ -18,15 +18,12 @@ public class FixRadio : MonoBehaviour
     public GrandmaQuest gq;
 
     AudioSource audioData; 
-    
 
     void Awake()
     {
         db = completebar.GetComponent<Slider>();
         db.maxValue = setTimer;
     }
-
-   
 
     void Update()
     {
@@ -50,8 +47,7 @@ public class FixRadio : MonoBehaviour
                 GetComponent<BoxCollider2D>().enabled = false;
                 audioData = GetComponent<AudioSource>();
                 audioData.Play(0);
-            }
-                       
+            }      
         }
         else
         {
@@ -66,7 +62,7 @@ public class FixRadio : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            PlayerCore.instance.KeyE = PlayerCore.instance.CheckItem(ref i, "toolbox");
+            PlayerCore.instance.KeyE = PlayerCore.instance.CheckItem(ref j, "screwdriver");
         }
     }
 

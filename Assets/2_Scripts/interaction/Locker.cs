@@ -6,19 +6,18 @@ using UnityEngine.UI;
 public class Locker : MonoBehaviour
 {
     public bool isInRange = false;
-    public GameObject toolbox;
-    public GameObject Keypad;
     public bool keypad = false;
     public bool hasToolBox = false;
 
+    public GameObject toolbox;
+    public GameObject Keypad;
+    
     void Update()
     {
         
         if (isInRange && hasToolBox == false  && Input.GetKeyDown(KeyCode.E))
         {
             Keypad.SetActive(true);
-            
-          
         }
 
         if (isInRange && Input.GetKeyDown(KeyCode.Escape))
@@ -52,6 +51,4 @@ public class Locker : MonoBehaviour
             Debug.Log("Player is not in Range");
         }
     }
-
-    
 }
