@@ -12,21 +12,11 @@ public class GameSceneManager : MonoBehaviour
             Destroy(this.gameObject);
         else
             instance = this;
+        Debug.Log(PlayerPrefs.GetInt("PlayerDieCount"));
     }
 
     public void SwitchScene(int indexBuild)
     {
         SceneManager.LoadScene(indexBuild);
-    }
-
-    public void QuitButton()
-    {
-        Application.Quit();
-        Debug.Log("Game is closed");
-    }
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene("OpeningScene");
     }
 }

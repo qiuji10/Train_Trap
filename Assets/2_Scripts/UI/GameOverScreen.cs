@@ -9,12 +9,12 @@ public class GameOverScreen : MonoBehaviour
     public Text countText;
     private int playerDieCount;
 
-    private void Awake()
+    private void Start()
     {
         playerDieCount = PlayerPrefs.GetInt("PlayerDieCount");
-        playerDieCount++;
-        countText.text = playerDieCount.ToString();
+        playerDieCount += 1;
         PlayerPrefs.SetInt("PlayerDieCount", playerDieCount);
+        countText.text = playerDieCount.ToString();
     }
 
     public void ReviveButton()
