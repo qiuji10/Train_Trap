@@ -1910,7 +1910,7 @@ PrefabInstance:
       objectReference: {fileID: 1155613024}
     - target: {fileID: 8037040943836153503, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
       propertyPath: timeValue
-      value: 10
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8037040943836153503, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
       propertyPath: objectiveHint
