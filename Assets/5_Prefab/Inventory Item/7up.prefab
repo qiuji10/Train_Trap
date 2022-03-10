@@ -98,8 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d253e62dbc8986c4db9d134a610be7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 8056546713476811267, guid: 95edea05480847740b3922fa35cf0eb4, type: 3}
   isInRange: 0
+  pdc: 0
+  itemButton: {fileID: 8056546713476811267, guid: 95edea05480847740b3922fa35cf0eb4, type: 3}
+  dialogueBox: {fileID: 0}
 --- !u!61 &6295159653313501599
 BoxCollider2D:
   m_ObjectHideFlags: 0

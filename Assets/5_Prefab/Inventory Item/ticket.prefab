@@ -99,7 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d253e62dbc8986c4db9d134a610be7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInRange: 0
+  pdc: 0
   itemButton: {fileID: 8056546713476811267, guid: 23e2a6e44c0f56346b3c7585a974b4b1, type: 3}
+  dialogueBox: {fileID: 0}
 --- !u!61 &7438010882266090874
 BoxCollider2D:
   m_ObjectHideFlags: 0

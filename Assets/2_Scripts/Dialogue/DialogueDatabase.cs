@@ -25,11 +25,30 @@ public class AllBranches
 
 public class DialogueDatabase : MonoBehaviour
 {
+    int i = 0;
+    private int pdc;
+
     [SerializeField]
     List<GameObject> npc = new List<GameObject>();
     public AllBranches allBranches;
     public TextAsset jsonText;
-    int i = 0;
+    
+
+    private void Awake()
+    {
+        pdc = PlayerPrefs.GetInt("PlayerDieCount");
+
+        if (pdc == 0)
+        {
+            foreach (Transform child in transform)
+            {
+                if (child.GetComponent("ActivateDistract") != null)
+                {
+                    child.GetComponent<ActivateDistract>().enabled = false;
+                }
+            }
+        }
+    }
 
     void Start()
     {

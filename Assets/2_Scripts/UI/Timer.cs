@@ -6,16 +6,21 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public float timeValue = 90;
+    private int pdc;
 
     public Text timeText;
-    public GameObject crossFade;
-    public GameObject bomb;
+    public GameObject crossFade, bomb, objectiveHint;
     public GameSceneManager gsm;
     [SerializeField] private GameObject cam;
 
     void Awake()
     {
         gsm = GetComponent<GameSceneManager>();
+        pdc = PlayerPrefs.GetInt("PlayerDieCount");
+        if (pdc == 0)
+        {
+            objectiveHint.SetActive(false);
+        }
     }
 
     void Update()
@@ -29,7 +34,11 @@ public class Timer : MonoBehaviour
             timeValue = 0;
             GameOver();
         }
-        DisplayTime(timeValue);
+
+        if (pdc != 0)
+            DisplayTime(timeValue);
+        else
+            return;
     }
 
     public void GameOver()

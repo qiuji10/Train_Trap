@@ -1792,6 +1792,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1591948623}
     m_Modifications:
+    - target: {fileID: 8037040943836153488, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037040943836153488, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037040943836153488, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037040943836153488, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8037040943836153489, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1894,8 +1910,12 @@ PrefabInstance:
       objectReference: {fileID: 1155613024}
     - target: {fileID: 8037040943836153503, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
       propertyPath: timeValue
-      value: 90
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8037040943836153503, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
+      propertyPath: objectiveHint
+      value: 
+      objectReference: {fileID: 1868933286}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
 --- !u!1 &295796473
@@ -2358,8 +2378,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d253e62dbc8986c4db9d134a610be7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 5077779633405715856, guid: cafe6cd9a03914843af1463209360d49, type: 3}
   isInRange: 0
+  pdc: 0
+  itemButton: {fileID: 5077779633405715856, guid: cafe6cd9a03914843af1463209360d49, type: 3}
 --- !u!61 &364981248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3819,7 +3840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725859705}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.745, y: -1.2026435, z: -1}
+  m_LocalPosition: {x: -62.43, y: -1.2026435, z: -1}
   m_LocalScale: {x: 1.1047387, y: 0.97, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4019,7 +4040,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.47066772, y: 0.015084654}
+  m_Offset: {x: -0.06858896, y: 0.015084654}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4030,7 +4051,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9438078, y: 0.6977765}
+  m_Size: {x: 0.86529446, y: 0.6977765}
   m_EdgeRadius: 0
 --- !u!1 &738773210
 GameObject:
@@ -6369,11 +6390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505592, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.05
+      value: 14.15
       objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505592, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.255
+      value: -3.2
       objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505592, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6605,7 +6626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193166427}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63.001, y: -1.2026435, z: -1}
+  m_LocalPosition: {x: -63.686, y: -1.2026435, z: -1}
   m_LocalScale: {x: 1.1047387, y: 0.97, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6848,8 +6869,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d253e62dbc8986c4db9d134a610be7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 8056546713476811267, guid: a14778233beffee49a8dcf606db66c63, type: 3}
   isInRange: 0
+  pdc: 0
+  itemButton: {fileID: 8056546713476811267, guid: a14778233beffee49a8dcf606db66c63, type: 3}
 --- !u!212 &1209891908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11685,8 +11707,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d253e62dbc8986c4db9d134a610be7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 5077779633405715856, guid: 78b9930b4d9735c40b3c5ccecde7e1a3, type: 3}
   isInRange: 0
+  pdc: 0
+  itemButton: {fileID: 5077779633405715856, guid: 78b9930b4d9735c40b3c5ccecde7e1a3, type: 3}
 --- !u!212 &1929864965
 SpriteRenderer:
   m_ObjectHideFlags: 0
