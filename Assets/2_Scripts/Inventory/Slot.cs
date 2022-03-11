@@ -7,7 +7,6 @@ public class Slot : MonoBehaviour
 {
     private Inventory inventory;
     public int i;
-    private int loopCount;
 
     private void Start()
     {
@@ -22,13 +21,11 @@ public class Slot : MonoBehaviour
         }
     }
 
-    public void DropItem()
+    public void DestroyUI()
     {
         foreach (Transform child in transform)
         {
-            child.GetComponent<Spawn>().SpawnDroppedItem();
             GameObject.Destroy(child.gameObject);
-            
         }
     }
 }
