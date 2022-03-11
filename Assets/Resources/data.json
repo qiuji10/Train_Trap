@@ -152,7 +152,7 @@
                 {
                     "conversation": [
                         "Uuuuwaaaa!!! *cries*"
-
+                        
                     ],
                     "readingMinds": [
 
@@ -160,25 +160,6 @@
                     ],
                     "specialDialogue": [
                         "Yippie!!"
-                    ]
-                }
-
-            ]
-        },
-        {
-            "npcName": "TimidGuy",
-            "options": [
-                {
-                    "conversation": [
-                        "There's a BOMB'"
-
-                    ],
-                    "readingMinds": [
-
-
-                    ],
-                    "specialDialogue": [
-                        
                     ]
                 }
 
