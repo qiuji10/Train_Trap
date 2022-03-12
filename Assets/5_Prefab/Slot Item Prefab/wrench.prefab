@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 410297632249597158}
   - component: {fileID: 7809547086143322042}
   - component: {fileID: 3578166513908188190}
+  - component: {fileID: 7547639319028530299}
   m_Layer: 5
   m_Name: wrench
   m_TagString: wrench
@@ -121,3 +122,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7547639319028530299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5077779633405715856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7270b6401eb79bd4dab243126b778d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 330241848278841597, guid: d42875c2955062042ad9f8592fa9c482, type: 3}

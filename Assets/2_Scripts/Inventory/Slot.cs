@@ -21,10 +21,11 @@ public class Slot : MonoBehaviour
         }
     }
 
-    public void DestroyUI()
+    public void DropItem()
     {
         foreach (Transform child in transform)
         {
+            child.GetComponent<Spawn>().SpawnDroppedItem();
             GameObject.Destroy(child.gameObject);
         }
     }
