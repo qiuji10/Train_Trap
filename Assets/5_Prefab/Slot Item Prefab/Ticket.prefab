@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3173019743751234421}
   - component: {fileID: 5032889759886628905}
   - component: {fileID: 1734251289624062861}
-  - component: {fileID: 3759048609453614435}
+  - component: {fileID: 7910737105383818685}
   m_Layer: 5
-  m_Name: 7up
-  m_TagString: Coke
+  m_Name: Ticket
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,14 +61,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08091678, g: 0.8773585, b: 0.012415428, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c58db611554d6a8439affa4407baadeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e5b5a7c87131f9d499c4d314f9c5958a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3759048609453614435
+--- !u!114 &7910737105383818685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7270b6401eb79bd4dab243126b778d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 6256419025553779127, guid: 3c9f105ba0a34e64a98763b638a98967, type: 3}
+  item: {fileID: 7438010882266090855, guid: 474ab31db69187344a2483aa31a8f5f1, type: 3}
