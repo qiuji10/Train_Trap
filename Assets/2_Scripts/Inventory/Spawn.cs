@@ -8,7 +8,7 @@ public class Spawn : MonoBehaviour
     public Transform player;
      public void Start()
     {
-        player = GameObject.FindGameObjectWithTag("player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
    public void SpawnDroppedItem()
