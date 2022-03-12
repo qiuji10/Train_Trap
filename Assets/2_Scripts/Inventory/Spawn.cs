@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public GameObject item;
-    private Transform player;
+    public Transform player;
      public void Start()
     {
         player = GameObject.FindGameObjectWithTag("player").transform;

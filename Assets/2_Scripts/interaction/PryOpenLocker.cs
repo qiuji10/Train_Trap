@@ -27,16 +27,21 @@ public class PryOpenLocker : MonoBehaviour
             
             if (hasCrowbar )
             {
-                Instantiate(toolbox);
-                Debug.Log("IS OPEN");
-                
-                GameObject g = GameObject.FindGameObjectWithTag("locker");
-                boolBoy = g.GetComponent<Locker>();
-                boolBoy.hasToolBox = true;
-                for (int k = 0; k < inventory.slots.Length; k++)
+               if (hastoolBox == false)
                 {
-                    inventory.slots[k].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[k];
+                    Instantiate(toolbox);
+                    Debug.Log("IS OPEN");
+                
+                    GameObject g = GameObject.FindGameObjectWithTag("locker");
+                    boolBoy = g.GetComponent<Locker>();
+                    boolBoy.hasToolBox = true;
+                    hastoolBox = true; 
+                    for (int k = 0; k < inventory.slots.Length; k++)
+                    {
+                        inventory.slots[k].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[k];
+                    }
                 }
+               
 
             }
         }
