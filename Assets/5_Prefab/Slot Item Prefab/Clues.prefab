@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afdfe444d3c4c240ab9aaf5be6b7dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CluePanel: {fileID: 8327605008576170399, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+  CluePanel: {fileID: 4696314576841996204, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}

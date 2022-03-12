@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Clues : MonoBehaviour
 {
@@ -12,16 +13,14 @@ public class Clues : MonoBehaviour
 
         if (CluePanel != null)
         {
-
             bool isActive = CluePanel.activeSelf;
-            CluePanel.SetActive(isActive);
-
-            Debug.Log("working");
+            CluePanel.SetActive(isActive); 
         }
     }
 
     public void DestroyPanel()
     {
         Destroy(CluePanel);
+        Debug.Log("working");
     }
 }
