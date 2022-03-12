@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PryOpenLocker : MonoBehaviour
 {
     public bool InRange = false;
+    public bool hastoolBox = false;
     private bool hasCrowbar;
     private int Count;
     public GameObject toolbox;
