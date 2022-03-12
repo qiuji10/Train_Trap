@@ -42,6 +42,7 @@ public class BombLocation : MonoBehaviour
                 {
                     Instantiate(MaryPic);
                     isCreated = true;
+                    //Destroy(defuseBar);
                 }
                
             
