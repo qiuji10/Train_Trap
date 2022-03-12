@@ -10,7 +10,6 @@ public class PryOpenLocker : MonoBehaviour
     private int Count;
     public GameObject toolbox;
     public Locker boolBoy;
-    private bool hastoolBox = false;
     private Inventory inventory;
 
     private void Awake()
