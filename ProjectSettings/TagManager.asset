@@ -22,6 +22,7 @@ TagManager:
   - daughter
   - Mary
   - Crowbar
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -32,6 +32,7 @@ public class VendingMachine : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag("coin"));
                 for (int j = 0; j < inventory.slots.Length; j++)
                 {
+                    Destroy(inventory.slots[loopCount].transform.GetChild(1).gameObject);
                     inventory.slots[j].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[j];
                 }
             }
