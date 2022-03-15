@@ -24,6 +24,7 @@ TagManager:
   - Crowbar
   - Coin
   - slot_orangejuice
+  - Orange_Juice
   layers:
   - Default
   - TransparentFX
