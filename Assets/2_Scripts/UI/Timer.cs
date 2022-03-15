@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeValue = 90;
+    public float timeValue = 180;
     private int pdc;
 
     public Text timeText;
@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
         pdc = PlayerPrefs.GetInt("PlayerDieCount");
         if (pdc == 0)
         {
+            timeValue = 60;
             objectiveHint.SetActive(false);
         }
     }

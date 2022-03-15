@@ -12,7 +12,6 @@ public class GameSceneManager : MonoBehaviour
             Destroy(this.gameObject);
         else
             instance = this;
-        Debug.Log(PlayerPrefs.GetInt("PlayerDieCount"));
     }
 
     public void SwitchScene(int indexBuild)

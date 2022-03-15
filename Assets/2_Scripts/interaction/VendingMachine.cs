@@ -9,7 +9,7 @@ public class VendingMachine : MonoBehaviour
     private bool hasCoin;
     private int loopCount;
     private int i;
-    public GameObject coke;
+    public GameObject drink;
     private Inventory inventory;
 
     private void Awake()
@@ -28,7 +28,7 @@ public class VendingMachine : MonoBehaviour
                 PlayerCore.instance.inventoryName.Insert(loopCount, "");
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
                 inventory.isFull[loopCount] = false;
-                Instantiate(coke);
+                Instantiate(drink);
                 Destroy(GameObject.FindGameObjectWithTag("coin"));
                 for (int j = 0; j < inventory.slots.Length; j++)
                 {

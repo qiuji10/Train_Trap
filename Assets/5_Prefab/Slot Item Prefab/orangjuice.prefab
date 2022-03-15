@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1734251289624062861}
   - component: {fileID: 3759048609453614435}
   m_Layer: 5
-  m_Name: 7up
-  m_TagString: Coke
+  m_Name: orangjuice
+  m_TagString: slot_orangejuice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08091678, g: 0.8773585, b: 0.012415428, a: 1}
+  m_Color: {r: 0.8784314, g: 0.48237544, b: 0.011764714, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

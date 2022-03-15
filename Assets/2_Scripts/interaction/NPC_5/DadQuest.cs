@@ -12,8 +12,8 @@ public class DadQuest : MonoBehaviour
     public GameObject coin, newspaper;
 
     private bool isInRange;
-    private bool has7up = false;
-    private bool taken7up = false;
+    private bool hasOJ = false;
+    private bool takenOJ = false;
     public bool questInteracted, questDone;
     private int loopCount = 0;
 
@@ -23,7 +23,7 @@ public class DadQuest : MonoBehaviour
     }
     void Update()
     {
-        if (isInRange && Input.GetKeyDown(KeyCode.E) && !taken7up)
+        if (isInRange && Input.GetKeyDown(KeyCode.E) && !takenOJ)
         {
             if (!questInteracted)
             {
@@ -35,8 +35,8 @@ public class DadQuest : MonoBehaviour
             
             if (!questDone)
             {
-                has7up = PlayerCore.instance.CheckItem(ref loopCount, "7up");
-                if (has7up)
+                hasOJ = PlayerCore.instance.CheckItem(ref loopCount, "Orange_Juice");
+                if (hasOJ)
                 {
                     doneQuest.Invoke();
 
@@ -49,8 +49,8 @@ public class DadQuest : MonoBehaviour
                     inventory.isFull[loopCount] = false;
                     Instantiate(newspaper);
                     isInRange = false;
-                    taken7up = true;
-                    Destroy(GameObject.FindGameObjectWithTag("7up"));
+                    takenOJ = true;
+                    Destroy(GameObject.FindGameObjectWithTag("slot_orangejuice"));
                     for (int i = 0; i < inventory.slots.Length; i++)
                     {
                         inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];

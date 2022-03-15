@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1875505477939760981}
   - component: {fileID: 6295159653313501599}
   m_Layer: 0
-  m_Name: 7up
-  m_TagString: 7up
+  m_Name: orangejuice
+  m_TagString: Orange_Juice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c58db611554d6a8439affa4407baadeb, type: 3}
-  m_Color: {r: 0.15118365, g: 0.9150943, b: 0.11654504, a: 1}
+  m_Color: {r: 0.9137255, g: 0.5729881, b: 0.11764703, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,7 +101,6 @@ MonoBehaviour:
   isInRange: 0
   pdc: 0
   itemButton: {fileID: 8056546713476811267, guid: 95edea05480847740b3922fa35cf0eb4, type: 3}
-  dialogueBox: {fileID: 0}
 --- !u!61 &6295159653313501599
 BoxCollider2D:
   m_ObjectHideFlags: 0

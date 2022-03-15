@@ -23,6 +23,7 @@ TagManager:
   - Mary
   - Crowbar
   - Coin
+  - slot_orangejuice
   layers:
   - Default
   - TransparentFX
