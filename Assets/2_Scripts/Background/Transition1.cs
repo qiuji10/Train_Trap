@@ -5,15 +5,14 @@ using UnityEngine;
 public class Transition1 : MonoBehaviour
 {
     public Transform target;
-    public float speed;
-    public float delay;
+    public float speed,delay,time, active;
     public Timer timer;
-    public float time;
-    
+    public GameObject StationBG , GameplayBg;
     
     void Start()
     {
-        delay = 170;  
+        delay = 170;
+        active = 162;
     }
 
     // Update is called once per frame
@@ -28,8 +27,12 @@ public class Transition1 : MonoBehaviour
         Vector3 a = transform.position;
         Vector3 b = target.position;
         transform.position = Vector3.MoveTowards(a, b, speed);
-
-
         }
+        
+        if (active > time)
+            {
+            StationBG.SetActive(false);
+            GameplayBg.SetActive(true);
+            }
     }
 }
