@@ -1,26 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Clues : MonoBehaviour
 {
     public GameObject CluePanel;
 
+    private void Awake()
+    {
+        CluePanel = GameObject.Find("CluePanel");
+    }
+
     public void OpenPanel()
     {
-        Instantiate(CluePanel, transform.parent, false);
+        //Instantiate(CluePanel, transform.parent, false);
 
-        if (CluePanel != null)
-        {
-            bool isActive = CluePanel.activeSelf;
-            CluePanel.SetActive(isActive); 
-        }
+        //if (CluePanel != null)
+        //{
+        //    bool isActive = CluePanel.activeSelf;
+        //    CluePanel.SetActive(isActive); 
+        //}
+        CluePanel.SetActive(true);
     }
 
     public void DestroyPanel()
     {
-        Destroy(CluePanel);
-        Debug.Log("working");
+        CluePanel.SetActive(false);
+        //Destroy(CluePanel);
     }
 }

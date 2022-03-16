@@ -56,6 +56,8 @@ public class DadQuest : MonoBehaviour
                         inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
                     }
 
+                    PlayerCore.instance.ChangeClueData(1);
+
                     questDone = true;
 
                 }
