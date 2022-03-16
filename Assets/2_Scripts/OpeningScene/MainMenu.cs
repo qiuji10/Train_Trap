@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class MainMenu : MonoBehaviour
 {
     public Button continueButton;
+    public TextAsset booleanJson;
+
     private void Awake()
     {
         if (PlayerPrefs.GetInt("PlayerDieCount") == 0)
@@ -24,6 +27,15 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         PlayerPrefs.SetInt("PlayerDieCount", 0);
+        Collected collected = JsonUtility.FromJson<Collected>(booleanJson.text);
+        int num = 0;
+        foreach (int clue in collected.collectedClue.ToArray())
+        {
+            collected.collectedClue[num] = 0;
+            num++;
+        }
+        string json = JsonUtility.ToJson(collected);
+        File.WriteAllText(Application.dataPath + "/Resources/clueBool.json", booleanJson.text);
         GameSceneManager.instance.SwitchScene(2);
     }
 
