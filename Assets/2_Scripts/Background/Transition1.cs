@@ -12,7 +12,7 @@ public class Transition1 : MonoBehaviour
     void Start()
     {
         delay = 170;
-        active = 162;
+        active = 163;
     }
 
     // Update is called once per frame
