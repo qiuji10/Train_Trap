@@ -7,12 +7,11 @@ public class Transition1 : MonoBehaviour
     public Transform target;
     public float speed,delay,time, active;
     public Timer timer;
-    public GameObject StationBG , GameplayBg;
+    public GameObject falseBG , trueBg;
     
     void Start()
     {
-        delay = 170;
-        active = 163;
+        
     }
 
     // Update is called once per frame
@@ -31,8 +30,8 @@ public class Transition1 : MonoBehaviour
         
         if (active > time)
             {
-            StationBG.SetActive(false);
-            GameplayBg.SetActive(true);
+            falseBG.SetActive(false);
+            trueBg.SetActive(true);
             }
     }
 }
