@@ -16,10 +16,12 @@ public class BombLocation : MonoBehaviour
     public GameObject toolbox;
     public GameObject defuseBar, MaryPic;
     public Slider db;
+    Timer timerOBJ;
    
 
     void Awake()
     {
+        timerOBJ = GameObject.Find("TimerText").GetComponent<Timer>();
         db = defuseBar.GetComponent<Slider>();
         db.maxValue = setTimer;
     }
@@ -43,6 +45,8 @@ public class BombLocation : MonoBehaviour
                     Instantiate(MaryPic);
                     isCreated = true;
                     //Destroy(defuseBar);
+                    timerOBJ.timeValue = 5f;
+                    timerOBJ.levelEnd = true;
                 }
                
             
@@ -54,6 +58,12 @@ public class BombLocation : MonoBehaviour
             db.value = setTimer;
         }
     }
+
+    //IEnumerator BombEnd()
+    //{
+    //    yield return new WaitForSeconds(5);
+
+    //}
 
 
 

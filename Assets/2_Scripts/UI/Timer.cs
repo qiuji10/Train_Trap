@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public float timeValue = 180;
+    public bool levelEnd;
     private int pdc;
 
     public Text timeText;
@@ -52,13 +53,22 @@ public class Timer : MonoBehaviour
     IEnumerator StartGameOver()
     {
         yield return StartCoroutine(cam.GetComponent<CameraFollow>().ShakeScreen(1f, 0.7f));
-        yield return StartCoroutine(SwitchGameOver());
+        if (!levelEnd)
+            yield return StartCoroutine(SwitchGameOver());
+        else
+            yield return StartCoroutine(SwitchWin());
     }
 
     IEnumerator SwitchGameOver()
     {
         yield return new WaitForSeconds(1f);
         gsm.SwitchScene(1);
+    }
+
+    IEnumerator SwitchWin()
+    {
+        yield return new WaitForSeconds(1f);
+        gsm.SwitchScene(4);
     }
 
     void DisplayTime(float timeToDisplay) 
