@@ -12,11 +12,14 @@ public class Pickup : MonoBehaviour
     private DialogueManager dm;
     public GameObject itemButton;
 
+    private SoundHandler sh;
+
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         pdc = PlayerPrefs.GetInt("PlayerDieCount");
+        sh = GetComponent<SoundHandler>();
     }
 
     private void Update()
@@ -37,7 +40,8 @@ public class Pickup : MonoBehaviour
                 for (int i = 0; i < inventory.slots.Length; i++)
                 {
                     if (inventory.isFull[i] == false)
-                    { // check whether the slot is EMPTY
+                    {
+                        // check whether the slot is EMPTY
                         PlayerCore.instance.inventoryName[i] = gameObject.tag;
                         inventory.isFull[i] = true; // makes sure that the slot is now considered FULL
                         Instantiate(itemButton, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
@@ -46,7 +50,7 @@ public class Pickup : MonoBehaviour
                         break;
                     }
                 }
-
+                
             }
         }
     }
