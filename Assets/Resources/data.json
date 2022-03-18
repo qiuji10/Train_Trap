@@ -5,17 +5,15 @@
             "options":[
                 {
                     "conversation":[
-                        "Uuuuaaaaaaa?!",
-                        "I wank drink the coke!",
-                        "I WANT DRINK THE COKE!!"
+                        "Could you buy me a Cola?",
+                        "I haven't drank that for 30 mintues.",
+                        "I will exchange you this fancy upper-class ticket with a Cola"
                     ],
                     "readingMinds":[
-                        "Why i have an extra upper class ticket but not a coke??"
+                        "Cola~~ Cola~~"
                     ],
                     "specialDialogue":[
-                        "OH MY GOD, thank you so much!",
-                        "Finally I can drink coke.",
-                        "I have nothing except this, an upper-class ticket!"
+                        "Thanks dude, here's the ticket"
                     ]
                 }
             ]
@@ -25,17 +23,18 @@
             "options": [
                 {
                     "conversation": [
-                        "Do you have upper-class ticket?",
-                        "Only people with upper-class ticket are allowed to enter."
+                        "I'm sorry sir, I can't allow you to enter the upper-class area.",
+                        "Why? Because you don't have an upper-class ticket.",
+                        "You are not allowed to enter without an upper-class ticket."
                     ],
                     "readingMinds": [
-                        "Who the heck is this ugly guy?",
-                        "Why is he keep staring me?"
+                        "This guy is weird"
 
                     ],
                     "specialDialogue": [
-                        "There're workers calling me?",
-                        "Let me go check that out quick"
+                        "I'm sorry sir, you can't ente-",
+                        "What? Are the workers having trouble with the ventilation again?",
+                        "Fine, I will go investigate."
                     ]
                 },
                 {
@@ -52,18 +51,14 @@
             ]
         },
         {
-            "npcName":"Bob",
+            "npcName":"Bob", 
             "options":[
                 {
                     "conversation":[
-                        "Welcome to Rocky's Train Trap playtest.",
-                        "Press E to interact with anything.",
-                        "Ops... seem like you already figured out."
+                        "Godamnit, I bought the wrong drink"
                     ],
                     "readingMinds": [
-                        "Ah! I forgot to tell....",
-                        "Press R to read NPC's mind!!",
-                        "Wait, I think figured out already..."
+                        "Well, guess the cola vending machine is at the end of mid-tier cart."
                     ],
                     "specialDialogue":[
                         
@@ -98,12 +93,13 @@
             "options": [
                 {
                     "conversation": [
-                        "It's a long journey",
-                        "I wonder what's on the news."
+                        "Son! I need some help in fixing this radio",
+                        "I really need to listen to the news!",
+                        "Can you get me a screwdriver to fix it?"
 
                     ],
                     "readingMinds": [
-                        "If only the radio's not broken, I could listen to the news."
+                        "Oh no...I'm gonna miss the news report."
 
                     ],
                     "specialDialogue": [
@@ -112,15 +108,13 @@
                 },
                 {
                     "conversation": [
-                        "Could you take a look at this radio?",
-                        "It's broken and perhaps you could try to fix it!"
+                        "Have you found the screwdriver yet?"
                     ],
                     "readingMinds": [
 
                     ],
                     "specialDialogue": [
-                        "Thank you so much kid...",
-                        "Now I can finally listen to the news!"
+                        "Thank you so much Son! I hope you have a safe trip"
                     ]
                 }
             ]
@@ -130,8 +124,7 @@
             "options": [
                 {
                     "conversation": [
-                        "Sorry to bother you kid",
-                        "Here's a dollar, could you help me to get an orange juice?"
+                        "Hey kid, could you help me get her an orange juice?"
 
                     ],
                     "readingMinds": [
@@ -139,8 +132,8 @@
 
                     ],
                     "specialDialogue": [
-                        "Here's a newspaper as a token of appreciation!",
-                        "Thank you so much!"
+                        "You are awesome kid! Take this newspaper...",
+                        "it might give you some wisdom."
                     ]
                 }
 
@@ -151,11 +144,11 @@
             "options": [
                 {
                     "conversation": [
-                        "Uuuuwaaaa!!! *cries*"
+                        "WAAAAAAAA !!!"
 
                     ],
                     "readingMinds": [
-
+                        "I miss mommy..."
 
                     ],
                     "specialDialogue": [
