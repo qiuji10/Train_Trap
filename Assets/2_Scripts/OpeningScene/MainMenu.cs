@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
 {
     public Button continueButton;
     public TextAsset booleanJson;
+    public GameObject SliderBar;
+    public Slider slider;
 
     private void Awake()
     {
@@ -15,7 +17,7 @@ public class MainMenu : MonoBehaviour
             continueButton.interactable = false;
         else
             continueButton.interactable = true;
-
+        slider = SliderBar.GetComponent<Slider>();
     }
 
     public void QuitButton()
@@ -45,5 +47,11 @@ public class MainMenu : MonoBehaviour
             GameSceneManager.instance.SwitchScene(3);
         else
             return;
+    }
+
+    public void AdjustVolume()
+    {
+        PlayerPrefs.SetFloat("Volume", slider.value);
+        AudioListener.volume = PlayerPrefs.GetFloat("Volume");
     }
 }
