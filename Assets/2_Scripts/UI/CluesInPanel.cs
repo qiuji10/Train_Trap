@@ -18,7 +18,7 @@ public class CluesInPanel : MonoBehaviour
     {
         int i = 0;
         collected = JsonUtility.FromJson<Collected>(booleanJson.text);
-        foreach (Transform clueText in transform.GetChild(1))
+        foreach (Transform clueText in transform.GetChild(1).GetChild(0))
         {
             if (!IntToBool(collected.collectedClue[i]))
             {

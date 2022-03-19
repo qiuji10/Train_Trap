@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class SoundHandler : MonoBehaviour
 {
-    private AudioSource[] mysounds;
+    public AudioSource[] mysounds;
 
-    private AudioSource pickUp;
+    public AudioSource pickUp;
 
-    // Start is called before the first frame update
     void Start()
     {
         mysounds = GetComponents<AudioSource>();

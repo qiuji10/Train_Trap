@@ -12,14 +12,14 @@ public class Pickup : MonoBehaviour
     private DialogueManager dm;
     public GameObject itemButton;
 
-    private SoundHandler sh;
+    [SerializeField] AudioData pickupAudio;
+
 
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         pdc = PlayerPrefs.GetInt("PlayerDieCount");
-        sh = GetComponent<SoundHandler>();
     }
 
     private void Update()
@@ -41,6 +41,7 @@ public class Pickup : MonoBehaviour
                 {
                     if (inventory.isFull[i] == false)
                     {
+                        AudioManager.instance.PlaySFX(pickupAudio,"Pickup");
                         // check whether the slot is EMPTY
                         PlayerCore.instance.inventoryName[i] = gameObject.tag;
                         inventory.isFull[i] = true; // makes sure that the slot is now considered FULL
