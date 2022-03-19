@@ -101,6 +101,7 @@ MonoBehaviour:
   isInRange: 0
   pdc: 0
   itemButton: {fileID: 5077779633405715856, guid: 78b9930b4d9735c40b3c5ccecde7e1a3, type: 3}
+  pickupAudio: {fileID: 11400000, guid: f90570ff1cbf1d84184a3602afd4b544, type: 2}
 --- !u!61 &330241848278841596
 BoxCollider2D:
   m_ObjectHideFlags: 0
