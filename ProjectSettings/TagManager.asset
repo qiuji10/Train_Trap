@@ -25,6 +25,7 @@ TagManager:
   - Coin
   - slot_orangejuice
   - Orange_Juice
+  - slot_wrench
   layers:
   - Default
   - TransparentFX
