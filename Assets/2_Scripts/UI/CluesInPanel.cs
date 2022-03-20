@@ -36,7 +36,7 @@ public class CluesInPanel : MonoBehaviour
             string cluesText = File.ReadAllText(Application.dataPath + "/Resources/clueBool.json");
             collected = JsonUtility.FromJson<Collected>(cluesText);
             Debug.Log(cluesText);
-            foreach (Transform clueText in transform.GetChild(1))
+            foreach (Transform clueText in transform.GetChild(1).GetChild(0)) 
             {
                 if (!IntToBool(collected.collectedClue[i]))
                     clueText.gameObject.SetActive(false);

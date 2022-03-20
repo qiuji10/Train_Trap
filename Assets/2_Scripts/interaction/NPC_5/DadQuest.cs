@@ -56,7 +56,7 @@ public class DadQuest : MonoBehaviour
                         inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
                     }
 
-                    PlayerCore.instance.ChangeClueData(1); //0 is clue 1 in array
+                    PlayerCore.instance.ChangeClueData(0); //0 is clue 1 in array
 
                     questDone = true;
 
