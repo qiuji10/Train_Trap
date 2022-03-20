@@ -8,7 +8,6 @@ public class DigitalDisplay : MonoBehaviour
     public GameObject toolbox;
     public GameObject Keypad;
     public Locker boolBoy;
-    public Locker usinglockerBool;
     private Inventory inventory;
     [SerializeField]
     private Sprite[] digits;
@@ -140,7 +139,6 @@ public class DigitalDisplay : MonoBehaviour
             GameObject g = GameObject.FindGameObjectWithTag("locker");
             boolBoy = g.GetComponent<Locker>();
             boolBoy.hasToolBox = true;
-            usinglockerBool.usingLocker = false;
             for (int j = 0; j < inventory.slots.Length; j++)
             {
                 inventory.slots[j].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[j];

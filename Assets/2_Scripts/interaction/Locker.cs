@@ -8,7 +8,6 @@ public class Locker : MonoBehaviour
     public bool isInRange = false;
     public bool keypad = false;
     public bool hasToolBox = false;
-    public bool usingLocker = false;
 
     public GameObject toolbox;
     public GameObject Keypad;
@@ -18,21 +17,17 @@ public class Locker : MonoBehaviour
         
         if (isInRange && hasToolBox == false  && Input.GetKeyDown(KeyCode.E))
         {
-            usingLocker = true;
             Keypad.SetActive(true);
-
         }
 
         if (isInRange && Input.GetKeyDown(KeyCode.Escape))
         {
             Keypad.SetActive(false);
-            usingLocker = false;
         }
 
         if (isInRange == false)
         {
             Keypad.SetActive(false);
-            usingLocker = false;
         }
 
     }
