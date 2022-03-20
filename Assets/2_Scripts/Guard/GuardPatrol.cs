@@ -5,26 +5,32 @@ using UnityEngine;
 public class GuardPatrol : MonoBehaviour
 {
     [HideInInspector]
-    public bool mustPatrol;
+    public bool mustPatrol,playerinRange;
     public Rigidbody2D rb;
     public float WalkSpeed;
-    public Transform player, groundCheckPos;
     private float nextActionTime = 0.0f;
     public float period = 0.1f;
-    // Start is called before the first frame update
+    public Locker playerUseLocker;
+
+
     void Start()
     {
         mustPatrol = true;
-
+        
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
      
             if (mustPatrol)
         {
             Patrol();
+        }
+
+           if(playerinRange && playerUseLocker.usingLocker == true)
+        {
+            Debug.Log("Catch Player");
         }
     }
 
@@ -48,5 +54,23 @@ public class GuardPatrol : MonoBehaviour
         mustPatrol = true;
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerinRange = true;
+            Debug.Log("Player is in Range with guard");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerinRange = false;
+            Debug.Log("Player is not in Range with guard");
+        }
+    }
+
+
 }
