@@ -19,3 +19,6 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: f6a215a5883b0e744844ea4f843390f7, type: 3}
     name: VendingMachine
     volume: 1
+  - clip: {fileID: 8300000, guid: 2322731ce2deb4041aaa83717ac89ace, type: 3}
+    name: Diary
+    volume: 1

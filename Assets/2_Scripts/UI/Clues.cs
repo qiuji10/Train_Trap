@@ -6,6 +6,8 @@ public class Clues : MonoBehaviour
 {
     public GameObject CluePanel;
 
+    [SerializeField] AudioData DiaryAudio;
+
     private void Awake()
     {
         CluePanel = GameObject.Find("CluePanel");
@@ -27,5 +29,10 @@ public class Clues : MonoBehaviour
     {
         CluePanel.SetActive(false);
         //Destroy(CluePanel);
+    }
+
+    public void PlayAudio()
+    {
+        AudioManager.instance.PlaySFX(DiaryAudio, "Diary");
     }
 }
