@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Transition1 : MonoBehaviour
+public class Transition2 : MonoBehaviour
 {
     public Transform target;
     public float speed,delay,time, active;
     public Timer timer;
-    public GameObject falseBG , trueBg, firstLoopFalse;
+    public GameObject falseBG , trueBg;
     
     void Start()
     {
@@ -33,10 +33,5 @@ public class Transition1 : MonoBehaviour
             falseBG.SetActive(false);
             trueBg.SetActive(true);
             }
-
-        if (time < 60)
-        {
-            firstLoopFalse.SetActive(false); 
-        }
     }
 }
