@@ -71,7 +71,8 @@ public class PlayerCore : MonoBehaviour
     public void ChangeClueData(int num)
     {
         int counter = 0;
-        Collected collected = JsonUtility.FromJson<Collected>(booleanJson.text);
+        string cluesText = File.ReadAllText(Application.dataPath + "/Resources/clueBool.json");
+        Collected collected = JsonUtility.FromJson<Collected>(cluesText);
         foreach (int clue in collected.collectedClue.ToArray())
         {
             if (counter < num)
