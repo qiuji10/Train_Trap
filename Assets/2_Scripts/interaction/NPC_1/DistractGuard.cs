@@ -11,10 +11,12 @@ public class DistractGuard : MonoBehaviour
     public Animator guardAnimator;
     public Animator cfAnimator;
     public GameObject player, crossFade, hintText;
+    DialogueManager dm;
 
     private void Awake()
     {
         cfAnimator = crossFade.GetComponent<Animator>();
+        dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
     }
 
     void Update()
@@ -57,6 +59,8 @@ public class DistractGuard : MonoBehaviour
                 yield return new WaitForSeconds(3f);
                 crossFade.SetActive(true);
                 yield return new WaitForSeconds(2f);
+                PlayerCore.instance.ActivateDistract = false;
+                dm.dialogueBox.SetActive(false);
                 guardAnimator.SetBool("caughtPlayer", false);
                 player.transform.position = new Vector3(41.23f, player.transform.position.y, player.transform.position.z);
                 yield return new WaitForSeconds(1f);

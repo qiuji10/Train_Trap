@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 public class GuardKnocked : MonoBehaviour
 {
     public bool gotHit;
-    private int num;
+    private int num, loopCount;
     public Animator guardAnimator, cfAnimator;
     public UnityEvent allowAccess, denyAccess, getCaught, changeBackDialogue;
     public GameObject player, crossFade;
+    DialogueManager dm;
+    Inventory inventory;
 
     void Awake()
     {
         cfAnimator = crossFade.GetComponent<Animator>();
+        dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     public void Update()
@@ -50,6 +55,19 @@ public class GuardKnocked : MonoBehaviour
                 yield return new WaitForSeconds(2f);
                 guardAnimator.SetBool("caughtPlayer", false);
                 player.transform.position = new Vector3(41.23f, player.transform.position.y, player.transform.position.z);
+                dm.dialogueBox.SetActive(false);
+                dm.slot.SetActive(true);
+                if (PlayerCore.instance.CheckItem(ref loopCount, "wrench"))
+                {
+                    PlayerCore.instance.inventoryName.Insert(loopCount, "");
+                    PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
+                    inventory.isFull[loopCount] = false;
+                    Destroy(GameObject.FindGameObjectWithTag("slot_wrench"));
+                    for (int i = 0; i < inventory.slots.Length; i++)
+                    {
+                        inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
+                    }
+                }
                 yield return new WaitForSeconds(1f);
                 crossFade.SetActive(false);
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
