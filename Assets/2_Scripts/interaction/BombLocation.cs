@@ -17,7 +17,9 @@ public class BombLocation : MonoBehaviour
     public GameObject defuseBar, MaryPic;
     public Slider db;
     Timer timerOBJ;
-   
+
+    [SerializeField] AudioData ExplosionAudio;
+
 
     void Awake()
     {
@@ -42,10 +44,12 @@ public class BombLocation : MonoBehaviour
                 //Instantiate picture of Mary
                 if (!isCreated)
                 {
+                    AudioManager.instance.PlaySFX(ExplosionAudio, "Explosion");
+
                     Instantiate(MaryPic);
                     isCreated = true;
                     //Destroy(defuseBar);
-                    timerOBJ.timeValue = 5f;
+                    timerOBJ.timeValue = 4f;
                     timerOBJ.levelEnd = true;
                 }
                
