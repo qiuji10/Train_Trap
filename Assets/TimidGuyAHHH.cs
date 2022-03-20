@@ -10,8 +10,6 @@ public class TimidGuyAHHH : MonoBehaviour
     {
         dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
-        dm.nameText.text = "TimidGuy";
-        dm.dialogueText.text = "AHHHHHHH !!!";
         StartRun();
         EndRun();
         return;
@@ -28,7 +26,10 @@ public class TimidGuyAHHH : MonoBehaviour
 
     IEnumerator SetDialogueActive()
     {
+
         yield return new WaitForSeconds(10f);
+        dm.nameText.text = "TimidGuy";
+        dm.dialogueText.text = "AHHHHHHH !!!";
         dm.dialogueBox.SetActive(true);
 
     }
