@@ -47,6 +47,8 @@ public class FixRadio : MonoBehaviour
                 GetComponent<BoxCollider2D>().enabled = false;
                 audioData = GetComponent<AudioSource>();
                 audioData.Play(0);
+
+                PlayerCore.instance.ChangeClueData(1);
             }      
         }
         else

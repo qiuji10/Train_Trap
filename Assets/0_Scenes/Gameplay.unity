@@ -14727,7 +14727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741270294472114474, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 895.7582
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741270294472114474, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -14735,7 +14735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741270294472114474, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0047992636
+      value: -0.000095183415
       objectReference: {fileID: 0}
     - target: {fileID: 777476840003181790, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_SizeDelta.x
@@ -14755,27 +14755,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1132927624213102243, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
-      value: 'Grandma Radio Clue
-
-        - Listen to the radio'
+      value: "Grandma Radio Clue\n- It\u2019s live broadcast news about the event
+        on the bridge. Although most of the message is messy and unclear in the following
+        part. But it seems like the director of the bridge is having an interview
+        on the bridge.\r\n\r\nRadio:\r\n\r\nWelcome to STR News. I\u2019m Shiro.\r\nCurrently,
+        we are on the bridge waiting for the event.\r\nWhile we are waiting, we have
+        Mr. John, who is the director of the bridge\r\nAnd the main host of today\u2019s
+        event.\r\nThank you for accepting my interview. Could you do a brief introduction
+        to today\u2019s event? \r\nGood afternoon everyone, the main purpose of today\u2019s
+        event is ab- !&)&#^@#)&\r\n\r\nThe radio signal was disrupted\u2026\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 1132927624213102243, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_margin.z
       value: 131.19891
       objectReference: {fileID: 0}
+    - target: {fileID: 1195517492480283015, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329745066804490863, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1756114580456471190, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
       value: Clue 3 555555555555555555555555555555555555555555555555555555
       objectReference: {fileID: 0}
+    - target: {fileID: 2093376881227295405, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2163949857422260901, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
-      value: 'Dad Quest Clue
-
-        - Read the newspaper'
+      value: "Dad NewspaperClue\n- This is yesterday\u2019s newspaper. It\u2019s
+        about a funeral and there are two relatives who are having a big fight. According
+        to the internet, some people recognized that one of the relatives is Mr.
+        John, who is the director of the bridge."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163949857422260901, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_margin.w
+      value: 172.18765
       objectReference: {fileID: 0}
     - target: {fileID: 2163949857422260901, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_margin.z
       value: 132.3916
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585575340229339713, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3306866601923509578, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
@@ -14805,29 +14832,41 @@ PrefabInstance:
       propertyPath: m_text
       value: Clue 4 555555555555555555555555555555555555555555555555555555
       objectReference: {fileID: 0}
+    - target: {fileID: 4023503052908312270, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431619018482310527, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4696314576841996204, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_Name
       value: CluePanel
       objectReference: {fileID: 0}
     - target: {fileID: 4696314576841996204, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 455.045
       objectReference: {fileID: 0}
     - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 272.065
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -28.4459
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5143667754910330556, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
@@ -14935,7 +14974,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5840793354470899692, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -810.42053
+      value: -250.59769
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366586301899309575, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7122999169209857513, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
@@ -14955,7 +14998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7528189208111227216, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -622.1465
+      value: -250.59769
       objectReference: {fileID: 0}
     - target: {fileID: 7665476498950022379, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_IsActive
@@ -14975,7 +15018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7941511982317149122, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -404.82922
+      value: -291.21033
       objectReference: {fileID: 0}
     - target: {fileID: 8090755310968366499, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
@@ -14991,27 +15034,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8090755310968366499, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -716.2835
+      value: -287.84296
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 113.6189
+      value: 608.785
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 272.065
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -113.70125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8250427304207260375, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
@@ -15027,7 +15070,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8250427304207260375, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -253.14069
+      value: -139.52179
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824323431603241976, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8835333729154376706, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
@@ -15043,7 +15090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8835333729154376706, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -533.7942
+      value: -282.0582
       objectReference: {fileID: 0}
     - target: {fileID: 8842041868204142696, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_ScrollSensitivity
@@ -15079,7 +15126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147422543843308345, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -867.3123
+      value: -250.59769
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
@@ -16739,7 +16786,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 17.195473
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -16749,26 +16796,8 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.05
-      value: 1
-      inSlope: -20.007967
-      outSlope: -20.007967
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.1
-      value: 0.5
-      inSlope: -5.0019917
-      outSlope: -5.0019917
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.2
-      value: 0.25
+      time: 0
+      value: 1.003479
       inSlope: -1.2504979
       outSlope: -1.2504979
       tangentMode: 0
@@ -16776,25 +16805,43 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.3964142
-      value: 0.08798218
-      inSlope: -0.31262448
-      outSlope: -0.31262448
+      time: 0.064481355
+      value: 0.9190521
+      inSlope: -5.0019917
+      outSlope: -5.0019917
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.7785004
-      value: 0.025482178
-      inSlope: -0.07815612
-      outSlope: -0.07815612
+      time: 0.29043657
+      value: 1.0926762
+      inSlope: -20.007967
+      outSlope: -20.007967
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.9892578
+      time: 0.3445038
+      value: 1.0751648
+      inSlope: -1.8312837
+      outSlope: -1.8312837
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.23237829
+    - serializedVersion: 3
+      time: 0.56539613
+      value: 0.8675995
+      inSlope: -1.0691029
+      outSlope: -1.0691029
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4238188
+      outWeight: 0.2637268
+    - serializedVersion: 3
+      time: 1
       value: 0
       inSlope: -0.05001994
       outSlope: -0.05001994
@@ -16839,7 +16886,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.20491791
       value: 1
       inSlope: 0
       outSlope: 0
