@@ -127,3 +127,4 @@ MonoBehaviour:
   isInRange: 0
   pdc: 0
   itemButton: {fileID: 1870818856170767205, guid: 62428533bbb21a44dbf13756ab606f3d, type: 3}
+  pickupAudio: {fileID: 11400000, guid: f90570ff1cbf1d84184a3602afd4b544, type: 2}
