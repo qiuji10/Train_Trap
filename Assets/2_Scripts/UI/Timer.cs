@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
     public GameObject crossFade, bomb, objectiveHint;
     public GameSceneManager gsm;
     [SerializeField] private GameObject cam;
+    [SerializeField] AudioData Explosion0;
 
     void Awake()
     {
@@ -33,6 +34,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlaySFX(Explosion0, "Explosion0");
             timeValue = 0;
             GameOver();
         }
