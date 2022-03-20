@@ -2392,6 +2392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInRange: 0
   drink: {fileID: 6256419025553779127, guid: 3c9f105ba0a34e64a98763b638a98967, type: 3}
+  vendingMachineAudio: {fileID: 0}
 --- !u!61 &127771965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4428,6 +4429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInRange: 0
   drink: {fileID: 6256419025553779127, guid: 82e5907d7a918f745bd8c428ca562005, type: 3}
+  vendingMachineAudio: {fileID: 11400000, guid: f90570ff1cbf1d84184a3602afd4b544, type: 2}
 --- !u!1 &292870470
 GameObject:
   m_ObjectHideFlags: 0
@@ -7533,6 +7535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInRange: 0
   drink: {fileID: 0}
+  vendingMachineAudio: {fileID: 0}
 --- !u!61 &533860010
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class VendingMachine : MonoBehaviour
     public GameObject drink;
     private Inventory inventory;
 
+    [SerializeField] AudioData vendingMachineAudio;
+
     private void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -25,6 +27,8 @@ public class VendingMachine : MonoBehaviour
             hasCoin = PlayerCore.instance.CheckItem(ref loopCount, "coin");
             if (hasCoin)
             {
+                AudioManager.instance.PlaySFX(vendingMachineAudio, "VendingMachine");
+
                 PlayerCore.instance.inventoryName.Insert(loopCount, "");
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
                 inventory.isFull[loopCount] = false;
