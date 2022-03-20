@@ -30,14 +30,11 @@ public class TimidGuyAHHH : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         dm.dialogueBox.SetActive(true);
-        GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
 
     }
     IEnumerator SetDialogueInactive()
     {
         yield return new WaitForSeconds(18f);
         dm.dialogueBox.SetActive(false);
-        GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
-
     }
 }
