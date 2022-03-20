@@ -2529,6 +2529,7 @@ MonoBehaviour:
   toolbox: {fileID: 2638005646209471928, guid: 6884b5a6c08494444af6c515525d3d94, type: 3}
   Keypad: {fileID: 80556269}
   boolBoy: {fileID: 0}
+  usingLockerBool: {fileID: 0}
   digits:
   - {fileID: 21300000, guid: b57acfa361a87874f99146ca8d3502e1, type: 3}
   - {fileID: 21300000, guid: 21dbca3468e5bae4480811eebed0c430, type: 3}
@@ -22674,7 +22675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209891906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.4307, y: -3.8270996, z: -1}
+  m_LocalPosition: {x: -9.4307, y: -4.293, z: -1}
   m_LocalScale: {x: 0.04655577, y: 0.023277884, z: 2.3277886}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37956,6 +37957,7 @@ MonoBehaviour:
   isInRange: 0
   keypad: 0
   hasToolBox: 0
+  usingLocker: 0
   toolbox: {fileID: 2638005646209471928, guid: 6884b5a6c08494444af6c515525d3d94, type: 3}
   Keypad: {fileID: 80556269}
 --- !u!61 &1881464399
