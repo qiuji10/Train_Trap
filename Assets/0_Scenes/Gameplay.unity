@@ -4884,6 +4884,10 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8037040943836153503, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
+      propertyPath: Explosion0
+      value: 
+      objectReference: {fileID: 11400000, guid: f90570ff1cbf1d84184a3602afd4b544, type: 2}
+    - target: {fileID: 8037040943836153503, guid: 0b3d1c444ae304342a1ffc0a7a5d440c, type: 3}
       propertyPath: objectiveHint
       value: 
       objectReference: {fileID: 1868933286}
