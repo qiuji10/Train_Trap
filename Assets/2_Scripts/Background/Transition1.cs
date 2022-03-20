@@ -8,24 +8,21 @@ public class Transition1 : MonoBehaviour
     public float speed,delay,time, active;
     public Timer timer;
     public GameObject falseBG , trueBg, firstLoopFalse;
-    
+    public Vector3 b;
     void Start()
     {
-        
+        b = target.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
        time = timer.timeValue;
 
         if (delay > time  ) 
-        { 
-
-        Vector3 a = transform.position;
-        Vector3 b = target.position;
-        transform.position = Vector3.MoveTowards(a, b, speed);
+        {
+            transform.position = Vector3.MoveTowards(transform.position, b, Time.deltaTime * speed);
         }
         
         if (active > time)

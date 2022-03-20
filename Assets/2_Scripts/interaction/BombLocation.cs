@@ -48,7 +48,7 @@ public class BombLocation : MonoBehaviour
 
                     Instantiate(MaryPic);
                     isCreated = true;
-                    //Destroy(defuseBar);
+                    Destroy(defuseBar);
                     timerOBJ.timeValue = 4f;
                     timerOBJ.levelEnd = true;
                 }

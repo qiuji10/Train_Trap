@@ -18238,7 +18238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1068722652}
-  speed: 0.09
+  speed: 30
   delay: 170
   time: 0
   active: 163.405
@@ -18246,6 +18246,7 @@ MonoBehaviour:
   falseBG: {fileID: 752853996}
   trueBg: {fileID: 1086926822}
   firstLoopFalse: {fileID: 936649326}
+  b: {x: 0, y: 0, z: 0}
 --- !u!1001 &937223262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37385,13 +37386,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1428450771}
-  speed: 0.09
-  delay: 60
+  speed: 30
+  delay: 150
   time: 0
-  active: 54
+  active: 144
   timer: {fileID: 755359939}
   falseBG: {fileID: 1086926822}
   trueBg: {fileID: 462160246}
+  firstLoopFalse: {fileID: 0}
+  b: {x: 0, y: 0, z: 0}
 --- !u!1 &1859920605
 GameObject:
   m_ObjectHideFlags: 0
