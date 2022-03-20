@@ -25,11 +25,30 @@ public class AllBranches
 
 public class DialogueDatabase : MonoBehaviour
 {
+    int i = 0;
+    private int pdc;
+
     [SerializeField]
     List<GameObject> npc = new List<GameObject>();
     public AllBranches allBranches;
     public TextAsset jsonText;
-    int i = 0;
+    
+
+    private void Awake()
+    {
+        pdc = PlayerPrefs.GetInt("PlayerDieCount");
+
+        if (pdc == 0)
+        {
+            foreach (Transform child in transform)
+            {
+                if (child.GetComponent("ActivateDistract") != null)
+                {
+                    child.GetComponent<ActivateDistract>().enabled = false;
+                }
+            }
+        }
+    }
 
     void Start()
     {
@@ -64,27 +83,27 @@ public class DialogueDatabase : MonoBehaviour
     //    }
     //}
 
-    public void changeDialogue()
+    public void DialogueTo_Opt0_Special(int NpcNum)
     {
-        string[] array = allBranches.npcs[0].options[0].specialDialogue.ToArray();
-        gameObject.transform.GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
+        string[] array = allBranches.npcs[NpcNum].options[0].specialDialogue.ToArray();
+        gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
 
-    public void changeDialogue2()
+    public void DialogueTo_Opt1_Special(int NpcNum)
     {
-        string[] array = allBranches.npcs[1].options[0].specialDialogue.ToArray();
-        gameObject.transform.GetChild(1).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
+        string[] array = allBranches.npcs[NpcNum].options[1].specialDialogue.ToArray();
+        gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
 
-    public void changeDialogue3()
+    public void DialogueTo_Opt0_Conversation(int NpcNum)
     {
-        string[] array = allBranches.npcs[1].options[1].specialDialogue.ToArray();
-        gameObject.transform.GetChild(1).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
+        string[] array = allBranches.npcs[NpcNum].options[0].conversation.ToArray();
+        gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
 
-    public void changeDialogue4()
+    public void DialogueTo_Opt1_Conversation(int NpcNum)
     {
-        string[] array = allBranches.npcs[1].options[0].conversation.ToArray();
-        gameObject.transform.GetChild(1).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
+        string[] array = allBranches.npcs[NpcNum].options[1].conversation.ToArray();
+        gameObject.transform.GetChild(NpcNum).GetComponentInChildren<DialogueTrigger>().dialogue.sentences = array;
     }
 }

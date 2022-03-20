@@ -7,9 +7,12 @@ public class VendingMachine : MonoBehaviour
 {
     public bool isInRange = false;
     private bool hasCoin;
+    private int loopCount;
     private int i;
-    public GameObject coke;
+    public GameObject drink;
     private Inventory inventory;
+
+    [SerializeField] AudioData vendingMachineAudio;
 
     private void Awake()
     {
@@ -21,17 +24,20 @@ public class VendingMachine : MonoBehaviour
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            hasCoin = PlayerCore.instance.CheckItem(ref i, "coin");
+            hasCoin = PlayerCore.instance.CheckItem(ref loopCount, "coin");
             if (hasCoin)
             {
-                PlayerCore.instance.inventoryName.RemoveAt(i);
-                inventory.isFull[i] = false;
-                Instantiate(coke);
-                PlayerCore.instance.inventoryName.Add("");
+                AudioManager.instance.PlaySFX(vendingMachineAudio, "VendingMachine");
+
+                PlayerCore.instance.inventoryName.Insert(loopCount, "");
+                PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
+                inventory.isFull[loopCount] = false;
+                Instantiate(drink);
                 Destroy(GameObject.FindGameObjectWithTag("coin"));
-                for (int i = 0; i < inventory.slots.Length; i++)
+                for (int j = 0; j < inventory.slots.Length; j++)
                 {
-                    inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
+                    Destroy(inventory.slots[loopCount].transform.GetChild(1).gameObject);
+                    inventory.slots[j].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[j];
                 }
             }
         }

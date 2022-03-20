@@ -20,10 +20,10 @@ public class CameraFollow : MonoBehaviour
             float xOffset = Random.Range(-0.5f, 0.5f) * magnitude;
             float yOffset = Random.Range(-0.5f, 0.5f) * magnitude;
 
-            transform.localPosition = new Vector3(xOffset, yOffset, transform.position.z);
+            transform.position = new Vector3(target.position.x + xOffset, target.position.y + yOffset, transform.position.z);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        transform.localPosition = transform.position;
+        //transform.localPosition = transform.position;
     }
 }

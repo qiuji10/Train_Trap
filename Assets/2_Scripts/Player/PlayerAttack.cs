@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
     public bool isInRange;
     public bool hasWrench = false;
     private int loopCount = 0;
-    public Enemy boolBoy;
+    public GuardKnocked boolBoy;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
 
                 GameObject g = GameObject.FindGameObjectWithTag("guard");
 
-                boolBoy = g.GetComponent<Enemy>();
+                boolBoy = g.GetComponent<GuardKnocked>();
 
                 boolBoy.gotHit = true;
 

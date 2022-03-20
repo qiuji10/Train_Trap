@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 410297632249597158}
   - component: {fileID: 7809547086143322042}
   - component: {fileID: 3578166513908188190}
+  - component: {fileID: 7547639319028530299}
   m_Layer: 5
   m_Name: wrench
-  m_TagString: Untagged
+  m_TagString: slot_wrench
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.000026703, y: -0.9038}
+  m_SizeDelta: {x: 474, y: 319}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &410297632249597158
 CanvasRenderer:
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 94f96d573ee898b458b58e90b16d1ef7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b654bc1bfa3bb0c4d996aaf284ad06a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -121,3 +122,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7547639319028530299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5077779633405715856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7270b6401eb79bd4dab243126b778d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 330241848278841597, guid: d42875c2955062042ad9f8592fa9c482, type: 3}
+  player: {fileID: 0}

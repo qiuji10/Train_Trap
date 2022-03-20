@@ -18,15 +18,4 @@ public class GameSceneManager : MonoBehaviour
     {
         SceneManager.LoadScene(indexBuild);
     }
-
-    public void QuitButton()
-    {
-        Application.Quit();
-        Debug.Log("Game is closed");
-    }
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene("OpeningScene");
-    }
 }

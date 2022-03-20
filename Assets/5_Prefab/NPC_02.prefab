@@ -83,7 +83,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ee30ce3e9ab9d4983a5582d57cdfa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInRange: 0
+  hintText: {fileID: 0}
 --- !u!114 &8039771352582693895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,10 +140,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548ee62802b3c9d4f8c57104975c9923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInRange: 0
   changeGuardDialogue:
     m_PersistentCalls:
       m_Calls: []
+  allowAccess:
+    m_PersistentCalls:
+      m_Calls: []
+  denyAccess:
+    m_PersistentCalls:
+      m_Calls: []
+  getCaught:
+    m_PersistentCalls:
+      m_Calls: []
+  changeBackDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+  guardAnimator: {fileID: 0}
+  cfAnimator: {fileID: 0}
+  player: {fileID: 0}
+  crossFade: {fileID: 0}
+  hintText: {fileID: 0}
 --- !u!114 &298097876182896446
 MonoBehaviour:
   m_ObjectHideFlags: 0

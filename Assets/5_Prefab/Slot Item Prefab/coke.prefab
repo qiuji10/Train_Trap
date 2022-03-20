@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3173019743751234421}
   - component: {fileID: 5032889759886628905}
   - component: {fileID: 1734251289624062861}
+  - component: {fileID: 9007993109455586979}
   m_Layer: 5
   m_Name: coke
   m_TagString: coke
@@ -36,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 1.6129, y: 0.0000076294}
+  m_SizeDelta: {x: 474.0294, y: 319.8687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3173019743751234421
 CanvasRenderer:
@@ -121,3 +122,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9007993109455586979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8056546713476811267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7270b6401eb79bd4dab243126b778d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 6256419025553779127, guid: 82e5907d7a918f745bd8c428ca562005, type: 3}
+  player: {fileID: 0}

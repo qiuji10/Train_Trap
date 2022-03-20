@@ -5,17 +5,25 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeValue = 90;
+    public float timeValue = 180;
+    public bool levelEnd;
+    private int pdc;
 
     public Text timeText;
-    public GameObject crossFade;
-    public GameObject bomb;
+    public GameObject crossFade, bomb, objectiveHint;
     public GameSceneManager gsm;
     [SerializeField] private GameObject cam;
+    [SerializeField] AudioData Explosion0;
 
     void Awake()
     {
         gsm = GetComponent<GameSceneManager>();
+        pdc = PlayerPrefs.GetInt("PlayerDieCount");
+        if (pdc == 0)
+        {
+            timeValue = 60;
+            objectiveHint.SetActive(false);
+        }
     }
 
     void Update()
@@ -26,10 +34,15 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlaySFX(Explosion0, "Explosion0");
             timeValue = 0;
             GameOver();
         }
-        DisplayTime(timeValue);
+
+        if (pdc != 0)
+            DisplayTime(timeValue);
+        else
+            return;
     }
 
     public void GameOver()
@@ -42,13 +55,22 @@ public class Timer : MonoBehaviour
     IEnumerator StartGameOver()
     {
         yield return StartCoroutine(cam.GetComponent<CameraFollow>().ShakeScreen(1f, 0.7f));
-        yield return StartCoroutine(SwitchGameOver());
+        if (!levelEnd)
+            yield return StartCoroutine(SwitchGameOver());
+        else
+            yield return StartCoroutine(SwitchWin());
     }
 
     IEnumerator SwitchGameOver()
     {
         yield return new WaitForSeconds(1f);
         gsm.SwitchScene(1);
+    }
+
+    IEnumerator SwitchWin()
+    {
+        yield return new WaitForSeconds(1f);
+        gsm.SwitchScene(4);
     }
 
     void DisplayTime(float timeToDisplay) 

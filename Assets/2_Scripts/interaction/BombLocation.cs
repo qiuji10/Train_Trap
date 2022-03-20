@@ -7,16 +7,23 @@ public class BombLocation : MonoBehaviour
 {
     public bool isInRange = false;
     public bool hasTool = false;
+    public bool isCreated;
     public float setTimer = 5f;
     private float holdTimer;
     private int i = 0;
+    private int j;
 
     public GameObject toolbox;
-    public GameObject defuseBar;
+    public GameObject defuseBar, MaryPic;
     public Slider db;
+    Timer timerOBJ;
+
+    [SerializeField] AudioData ExplosionAudio;
+
 
     void Awake()
     {
+        timerOBJ = GameObject.Find("TimerText").GetComponent<Timer>();
         db = defuseBar.GetComponent<Slider>();
         db.maxValue = setTimer;
     }
@@ -33,8 +40,20 @@ public class BombLocation : MonoBehaviour
             db.value = holdTimer;
             if (holdTimer < 0)
             {
-                PlayerCore.instance.inventoryName.RemoveAt(i);
+                //PlayerCore.instance.inventoryName.RemoveAt(i);
                 //Instantiate picture of Mary
+                if (!isCreated)
+                {
+                    AudioManager.instance.PlaySFX(ExplosionAudio, "Explosion");
+
+                    Instantiate(MaryPic);
+                    isCreated = true;
+                    Destroy(defuseBar);
+                    timerOBJ.timeValue = 4f;
+                    timerOBJ.levelEnd = true;
+                }
+               
+            
             }
         }
         else
@@ -44,12 +63,20 @@ public class BombLocation : MonoBehaviour
         }
     }
 
+    //IEnumerator BombEnd()
+    //{
+    //    yield return new WaitForSeconds(5);
+
+    //}
+
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            PlayerCore.instance.KeyE = PlayerCore.instance.CheckItem(ref i, "toolbox");
+            PlayerCore.instance.KeyE = PlayerCore.instance.CheckItem(ref j, "toolbox");
         }
     }
 

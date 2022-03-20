@@ -15,6 +15,17 @@ TagManager:
   - 7up
   - Coke
   - Panel
+  - locker
+  - screwdriver
+  - radio
+  - grandma
+  - daughter
+  - Mary
+  - Crowbar
+  - Coin
+  - slot_orangejuice
+  - Orange_Juice
+  - slot_wrench
   layers:
   - Default
   - TransparentFX
