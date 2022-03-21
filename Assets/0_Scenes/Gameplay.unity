@@ -1622,6 +1622,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
       objectReference: {fileID: 0}
+    - target: {fileID: 5553285148630748731, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5553285149017596330, guid: 252257498531c0544a16873a072c202f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -37608,9 +37612,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1428450771}
   speed: 30
-  delay: 150
+  delay: 60
   time: 0
-  active: 144
+  active: 54
   timer: {fileID: 755359939}
   falseBG: {fileID: 1086926822}
   trueBg: {fileID: 462160246}
