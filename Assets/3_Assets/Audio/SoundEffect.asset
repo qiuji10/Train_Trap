@@ -24,7 +24,7 @@ MonoBehaviour:
     volume: 1
   - clip: {fileID: 8300000, guid: e27fa439931ee614d8656ef3f3c76305, type: 3}
     name: Explosion
-    volume: 0.216
+    volume: 0.109
   - clip: {fileID: 8300000, guid: f1a5de773b1c9e845a892bad692a5351, type: 3}
     name: Explosion0
-    volume: 0.216
+    volume: 0.109
