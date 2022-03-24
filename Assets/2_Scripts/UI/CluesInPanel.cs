@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+
 [System.Serializable]
 public class Collected
 {
@@ -10,7 +11,6 @@ public class Collected
 
 public class CluesInPanel : MonoBehaviour
 {
-    private bool updated;
     public Collected collected;
     public TextAsset booleanJson;
 
@@ -55,6 +55,4 @@ public class CluesInPanel : MonoBehaviour
         else
             return false;
     }
-
-    
 }
