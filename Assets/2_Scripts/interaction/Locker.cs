@@ -26,14 +26,14 @@ public class Locker : MonoBehaviour
         if (isInRange && Input.GetKeyDown(KeyCode.Escape))
         {
             usingLocker = false;
-                Debug.Log("using locker false");
+            Debug.Log("using locker false");
             Keypad.SetActive(false);
         }
 
         if (isInRange == false)
         {
             usingLocker = false;
-                Debug.Log("using locker false");
+            Debug.Log("using locker false");
             Keypad.SetActive(false);
         }
 
