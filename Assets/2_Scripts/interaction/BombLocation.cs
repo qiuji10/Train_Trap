@@ -49,7 +49,10 @@ public class BombLocation : MonoBehaviour
                     Instantiate(MaryPic);
                     isCreated = true;
                     Destroy(defuseBar);
-                    timerOBJ.timeValue = 4f;
+                    if (timerOBJ.timeValue >= 10)
+                    {
+                        timerOBJ.timeValue = 10f;
+                    }
                     timerOBJ.levelEnd = true;
                 }
                
