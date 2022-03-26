@@ -41,7 +41,7 @@ public class PlayerStartDialogue : MonoBehaviour
                 if (PlayerPrefs.GetInt("GetMaryPic") == 1)
                 {
                     List<string> tmpDialogue = dt.readMinds.sentences.ToList();
-                    tmpDialogue.Add("Is a picture of woman and text beside is Mary...");
+                    tmpDialogue.Add("Is a picture of a woman and text beside is Mary...");
                     dt.dialogue.sentences = tmpDialogue.ToArray();
 
                     dt.dialogue.sentences = new string[dt.readMinds.sentences.Length];
