@@ -600,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3400128541510763823, guid: e9550d2f5fb63c84f89644483377e054, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3400128541510763823, guid: e9550d2f5fb63c84f89644483377e054, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4549,9 +4549,16 @@ MonoBehaviour:
   readMinds:
     name: You
     sentences:
-    - I think i know what's happening
-    - maybe we should find bomber
-    - hurry!
+    - "\u2026\u2026."
+    - W.T.F????
+    - That is a timed and a remote bomb???
+    - No way I could defuse it within a short time.
+    - "But since it\u2019s a remote bomb too, means the bomber is not far away and
+      has to be in the train too."
+    - But where?
+    - 'I need to find more clues to be sure. '
+    - "Wait, the picture I got just now\u2026"
+    - "\u2026\u2026"
 --- !u!114 &292781029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4564,6 +4571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1416c112eb9ea4980b78b179b255b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTriggered: 0
   StartDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -6006,7 +6014,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &396699425
 GameObject:
@@ -10456,7 +10464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1756114580456471190, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
-      value: Clue 3 555555555555555555555555555555555555555555555555555555
+      value: Found a picture of a woman named Mary inside the bomb
       objectReference: {fileID: 0}
     - target: {fileID: 2093376881227295405, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_IsActive
@@ -12706,7 +12714,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &804614611
 MonoBehaviour:

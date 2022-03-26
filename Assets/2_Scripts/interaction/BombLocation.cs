@@ -37,7 +37,10 @@ public class BombLocation : MonoBehaviour
 
         if (isInRange && hasTool && Input.GetKey(KeyCode.E))
         {
-            defuseBar.SetActive(true);
+            if (defuseBar != null)
+            {
+                defuseBar.SetActive(true);
+            }
             holdTimer -= Time.deltaTime;
             db.value = holdTimer;
             if (holdTimer < 0)
@@ -47,7 +50,7 @@ public class BombLocation : MonoBehaviour
                 if (!isCreated)
                 {
                     AudioManager.instance.PlaySFX(ExplosionAudio, "Explosion");
-
+                    PlayerPrefs.SetInt("MaryPicSpawned", 1);
                     Instantiate(MaryPic);
                     isCreated = true;
                     Destroy(defuseBar);
@@ -91,7 +94,10 @@ public class BombLocation : MonoBehaviour
         {
             isInRange = false;
             PlayerCore.instance.KeyE = false;
-            defuseBar.SetActive(false);
+            if (defuseBar != null)
+            {
+                defuseBar.SetActive(true);
+            }
         }
     }
 }

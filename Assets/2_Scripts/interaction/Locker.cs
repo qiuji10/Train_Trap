@@ -19,21 +19,21 @@ public class Locker : MonoBehaviour
         if (isInRange && hasToolBox == false  && Input.GetKeyDown(KeyCode.E))
         {
             usingLocker = true;
-            Debug.Log("using locker true");
+            //Debug.Log("using locker true");
             Keypad.SetActive(true);
         }
 
         if (isInRange && Input.GetKeyDown(KeyCode.Escape))
         {
             usingLocker = false;
-            Debug.Log("using locker false");
+            //Debug.Log("using locker false");
             Keypad.SetActive(false);
         }
 
         if (isInRange == false)
         {
             usingLocker = false;
-            Debug.Log("using locker false");
+            //Debug.Log("using locker false");
             Keypad.SetActive(false);
         }
 
@@ -45,7 +45,7 @@ public class Locker : MonoBehaviour
         {
             isInRange = true;
             PlayerCore.instance.KeyE = true;
-            Debug.Log("Player is in Range");
+            //Debug.Log("Player is in Range");
         }
     }
 
@@ -55,7 +55,7 @@ public class Locker : MonoBehaviour
         {
             isInRange = false;
             PlayerCore.instance.KeyE = false;
-            Debug.Log("Player is not in Range");
+            //Debug.Log("Player is not in Range");
         }
     }
 }

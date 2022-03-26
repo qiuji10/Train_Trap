@@ -28,6 +28,12 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        ////this is for debugging purposes, leave it here
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    timeValue = 5;
+        //}
+
         if(timeValue > 0)
         {
             timeValue -= Time.deltaTime;

@@ -28,8 +28,10 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
+        PlayerPrefs.SetInt("GetMaryPic", 0);
         PlayerPrefs.SetInt("PlayerDieCount", 0);
         PlayerPrefs.SetInt("GetAllClues", 0);
+        PlayerPrefs.SetInt("MaryPicSpawned", 0);
         Collected collected = JsonUtility.FromJson<Collected>(booleanJson.text);
         int num = 0;
         foreach (int clue in collected.collectedClue.ToArray())
