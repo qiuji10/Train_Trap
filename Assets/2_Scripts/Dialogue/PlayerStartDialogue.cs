@@ -44,8 +44,8 @@ public class PlayerStartDialogue : MonoBehaviour
                     tmpDialogue.Add("Is a picture of a woman and text beside is Mary...");
                     dt.dialogue.sentences = tmpDialogue.ToArray();
 
-                    dt.dialogue.sentences = new string[dt.readMinds.sentences.Length];
-                    dt.dialogue.sentences = dt.readMinds.sentences;
+                    //dt.dialogue.sentences = new string[dt.readMinds.sentences.Length];
+                    //dt.dialogue.sentences = dt.readMinds.sentences;
                     gameObject.SetActive(true);
                 }
                 else
