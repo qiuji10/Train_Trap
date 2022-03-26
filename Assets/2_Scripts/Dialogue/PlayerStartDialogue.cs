@@ -40,7 +40,6 @@ public class PlayerStartDialogue : MonoBehaviour
             {
                 if (PlayerPrefs.GetInt("GetMaryPic") == 1)
                 {
-
                     List<string> tmpDialogue = dt.readMinds.sentences.ToList();
                     tmpDialogue.Add("Is a picture of woman and text beside is Mary...");
                     dt.dialogue.sentences = tmpDialogue.ToArray();
@@ -51,13 +50,11 @@ public class PlayerStartDialogue : MonoBehaviour
                 }
                 else
                 {
-                    
                     List<string> tmpDialogue = dt.readMinds.sentences.ToList();
                     tmpDialogue.Add("I need to get it, it might be a clue. ");
                     dt.dialogue.sentences = tmpDialogue.ToArray();
                     gameObject.SetActive(true);
                 }
-                
             }
             else
                 gameObject.SetActive(false);
