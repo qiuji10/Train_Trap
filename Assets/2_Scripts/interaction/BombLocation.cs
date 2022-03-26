@@ -16,6 +16,7 @@ public class BombLocation : MonoBehaviour
     public GameObject toolbox;
     public GameObject defuseBar, MaryPic;
     public Slider db;
+    public PlayerStartDialogue psd;
     Timer timerOBJ;
 
     [SerializeField] AudioData ExplosionAudio;
@@ -25,6 +26,7 @@ public class BombLocation : MonoBehaviour
     {
         timerOBJ = GameObject.Find("TimerText").GetComponent<Timer>();
         db = defuseBar.GetComponent<Slider>();
+        psd = FindObjectOfType<PlayerStartDialogue>();
         db.maxValue = setTimer;
     }
 
