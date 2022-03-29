@@ -53,7 +53,7 @@ public class BombLocation : MonoBehaviour
                     PlayerPrefs.SetInt("MaryPicSpawned", 1);
                     Instantiate(MaryPic);
                     isCreated = true;
-                    Destroy(defuseBar);
+                    //Destroy(defuseBar);
                     if (timerOBJ.timeValue >= 10)
                     {
                         timerOBJ.timeValue = 10f;

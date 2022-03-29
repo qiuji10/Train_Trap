@@ -32,7 +32,7 @@ public class VendingMachine : MonoBehaviour
                 PlayerCore.instance.inventoryName.Insert(loopCount, "");
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
                 inventory.isFull[loopCount] = false;
-                Instantiate(drink);
+                Instantiate(drink, transform.position, Quaternion.identity);
                 Destroy(GameObject.FindGameObjectWithTag("coin"));
                 for (int j = 0; j < inventory.slots.Length; j++)
                 {
