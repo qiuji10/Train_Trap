@@ -6,9 +6,16 @@ using UnityEngine.Events;
 public class NpcInteraction : MonoBehaviour
 {
     public bool isInRange;
+    private bool inDialogue, inReadMind;
     public KeyCode dialogueKey, readMindKey;
 
     public UnityEvent dialogueAction, readMindsAction, nextSentence;
+    DialogueManager dm;
+
+    private void Awake()
+    {
+        dm = FindObjectOfType<DialogueManager>();
+    }
 
     void Update()
     {
@@ -20,10 +27,13 @@ public class NpcInteraction : MonoBehaviour
                 {
                     dialogueAction.Invoke();
                     DialogueManager.instance.isInteracted = true;
+                    inDialogue = true;
                 }
-                else
+                else if (inDialogue)
                 {
                     nextSentence.Invoke();
+                    if (!dm.dialogueBox.activeInHierarchy)
+                        inDialogue = false;
                 }
             }
 
@@ -33,10 +43,13 @@ public class NpcInteraction : MonoBehaviour
                 {
                     readMindsAction.Invoke();
                     DialogueManager.instance.isInteracted = true;
+                    inReadMind = true;
                 }
-                else
+                else if (inReadMind)
                 {
                     nextSentence.Invoke();
+                    if (!dm.dialogueBox.activeInHierarchy)
+                        inReadMind = false;
                 }
             }
         }

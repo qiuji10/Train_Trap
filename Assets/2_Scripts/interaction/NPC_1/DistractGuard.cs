@@ -12,10 +12,12 @@ public class DistractGuard : MonoBehaviour
     public Animator cfAnimator;
     public GameObject player, crossFade, hintText;
     DialogueManager dm;
+    GuardKnocked gk;
 
     private void Awake()
     {
         cfAnimator = crossFade.GetComponent<Animator>();
+        gk = GetComponent<GuardKnocked>();
         dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
     }
 
@@ -24,10 +26,12 @@ public class DistractGuard : MonoBehaviour
         if (isInRange && PlayerCore.instance.ActivateDistract == true)
         {
             changeGuardDialogue.Invoke();
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && !gk.gotHit)
             {
+                gk.enabled = false;
                 hintText.SetActive(false);
-                StartDistract();
+                if (!dm.dialogueBox.activeInHierarchy)
+                    StartDistract();
             }
         }
     }
@@ -40,11 +44,11 @@ public class DistractGuard : MonoBehaviour
     private IEnumerator StorySequence()
     {
         PlayerCore.instance.ActivateDistract = false;
-        yield return new WaitForSeconds(3f);
         guardAnimator.SetBool("activateDistract", true);
         allowAccess.Invoke();
         yield return new WaitForSeconds(25f);
         guardAnimator.SetBool("activateDistract", false);
+        gk.enabled = true;
         //should close again the passAccess and check if player still in upper train the guard should kick him off
 
         if (!PlayerCore.instance.CheckItem(ref num, "ticket"))
@@ -52,6 +56,7 @@ public class DistractGuard : MonoBehaviour
             if (player.transform.position.x > transform.position.x)
             {
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+                gk.enabled = false;
                 guardAnimator.SetBool("caughtPlayer", true);
                 yield return new WaitForSeconds(1f);
                 getCaught.Invoke();
@@ -66,6 +71,7 @@ public class DistractGuard : MonoBehaviour
                 yield return new WaitForSeconds(1f);
                 crossFade.SetActive(false);
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
+                gk.enabled = true;
             }
             changeBackDialogue.Invoke();
             denyAccess.Invoke();
@@ -77,7 +83,6 @@ public class DistractGuard : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            Debug.Log("Player is in Range");
         }
     }
 
@@ -86,7 +91,6 @@ public class DistractGuard : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-            Debug.Log("Player is not in Range");
         }
     }
 }
