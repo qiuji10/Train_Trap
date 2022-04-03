@@ -23,6 +23,7 @@ public class Ending : MonoBehaviour
     {
         if (isTriggered && Input.GetKeyDown(KeyCode.E) && Check())
         {
+            //haven't add anything yet, later do switch scene
             //extend time, hide time, wait until dialogue finish, switch to win screen
             if (!dm.dialogueBox.activeInHierarchy)
             {
