@@ -18382,6 +18382,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.42
       objectReference: {fileID: 0}
+    - target: {fileID: 8291650908334450993, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
 --- !u!1 &1177495429
@@ -26772,6 +26776,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 636390701775714571, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2783019
+      objectReference: {fileID: 0}
+    - target: {fileID: 636390701775714571, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: m_Color.g
+      value: 0.79781944
+      objectReference: {fileID: 0}
+    - target: {fileID: 636390701775714571, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 636390701775714573, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
       propertyPath: m_Name
       value: locker-removebg-preview (1)
@@ -28920,6 +28936,14 @@ PrefabInstance:
     - target: {fileID: 636390701775714570, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 636390701775714571, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 636390701775714571, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: m_Color.g
+      value: 0.79607844
       objectReference: {fileID: 0}
     - target: {fileID: 636390701775714573, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
       propertyPath: m_Name
