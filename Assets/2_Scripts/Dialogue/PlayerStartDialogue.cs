@@ -43,9 +43,6 @@ public class PlayerStartDialogue : MonoBehaviour
                     List<string> tmpDialogue = dt.readMinds.sentences.ToList();
                     tmpDialogue.Add("Is a picture of a woman and text beside is Mary...");
                     dt.dialogue.sentences = tmpDialogue.ToArray();
-
-                    //dt.dialogue.sentences = new string[dt.readMinds.sentences.Length];
-                    //dt.dialogue.sentences = dt.readMinds.sentences;
                     gameObject.SetActive(true);
                 }
                 else

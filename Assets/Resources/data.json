@@ -191,10 +191,17 @@
 
                     ],
                     "readingMinds": [
-                        "Unfinished dialogue"
-
+                        "Never gonna give you up",
+                        "Never gonna let you down",
+                        "Never gonna run around",
+                        "And deserve you."
                     ],
                     "specialDialogue": [
+                        "testing1",
+                        "testing2",
+                        "testing3",
+                        "testing4",
+                        "testing5"
 
                     ]
                 }
