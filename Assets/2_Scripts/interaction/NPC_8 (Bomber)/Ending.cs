@@ -3,19 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.IO;
-using System.Linq;
+using UnityEngine.UI;
 
 public class Ending : MonoBehaviour
 {
     public bool isTriggered;
 
     public UnityEvent ChangeDialogue;
+    public GameObject crossfade, objHint;
     Collected collected;
     DialogueManager dm;
+    Timer timerObj;
+    GameSceneManager gsm;
+    Text timerText;
 
     private void Awake()
     {
         UpdateData();
+        timerObj = GameObject.Find("TimerText").GetComponent<Timer>();
+        timerText = timerObj.GetComponent<Text>();
+        gsm = FindObjectOfType<GameSceneManager>();
         dm = FindObjectOfType<DialogueManager>();
     }
 
@@ -25,6 +32,9 @@ public class Ending : MonoBehaviour
         {
             //haven't add anything yet, later do switch scene
             //extend time, hide time, wait until dialogue finish, switch to win screen
+            timerObj.timeValue = 1000f;
+            timerText.enabled = false;
+            objHint.SetActive(false);
             if (!dm.dialogueBox.activeInHierarchy)
             {
                 EnterEnding();
@@ -61,7 +71,10 @@ public class Ending : MonoBehaviour
     IEnumerator Endgame()
     {
         Debug.Log("Activate Crossfade, Switch Scene to Win");
-        yield return null;
+        crossfade.SetActive(true);
+        yield return new WaitForSeconds(1);
+        gsm.SwitchScene(4);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
