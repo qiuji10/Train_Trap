@@ -9,13 +9,13 @@ public class PryOpenLocker : MonoBehaviour
     public bool hasObject = false;
     private bool hasCrowbar;
     private int Count;
-    public GameObject Object;
+    public GameObject Object,LockerOpen,LockerClose;
     private Inventory inventory;
 
     private void Awake()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>(); 
-       
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+
     }
 
     // Update is called once per frame
@@ -24,20 +24,22 @@ public class PryOpenLocker : MonoBehaviour
         if (InRange && Input.GetKeyDown(KeyCode.R))
         {
             hasCrowbar = PlayerCore.instance.CheckItem(ref Count, "Crowbar");
-            
-            if (hasCrowbar )
+
+            if (hasCrowbar)
             {
-               if (hasObject == false)
+                if (hasObject == false)
                 {
                     Instantiate(Object);
+                    LockerOpen.SetActive(true);
+                    LockerClose.SetActive(false);
                     Debug.Log("IS OPEN");
-                    hasObject = true; 
+                    hasObject = true;
                     for (int k = 0; k < inventory.slots.Length; k++)
                     {
                         inventory.slots[k].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[k];
                     }
                 }
-               
+
 
             }
         }
@@ -52,7 +54,7 @@ public class PryOpenLocker : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collide )
+    private void OnTriggerExit2D(Collider2D collide)
     {
         if (collide.gameObject.CompareTag("Player"))
         {

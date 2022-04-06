@@ -22037,6 +22037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LockerOpen left
       objectReference: {fileID: 0}
+    - target: {fileID: 636390701775714573, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
       propertyPath: Object
       value: 
@@ -22051,6 +22055,11 @@ PrefabInstance:
 --- !u!4 &1354052315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 636390701775714570, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+  m_PrefabInstance: {fileID: 1354052314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1354052316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 636390701775714573, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
   m_PrefabInstance: {fileID: 1354052314}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1356122454
@@ -27948,8 +27957,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InRange: 0
   hasObject: 0
-  LockerOpen: {fileID: 0}
-  LockerClose: {fileID: 0}
+  LockerOpen: {fileID: 1987756060}
+  LockerClose: {fileID: 1689546606}
 --- !u!1 &1695859720
 GameObject:
   m_ObjectHideFlags: 0
@@ -30108,11 +30117,24 @@ PrefabInstance:
       propertyPath: toolbox
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: LockerOpen
+      value: 
+      objectReference: {fileID: 1354052316}
+    - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: LockerClose
+      value: 
+      objectReference: {fileID: 1809181719}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
 --- !u!4 &1809181718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 636390701775714570, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+  m_PrefabInstance: {fileID: 1809181717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1809181719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 636390701775714573, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
   m_PrefabInstance: {fileID: 1809181717}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1812219384
@@ -33084,6 +33106,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'LockerOpenRight '
       objectReference: {fileID: 0}
+    - target: {fileID: 636390701775714573, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
       propertyPath: toolbox
       value: 
@@ -33094,6 +33120,11 @@ PrefabInstance:
 --- !u!4 &1987756059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 636390701775714570, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+  m_PrefabInstance: {fileID: 1987756058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1987756060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 636390701775714573, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
   m_PrefabInstance: {fileID: 1987756058}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1998420623
