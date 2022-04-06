@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class PryOpenLocker : MonoBehaviour
 {
     public bool InRange = false;
-    public bool hastoolBox = false;
+    public bool hasObject = false;
     private bool hasCrowbar;
     private int Count;
-    public GameObject toolbox;
-    public Locker boolBoy;
+    public GameObject Object;
     private Inventory inventory;
 
     private void Awake()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>(); 
+       
     }
 
     // Update is called once per frame
@@ -27,15 +27,11 @@ public class PryOpenLocker : MonoBehaviour
             
             if (hasCrowbar )
             {
-               if (hastoolBox == false)
+               if (hasObject == false)
                 {
-                    Instantiate(toolbox);
+                    Instantiate(Object);
                     Debug.Log("IS OPEN");
-                
-                    GameObject g = GameObject.FindGameObjectWithTag("locker");
-                    boolBoy = g.GetComponent<Locker>();
-                    boolBoy.hasToolBox = true;
-                    hastoolBox = true; 
+                    hasObject = true; 
                     for (int k = 0; k < inventory.slots.Length; k++)
                     {
                         inventory.slots[k].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[k];

@@ -28950,6 +28950,10 @@ PrefabInstance:
       value: locker-removebg-preview (2)
       objectReference: {fileID: 0}
     - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: Object
+      value: 
+      objectReference: {fileID: 1110975790369985680, guid: 083ddc2ca1a39ba44b77cd5bb19621da, type: 3}
+    - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
       propertyPath: toolbox
       value: 
       objectReference: {fileID: 0}
@@ -34749,7 +34753,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: locker-removebg-preview
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2392920296417355927, guid: 2a71586cbe79e4d449bca33cfe59ea25, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2a71586cbe79e4d449bca33cfe59ea25, type: 3}
 --- !u!4 &2935236270505863365
 Transform:
