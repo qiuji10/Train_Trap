@@ -9,9 +9,10 @@ public class EmptyLocker : MonoBehaviour
     public bool hasObject = false;
     private bool hasCrowbar;
     private int Count;
-   
-  
-   
+    public GameObject LockerOpen, LockerClose;
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -22,7 +23,8 @@ public class EmptyLocker : MonoBehaviour
 
             if (hasCrowbar)
             {
-               
+                LockerOpen.SetActive(true);
+                LockerClose.SetActive(false);
 
             }
         }
