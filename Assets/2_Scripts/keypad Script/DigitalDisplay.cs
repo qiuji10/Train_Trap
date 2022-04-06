@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class DigitalDisplay : MonoBehaviour
 {
     public GameObject toolbox;
-    public GameObject Keypad;
-    public Locker boolBoy;
+    public GameObject Keypad,LockerOpen,LockerClose;
     public Locker usingLockerBool;
     private Inventory inventory;
     [SerializeField]
@@ -137,9 +136,9 @@ public class DigitalDisplay : MonoBehaviour
             Instantiate(toolbox);
             Debug.Log("IS OPEN");
             Keypad.SetActive(false);
-            GameObject g = GameObject.FindGameObjectWithTag("locker");
-            boolBoy = g.GetComponent<Locker>();
-            boolBoy.hasToolBox = true;
+            LockerOpen.SetActive(true);
+            LockerClose.SetActive(false);
+            
             usingLockerBool.usingLocker = false; 
             Debug.Log("using locker false");
             for (int j = 0; j < inventory.slots.Length; j++)

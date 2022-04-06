@@ -2562,7 +2562,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolbox: {fileID: 2638005646209471928, guid: 6884b5a6c08494444af6c515525d3d94, type: 3}
   Keypad: {fileID: 80556269}
-  boolBoy: {fileID: 0}
+  LockerOpen: {fileID: 1519427633}
+  LockerClose: {fileID: 482061792}
   usingLockerBool: {fileID: 0}
   digits:
   - {fileID: 21300000, guid: b57acfa361a87874f99146ca8d3502e1, type: 3}
@@ -7770,6 +7771,11 @@ SortingGroup:
   m_SortingLayerID: 137557073
   m_SortingLayer: -2
   m_SortingOrder: 0
+--- !u!1 &482061792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2392920296417355916, guid: 2a71586cbe79e4d449bca33cfe59ea25, type: 3}
+  m_PrefabInstance: {fileID: 2392920295613904583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &491996655
 GameObject:
   m_ObjectHideFlags: 0
@@ -25747,6 +25753,11 @@ MonoBehaviour:
   pooledObjects: []
   objectToTpool: {fileID: 6032803391979971199, guid: 113d34be8c814234bb5f4f685e308531, type: 3}
   amountToPool: 20
+--- !u!1 &1519427633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2392920296417355916, guid: 2a71586cbe79e4d449bca33cfe59ea25, type: 3}
+  m_PrefabInstance: {fileID: 774965188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1537925279
 GameObject:
   m_ObjectHideFlags: 0
@@ -33264,6 +33275,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 636390701775714571, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3c8fd3aa4fee97646bda3f302f37c8c0, type: 3}
     - target: {fileID: 636390701775714571, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
       propertyPath: m_Color.b
       value: 0.2783019
