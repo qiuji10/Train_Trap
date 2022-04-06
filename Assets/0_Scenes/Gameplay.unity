@@ -35922,6 +35922,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  crossfade: {fileID: 1155613024}
+  objHint: {fileID: 1868933286}
 --- !u!61 &246399205204609850
 BoxCollider2D:
   m_ObjectHideFlags: 0

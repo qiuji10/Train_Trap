@@ -58,7 +58,7 @@ public class BombLocation : MonoBehaviour
                     {
                         timerOBJ.timeValue = 10f;
                     }
-                    timerOBJ.levelEnd = true;
+                    //timerOBJ.levelEnd = true;
                 }
                
             
@@ -70,14 +70,6 @@ public class BombLocation : MonoBehaviour
             db.value = setTimer;
         }
     }
-
-    //IEnumerator BombEnd()
-    //{
-    //    yield return new WaitForSeconds(5);
-
-    //}
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
