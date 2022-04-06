@@ -138,9 +138,7 @@ public class DigitalDisplay : MonoBehaviour
             Keypad.SetActive(false);
             LockerOpen.SetActive(true);
             LockerClose.SetActive(false);
-            
-            usingLockerBool.usingLocker = false; 
-            Debug.Log("using locker false");
+            usingLockerBool.usingLocker = false;
             for (int j = 0; j < inventory.slots.Length; j++)
             {
                 inventory.slots[j].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[j];
