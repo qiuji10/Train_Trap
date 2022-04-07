@@ -4,29 +4,43 @@ using UnityEngine;
 
 public class GuardPatrol : MonoBehaviour
 {
-    [HideInInspector]
-    public bool mustPatrol, playerinRange;
-    public Rigidbody2D rb;
-    public float WalkSpeed;
-    private float nextActionTime = 0.0f;
-    public float period = 0.1f;
+    public List<Transform> points;
+    public int nextId;
+    int idChangeValue = 1;
+    public bool playerinRange;
+    public float WalkSpeed = 2;
     public Locker playerUseLocker;
     // Start is called before the first frame update
-    void Start()
+
+
+    private void Reset()
     {
-        mustPatrol = true;
-        
+        Init();
     }
 
-    // Update is called once per frame
+    void Init()
+    {
+                GetComponent<BoxCollider2D>().isTrigger = true;
+                GameObject root = new GameObject(name + "_Root");
+                root.transform.position = transform.position;
+                transform.SetParent(root.transform);
+                GameObject waypoints = new GameObject("Waypoint");
+                waypoints.transform.SetParent(root.transform);
+                waypoints.transform.position = root.transform.position;
+                GameObject p1 = new GameObject("Point1"); p1.transform.SetParent(waypoints.transform); p1.transform.position = root.transform.position;
+        GameObject p2 = new GameObject("Point2"); p2.transform.SetParent(waypoints.transform); p2.transform.position = root.transform.position;
+
+        points = new List<Transform>();
+        points.Add(p1.transform);
+        points.Add(p2.transform);
+    }
+    
+   
+    
     void Update()
     {
-     
-            if (mustPatrol)
-        {
             Patrol();
-        }
-
+ 
         if (playerinRange && playerUseLocker.usingLocker)
         {
             Debug.Log("Catch Player");
@@ -35,23 +49,23 @@ public class GuardPatrol : MonoBehaviour
 
     void Patrol()
     {
-        rb.velocity = new Vector2(WalkSpeed * Time.fixedDeltaTime, rb.velocity.y);
-
-
-         if (Time.time > nextActionTime)
+        Transform goalPoint = points[nextId];
+        if (goalPoint.transform.position.x > transform.position.x)
+            transform.localScale = new Vector3(-1, 1, 1);
+        else
+            transform.localScale = new Vector3(1, 1, 1);
+        transform.position = Vector2.MoveTowards(transform.position, goalPoint.position, WalkSpeed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, goalPoint.position) < 0.2f)
         {
-            nextActionTime = Time.time + period;
-            Flip();
+            if (nextId == points.Count - 1)
+                idChangeValue = -1;
+            if (nextId == 0)
+                idChangeValue = 1;
+            nextId += idChangeValue;
         }
     }
 
-    void Flip()
-    {
-        mustPatrol = false;
-        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        WalkSpeed *= -1;
-        mustPatrol = true;
-    }
+  
 
 
     private void OnTriggerEnter2D(Collider2D collision)
