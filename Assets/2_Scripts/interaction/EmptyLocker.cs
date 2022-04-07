@@ -47,7 +47,7 @@ public class EmptyLocker : MonoBehaviour
                 }
             }else
             {
-                usingLocker3 = false; Debug.Log("using locker False");
+                usingLocker3 = false; 
                 holdTimer = setTimer;
                 db.value = setTimer;
             }

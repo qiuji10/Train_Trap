@@ -61,7 +61,7 @@ public class PryOpenLocker : MonoBehaviour
                
             }else
                 {
-            usingLocker2 = false; Debug.Log("using locker False");
+            usingLocker2 = false; 
             holdTimer = setTimer;
                     db.value = setTimer;
                 }

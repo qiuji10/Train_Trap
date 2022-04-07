@@ -21181,6 +21181,7 @@ MonoBehaviour:
   playerUseKeypadLocker: {fileID: 1881464397}
   playerUseLocker: {fileID: 1809181720}
   PlayerUseEmptyLocker: {fileID: 6692147371236335313}
+  PlayerUseEmptyLocker2: {fileID: 1689546607}
 --- !u!1 &1257159961
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class GuardPatrol : MonoBehaviour
     public Locker playerUseKeypadLocker;
     public PryOpenLocker playerUseLocker;
     public EmptyLocker PlayerUseEmptyLocker;
+    public EmptyLocker PlayerUseEmptyLocker2;
     // Start is called before the first frame update
 
 
@@ -43,7 +44,7 @@ public class GuardPatrol : MonoBehaviour
     {
             Patrol();
 
-        if (playerinRange && playerUseKeypadLocker.usingLocker == true || playerinRange && playerUseLocker.usingLocker2 == true || playerinRange && PlayerUseEmptyLocker.usingLocker3 == true)
+        if (playerinRange && playerUseKeypadLocker.usingLocker == true || playerinRange && playerUseLocker.usingLocker2 == true || playerinRange && PlayerUseEmptyLocker.usingLocker3 == true || playerinRange && PlayerUseEmptyLocker2.usingLocker3 == true)
         {
             Debug.Log("Catch Player");
         }
