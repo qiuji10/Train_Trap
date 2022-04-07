@@ -9,7 +9,9 @@ public class GuardPatrol : MonoBehaviour
     int idChangeValue = 1;
     public bool playerinRange;
     public float WalkSpeed = 2;
-    public Locker playerUseLocker;
+    public Locker playerUseKeypadLocker;
+    public PryOpenLocker playerUseLocker;
+    public EmptyLocker PlayerUseEmptyLocker;
     // Start is called before the first frame update
 
 
@@ -41,7 +43,7 @@ public class GuardPatrol : MonoBehaviour
     {
             Patrol();
  
-        if (playerinRange && playerUseLocker.usingLocker)
+        if (playerinRange && playerUseKeypadLocker.usingLocker || playerUseLocker.usingLocker2 || PlayerUseEmptyLocker.usingLocker3)
         {
             Debug.Log("Catch Player");
         }

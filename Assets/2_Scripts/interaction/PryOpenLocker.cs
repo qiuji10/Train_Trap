@@ -7,6 +7,7 @@ public class PryOpenLocker : MonoBehaviour
 {
     public bool InRange = false;
     public bool hasObject = false;
+    public bool usingLocker2 = false;
     private bool hasCrowbar;
     public float setTimer = 5f;
     private float holdTimer;

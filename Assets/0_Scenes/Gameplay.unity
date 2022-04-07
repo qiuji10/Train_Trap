@@ -21178,7 +21178,9 @@ MonoBehaviour:
   nextId: 0
   playerinRange: 0
   WalkSpeed: 2
-  playerUseLocker: {fileID: 0}
+  playerUseKeypadLocker: {fileID: 1881464397}
+  playerUseLocker: {fileID: 1809181720}
+  PlayerUseEmptyLocker: {fileID: 6692147371236335313}
 --- !u!1 &1257159961
 GameObject:
   m_ObjectHideFlags: 0
@@ -28385,6 +28387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InRange: 0
+  usingLocker3: 0
   hasObject: 0
   setTimer: 5
   LockerOpen: {fileID: 1987756060}
@@ -30677,6 +30680,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 636390701775714573, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
   m_PrefabInstance: {fileID: 1809181717}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1809181720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+  m_PrefabInstance: {fileID: 1809181717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809181719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e1fd4bc6f5237488eb70ca96c447a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1812219384
 GameObject:
   m_ObjectHideFlags: 0
@@ -32310,6 +32324,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2392920296417355915, guid: 2a71586cbe79e4d449bca33cfe59ea25, type: 3}
   m_PrefabInstance: {fileID: 2392920295613904583}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1881464397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2392920296417355913, guid: 2a71586cbe79e4d449bca33cfe59ea25, type: 3}
+  m_PrefabInstance: {fileID: 2392920295613904583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482061792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ef8003365013242bda1b66e2bc438c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1894421733
 GameObject:
   m_ObjectHideFlags: 0
@@ -37594,6 +37619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InRange: 0
+  usingLocker3: 0
   hasObject: 0
   setTimer: 5
   LockerOpen: {fileID: 795991347}

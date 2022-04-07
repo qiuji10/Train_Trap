@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EmptyLocker : MonoBehaviour
 {
     public bool InRange = false;
+    public bool usingLocker3 = false;
     public bool hasObject = false;
     private bool hasCrowbar;
     public float setTimer = 5f;
@@ -29,6 +30,7 @@ public class EmptyLocker : MonoBehaviour
 
             if (InRange && hasCrowbar && Input.GetKey(KeyCode.E))
             {
+                usingLocker3 = true;
                 if (LockerBar != null)
                 {
                     LockerBar.SetActive(true);
@@ -44,7 +46,7 @@ public class EmptyLocker : MonoBehaviour
                 }
             }else
             {
-
+             usingLocker3 = false;
                 holdTimer = setTimer;
                 db.value = setTimer;
             }
