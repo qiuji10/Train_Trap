@@ -11,14 +11,14 @@ public class PryOpenLocker : MonoBehaviour
     public float setTimer = 5f;
     private float holdTimer;
     private int Count;
-    public GameObject Object,LockerOpen,LockerClose, LockerBar;
+    public GameObject Object,LockerOpen,LockerClose, LockerBar2;
     private Inventory inventory;
     public Slider db;
 
     private void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        db = LockerBar.GetComponent<Slider>();
+        db = LockerBar2.GetComponent<Slider>();
         db.maxValue = setTimer;
     }
 
@@ -31,9 +31,9 @@ public class PryOpenLocker : MonoBehaviour
             if (InRange && hasCrowbar && Input.GetKey(KeyCode.E))
             {
 
-                if (LockerBar != null)
+                if (LockerBar2 != null)
                     {
-                        LockerBar.SetActive(true);
+                        LockerBar2.SetActive(true);
                     }
                 holdTimer -= Time.deltaTime;
                 db.value = holdTimer;
@@ -42,7 +42,7 @@ public class PryOpenLocker : MonoBehaviour
                 {
                      if (hasObject == false)
                     {
-                        LockerBar.SetActive(false);
+                        LockerBar2.SetActive(false);
                         Instantiate(Object);
                         LockerOpen.SetActive(true);
                         LockerClose.SetActive(false); 
@@ -83,6 +83,7 @@ public class PryOpenLocker : MonoBehaviour
         {
             InRange = false;
             Debug.Log("Player is not in Range");
+            LockerBar2.SetActive(false);
         }
     }
 }

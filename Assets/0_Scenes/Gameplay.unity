@@ -19227,6 +19227,10 @@ PrefabInstance:
       propertyPath: slots.Array.data[4]
       value: 
       objectReference: {fileID: 244265818}
+    - target: {fileID: 2391101167467597975, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505573, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -20965,11 +20969,11 @@ GameObject:
   - component: {fileID: 1256924383}
   m_Layer: 0
   m_Name: guard patrol
-  m_TagString: Ground
+  m_TagString: patrol Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1256924382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21076,7 +21080,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.06, y: -0.14}
@@ -30600,6 +30604,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
       propertyPath: LockerBar
+      value: 
+      objectReference: {fileID: 537147901}
+    - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: LockerBar2
       value: 
       objectReference: {fileID: 537147901}
     - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
