@@ -2564,7 +2564,7 @@ MonoBehaviour:
   Keypad: {fileID: 80556269}
   LockerOpen: {fileID: 1519427633}
   LockerClose: {fileID: 482061792}
-  usingLockerBool: {fileID: 0}
+  usingLockerBool: {fileID: 1881464397}
   digits:
   - {fileID: 21300000, guid: b57acfa361a87874f99146ca8d3502e1, type: 3}
   - {fileID: 21300000, guid: 21dbca3468e5bae4480811eebed0c430, type: 3}
