@@ -24,13 +24,15 @@ public class EmptyLocker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (InRange && Input.GetKeyDown(KeyCode.R))
-        {
+        if (InRange && Input.GetKeyDown(KeyCode.E))
             hasCrowbar = PlayerCore.instance.CheckItem(ref Count, "Crowbar");
 
-            if (hasCrowbar)
+            if (InRange && hasCrowbar && Input.GetKey(KeyCode.E))
             {
-                LockerBar.SetActive(true);
+                if (LockerBar != null)
+                {
+                    LockerBar.SetActive(true);
+                }
                 holdTimer -= Time.deltaTime;
                 db.value = holdTimer;
 
@@ -38,15 +40,16 @@ public class EmptyLocker : MonoBehaviour
                 {
                     LockerOpen.SetActive(true);
                     LockerClose.SetActive(false);
+                    LockerBar.SetActive(false);
                 }
-            }
-            else
+            }else
             {
 
                 holdTimer = setTimer;
                 db.value = setTimer;
             }
-        }
+            
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collide)
@@ -64,6 +67,7 @@ public class EmptyLocker : MonoBehaviour
         {
             InRange = false;
             Debug.Log("Player is not in Range");
+            LockerBar.SetActive(false);
         }
     }
 }
