@@ -14,5 +14,6 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerReadMinds()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(readMinds);
+        FindObjectOfType<DialogueManager>().key.text = "R";
     }
 }
