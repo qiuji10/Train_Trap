@@ -44,7 +44,8 @@ public class EmptyLocker : MonoBehaviour
                     LockerOpen.SetActive(true);
                     LockerClose.SetActive(false);
                     LockerBar.SetActive(false);
-                }
+                     usingLocker3 = false;
+            }
             }else
             {
                 usingLocker3 = false; 

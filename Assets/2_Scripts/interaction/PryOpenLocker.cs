@@ -46,8 +46,9 @@ public class PryOpenLocker : MonoBehaviour
                         LockerBar2.SetActive(false);
                         Instantiate(Object);
                         LockerOpen.SetActive(true);
-                        LockerClose.SetActive(false); 
-                        Debug.Log("IS OPEN");
+                        LockerClose.SetActive(false);
+                         usingLocker2 = false;
+                         Debug.Log("IS OPEN");
                         hasObject = true;
                         for (int k = 0; k < inventory.slots.Length; k++)
                         {
@@ -61,9 +62,9 @@ public class PryOpenLocker : MonoBehaviour
                
             }else
                 {
-            usingLocker2 = false; 
-            holdTimer = setTimer;
-                    db.value = setTimer;
+                usingLocker2 = false; 
+                holdTimer = setTimer;
+                db.value = setTimer;
                 }
 
 
