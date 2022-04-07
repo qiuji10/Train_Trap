@@ -15,7 +15,7 @@ public class GuardPatrol : MonoBehaviour
     void Start()
     {
         mustPatrol = true;
-
+        
     }
 
     // Update is called once per frame
