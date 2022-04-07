@@ -8,11 +8,18 @@ public class EmptyLocker : MonoBehaviour
     public bool InRange = false;
     public bool hasObject = false;
     private bool hasCrowbar;
+    public float setTimer = 5f;
+    private float holdTimer;
     private int Count;
-    public GameObject LockerOpen, LockerClose;
+    public GameObject LockerOpen, LockerClose,LockerBar;
+    public Slider db;
 
 
-
+    void Awake()
+    {
+        db = LockerBar.GetComponent<Slider>();
+        db.maxValue = setTimer;
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,9 +30,21 @@ public class EmptyLocker : MonoBehaviour
 
             if (hasCrowbar)
             {
-                LockerOpen.SetActive(true);
-                LockerClose.SetActive(false);
+                LockerBar.SetActive(true);
+                holdTimer -= Time.deltaTime;
+                db.value = holdTimer;
 
+                if (holdTimer < 0)
+                {
+                    LockerOpen.SetActive(true);
+                    LockerClose.SetActive(false);
+                }
+            }
+            else
+            {
+
+                holdTimer = setTimer;
+                db.value = setTimer;
             }
         }
     }
