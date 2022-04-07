@@ -42,8 +42,8 @@ public class GuardPatrol : MonoBehaviour
     void Update()
     {
             Patrol();
- 
-        if (playerinRange && playerUseKeypadLocker.usingLocker || playerUseLocker.usingLocker2 || PlayerUseEmptyLocker.usingLocker3)
+
+        if (playerinRange && playerUseKeypadLocker.usingLocker == true || playerinRange && playerUseLocker.usingLocker2 == true || playerinRange && PlayerUseEmptyLocker.usingLocker3 == true)
         {
             Debug.Log("Catch Player");
         }

@@ -25,6 +25,7 @@ public class EmptyLocker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (InRange && Input.GetKeyDown(KeyCode.E))
             hasCrowbar = PlayerCore.instance.CheckItem(ref Count, "Crowbar");
 
@@ -46,7 +47,7 @@ public class EmptyLocker : MonoBehaviour
                 }
             }else
             {
-             usingLocker3 = false;
+                usingLocker3 = false; Debug.Log("using locker False");
                 holdTimer = setTimer;
                 db.value = setTimer;
             }

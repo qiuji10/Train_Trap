@@ -31,8 +31,8 @@ public class PryOpenLocker : MonoBehaviour
 
             if (InRange && hasCrowbar && Input.GetKey(KeyCode.E))
             {
-
-                if (LockerBar2 != null)
+            usingLocker2 = true;
+            if (LockerBar2 != null)
                     {
                         LockerBar2.SetActive(true);
                     }
@@ -61,8 +61,8 @@ public class PryOpenLocker : MonoBehaviour
                
             }else
                 {
-
-                    holdTimer = setTimer;
+            usingLocker2 = false; Debug.Log("using locker False");
+            holdTimer = setTimer;
                     db.value = setTimer;
                 }
 
