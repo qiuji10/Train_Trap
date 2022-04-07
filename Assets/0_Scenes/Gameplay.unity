@@ -30599,6 +30599,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
+      propertyPath: LockerBar
+      value: 
+      objectReference: {fileID: 537147901}
+    - target: {fileID: 636390701775714582, guid: 5daae17e11b6bc64aa4c77a8ce1a1387, type: 3}
       propertyPath: LockerOpen
       value: 
       objectReference: {fileID: 1354052316}

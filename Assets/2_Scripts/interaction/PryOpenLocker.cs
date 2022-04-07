@@ -8,41 +8,64 @@ public class PryOpenLocker : MonoBehaviour
     public bool InRange = false;
     public bool hasObject = false;
     private bool hasCrowbar;
+    public float setTimer = 5f;
+    private float holdTimer;
     private int Count;
-    public GameObject Object,LockerOpen,LockerClose;
+    public GameObject Object,LockerOpen,LockerClose, LockerBar;
     private Inventory inventory;
+    public Slider db;
 
     private void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-
+        db = LockerBar.GetComponent<Slider>();
+        db.maxValue = setTimer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (InRange && Input.GetKeyDown(KeyCode.R))
-        {
-            hasCrowbar = PlayerCore.instance.CheckItem(ref Count, "Crowbar");
+        if (InRange && Input.GetKeyDown(KeyCode.E))
+         hasCrowbar = PlayerCore.instance.CheckItem(ref Count, "Crowbar");
 
-            if (hasCrowbar)
+            if (InRange && hasCrowbar && Input.GetKey(KeyCode.E))
             {
-                if (hasObject == false)
-                {
-                    Instantiate(Object);
-                    LockerOpen.SetActive(true);
-                    LockerClose.SetActive(false);
-                    Debug.Log("IS OPEN");
-                    hasObject = true;
-                    for (int k = 0; k < inventory.slots.Length; k++)
+
+                if (LockerBar != null)
                     {
-                        inventory.slots[k].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[k];
+                        LockerBar.SetActive(true);
                     }
+                holdTimer -= Time.deltaTime;
+                db.value = holdTimer;
+
+                if (holdTimer < 0)
+                {
+                     if (hasObject == false)
+                    {
+                        LockerBar.SetActive(false);
+                        Instantiate(Object);
+                        LockerOpen.SetActive(true);
+                        LockerClose.SetActive(false); 
+                        Debug.Log("IS OPEN");
+                        hasObject = true;
+                        for (int k = 0; k < inventory.slots.Length; k++)
+                        {
+                            inventory.slots[k].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[k];
+                        }
+                    }
+
+
+                }
+        
+               
+            }else
+                {
+
+                    holdTimer = setTimer;
+                    db.value = setTimer;
                 }
 
 
-            }
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collide)
