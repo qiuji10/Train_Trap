@@ -26,14 +26,15 @@ TagManager:
   - slot_orangejuice
   - Orange_Juice
   - slot_wrench
+  - patrol Guard
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - patrol guard
   - Water
   - UI
-  - 
+  - 'Player '
   - 
   - 
   - 

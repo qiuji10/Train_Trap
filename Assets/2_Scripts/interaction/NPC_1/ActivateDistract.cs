@@ -9,7 +9,7 @@ public class ActivateDistract : MonoBehaviour
 
     void Update()
     {
-        if (isInRange && PlayerCore.instance.ActivateDistract==false && Input.GetKeyDown(KeyCode.E))
+        if (isInRange && PlayerCore.instance.ActivateDistract==false && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.R)))
         {
             PlayerCore.instance.ActivateDistract = true;
             hintText.SetActive(true);

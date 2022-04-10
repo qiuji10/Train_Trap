@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.IO;
+using System.Linq;
 
 public class PlayerStartDialogue : MonoBehaviour
 {
     private int pdc;
-    private bool isTriggered;
+    public bool isTriggered;
 
     public UnityEvent StartDialogue, NextSentence;
     Collected collected;
@@ -29,9 +30,28 @@ public class PlayerStartDialogue : MonoBehaviour
             if (Check() && PlayerPrefs.GetInt("GetAllClues") == 0)
             {
                 PlayerPrefs.SetInt("GetAllClues", 1);
-                dt.dialogue.sentences = new string[dt.readMinds.sentences.Length];
-                dt.dialogue.sentences = dt.readMinds.sentences;
+                dt.dialogue.sentences = new string[3];
+                dt.dialogue.sentences[0] = "Alright.";
+                dt.dialogue.sentences[1] = "I know what is going on.";
+                dt.dialogue.sentences[2] = "Gonna end these nightmares now.";
                 gameObject.SetActive(true);
+            }
+            else if (PlayerPrefs.GetInt("MaryPicSpawned") == 1 && PlayerPrefs.GetInt("GetAllClues") == 0)
+            {
+                if (PlayerPrefs.GetInt("GetMaryPic") == 1)
+                {
+                    List<string> tmpDialogue = dt.readMinds.sentences.ToList();
+                    tmpDialogue.Add("Is a picture of a woman and text beside is Mary...");
+                    dt.dialogue.sentences = tmpDialogue.ToArray();
+                    gameObject.SetActive(true);
+                }
+                else
+                {
+                    List<string> tmpDialogue = dt.readMinds.sentences.ToList();
+                    tmpDialogue.Add("I need to get it, it might be a clue. ");
+                    dt.dialogue.sentences = tmpDialogue.ToArray();
+                    gameObject.SetActive(true);
+                }
             }
             else
                 gameObject.SetActive(false);
@@ -40,7 +60,7 @@ public class PlayerStartDialogue : MonoBehaviour
 
     void Update()
     {
-        if ((pdc == 1 || Check()) && isTriggered)
+        if ((pdc == 1 || Check() || PlayerPrefs.GetInt("MaryPicSpawned") == 1 || (PlayerPrefs.GetInt("GetMaryPic") == 1)) && isTriggered)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -53,6 +73,7 @@ public class PlayerStartDialogue : MonoBehaviour
             if (!DialogueManager.instance.isInteracted)
             {
                 gameObject.SetActive(false);
+                PlayerPrefs.SetInt("MaryPicSpawned", 0);
             }
         }
     }

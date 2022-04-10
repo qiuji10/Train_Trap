@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
 
     public Text nameText;
     public Text dialogueText;
+    public Text key;
     public GameObject dialogueBox;
     public GameObject slot;
     private Queue<string> sentences;
@@ -73,8 +74,9 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        Debug.Log("there is no sentences alr");
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
         isInteracted = false;
-        Debug.Log("there is no sentences alr");
+        key.text = "E";
     }
 }

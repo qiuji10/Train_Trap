@@ -1,25 +1,25 @@
 {
-    "npcs":[
+    "npcs": [
         {
-            "npcName":"Kid",
-            "options":[
+            "npcName": "Kid",
+            "options": [
                 {
-                    "conversation":[
+                    "conversation": [
                         "Could you buy me a Cola?",
                         "I haven't drank that for 30 mintues.",
                         "I will exchange you this fancy upper-class ticket with a Cola"
                     ],
-                    "readingMinds":[
+                    "readingMinds": [
                         "Cola~~ Cola~~"
                     ],
-                    "specialDialogue":[
+                    "specialDialogue": [
                         "Thanks dude, here's the ticket"
                     ]
                 }
             ]
         },
         {
-            "npcName":"Guard",
+            "npcName": "Guard",
             "options": [
                 {
                     "conversation": [
@@ -51,25 +51,25 @@
             ]
         },
         {
-            "npcName":"Bob", 
-            "options":[
+            "npcName": "Bob",
+            "options": [
                 {
-                    "conversation":[
+                    "conversation": [
                         "Godamnit, I bought the wrong drink"
                     ],
                     "readingMinds": [
                         "...this job sucks",
                         "Is it 6699#, 6969# or *6669??"
                     ],
-                    "specialDialogue":[
-                        
+                    "specialDialogue": [
+
                     ]
                 }
             ]
         },
         {
-            "npcName":"Thomas[Train Staff]",
-            "options":[
+            "npcName": "Thomas[Train Staff]",
+            "options": [
                 {
                     "conversation": [
                         "Hey, can you help me call the guard to here?",
@@ -83,8 +83,8 @@
                         "I really need him now",
                         "but i kinda forgot how he looks like"
                     ],
-                    "specialDialogue":[
-                        
+                    "specialDialogue": [
+
                     ]
                 }
             ]
@@ -172,11 +172,37 @@
 
                     ],
                     "readingMinds": [
-                        "This can't be happening'"
+                        "This can't be happening"
 
                     ],
                     "specialDialogue": [
-                        
+
+                    ]
+                }
+
+            ]
+        },
+        {
+            "npcName": "John",
+            "options": [
+                {
+                    "conversation": [
+                        "Hey, watch your steps."
+
+                    ],
+                    "readingMinds": [
+                        "Never gonna give you up",
+                        "Never gonna let you down",
+                        "Never gonna run around",
+                        "And deserve you."
+                    ],
+                    "specialDialogue": [
+                        "testing1",
+                        "testing2",
+                        "testing3",
+                        "testing4",
+                        "testing5"
+
                     ]
                 }
 

@@ -16,6 +16,7 @@ public class BombLocation : MonoBehaviour
     public GameObject toolbox;
     public GameObject defuseBar, MaryPic;
     public Slider db;
+    public PlayerStartDialogue psd;
     Timer timerOBJ;
 
     [SerializeField] AudioData ExplosionAudio;
@@ -25,6 +26,7 @@ public class BombLocation : MonoBehaviour
     {
         timerOBJ = GameObject.Find("TimerText").GetComponent<Timer>();
         db = defuseBar.GetComponent<Slider>();
+        psd = FindObjectOfType<PlayerStartDialogue>();
         db.maxValue = setTimer;
     }
 
@@ -35,7 +37,10 @@ public class BombLocation : MonoBehaviour
 
         if (isInRange && hasTool && Input.GetKey(KeyCode.E))
         {
-            defuseBar.SetActive(true);
+            if (defuseBar != null)
+            {
+                defuseBar.SetActive(true);
+            }
             holdTimer -= Time.deltaTime;
             db.value = holdTimer;
             if (holdTimer < 0)
@@ -45,12 +50,15 @@ public class BombLocation : MonoBehaviour
                 if (!isCreated)
                 {
                     AudioManager.instance.PlaySFX(ExplosionAudio, "Explosion");
-
+                    PlayerPrefs.SetInt("MaryPicSpawned", 1);
                     Instantiate(MaryPic);
                     isCreated = true;
-                    Destroy(defuseBar);
-                    timerOBJ.timeValue = 4f;
-                    timerOBJ.levelEnd = true;
+                    //Destroy(defuseBar);
+                    if (timerOBJ.timeValue >= 10)
+                    {
+                        timerOBJ.timeValue = 10f;
+                    }
+                    //timerOBJ.levelEnd = true;
                 }
                
             
@@ -62,14 +70,6 @@ public class BombLocation : MonoBehaviour
             db.value = setTimer;
         }
     }
-
-    //IEnumerator BombEnd()
-    //{
-    //    yield return new WaitForSeconds(5);
-
-    //}
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -86,7 +86,10 @@ public class BombLocation : MonoBehaviour
         {
             isInRange = false;
             PlayerCore.instance.KeyE = false;
-            defuseBar.SetActive(false);
+            if (defuseBar != null)
+            {
+                defuseBar.SetActive(true);
+            }
         }
     }
 }

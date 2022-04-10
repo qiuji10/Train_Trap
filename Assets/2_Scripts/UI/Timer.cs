@@ -28,7 +28,13 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if(timeValue > 0)
+        ////this is for debugging purposes, leave it here
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    timeValue = 5;
+        //}
+
+        if (timeValue > 0)
         {
             timeValue -= Time.deltaTime;
         }
@@ -55,22 +61,13 @@ public class Timer : MonoBehaviour
     IEnumerator StartGameOver()
     {
         yield return StartCoroutine(cam.GetComponent<CameraFollow>().ShakeScreen(1f, 0.7f));
-        if (!levelEnd)
-            yield return StartCoroutine(SwitchGameOver());
-        else
-            yield return StartCoroutine(SwitchWin());
+        yield return StartCoroutine(SwitchGameOver());
     }
 
     IEnumerator SwitchGameOver()
     {
         yield return new WaitForSeconds(1f);
         gsm.SwitchScene(1);
-    }
-
-    IEnumerator SwitchWin()
-    {
-        yield return new WaitForSeconds(1f);
-        gsm.SwitchScene(4);
     }
 
     void DisplayTime(float timeToDisplay) 

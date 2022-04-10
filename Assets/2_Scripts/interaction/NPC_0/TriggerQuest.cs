@@ -14,10 +14,12 @@ public class TriggerQuest : MonoBehaviour
     private Inventory inventory;
     public GameObject ticketPrefab;
     public UnityEvent triggerQuest;
+    Vector3 spawnPos;
 
     private void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        spawnPos = new Vector3(transform.position.x, -4.1f, transform.position.z);
     }
 
     void Update()
@@ -31,7 +33,7 @@ public class TriggerQuest : MonoBehaviour
                 PlayerCore.instance.inventoryName.Insert(loopCount, "");
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
                 inventory.isFull[loopCount] = false;
-                Instantiate(ticketPrefab);
+                Instantiate(ticketPrefab, spawnPos, Quaternion.identity);
                 isInRange = false;
                 takenCola = true;
                 Destroy(GameObject.FindGameObjectWithTag("coke"));

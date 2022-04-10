@@ -11,12 +11,14 @@ public class VendingMachine : MonoBehaviour
     private int i;
     public GameObject drink;
     private Inventory inventory;
+    Vector3 spawnPos; 
 
     [SerializeField] AudioData vendingMachineAudio;
 
     private void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        spawnPos = new Vector3(transform.position.x, -4.1f, transform.position.z);
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class VendingMachine : MonoBehaviour
                 PlayerCore.instance.inventoryName.Insert(loopCount, "");
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
                 inventory.isFull[loopCount] = false;
-                Instantiate(drink);
+                Instantiate(drink, spawnPos, Quaternion.identity);
                 Destroy(GameObject.FindGameObjectWithTag("coin"));
                 for (int j = 0; j < inventory.slots.Length; j++)
                 {

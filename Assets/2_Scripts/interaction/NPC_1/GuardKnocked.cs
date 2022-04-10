@@ -12,10 +12,14 @@ public class GuardKnocked : MonoBehaviour
     public GameObject player, crossFade;
     DialogueManager dm;
     Inventory inventory;
+    DistractGuard dg;
+    NpcInteraction npcInteract;
 
     void Awake()
     {
         cfAnimator = crossFade.GetComponent<Animator>();
+        dg = GetComponent<DistractGuard>();
+        npcInteract = GetComponent<NpcInteraction>();
         dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
@@ -24,13 +28,16 @@ public class GuardKnocked : MonoBehaviour
     {
         if (gotHit == true)
         {
+            npcInteract.enabled = false;
+            dg.enabled = false;
             StartWake();
         }
     }
 
     public void StartWake()
     {
-        StartCoroutine(Wakey());
+        if (!dm.dialogueBox.activeInHierarchy)
+            StartCoroutine(Wakey());
     }
 
     private IEnumerator Wakey()
@@ -40,12 +47,16 @@ public class GuardKnocked : MonoBehaviour
         allowAccess.Invoke();
         yield return new WaitForSeconds(10f);
         guardAnimator.SetBool("isKnocked", false);
+        npcInteract.enabled = true;
+        dg.enabled = true;
         //should close again the passAccess and check if player still in upper train the guard should kick him off
         if (!PlayerCore.instance.CheckItem(ref num, "ticket"))
         {
             if (player.transform.position.x > transform.position.x)
             {
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+                dg.enabled = false;
+                npcInteract.enabled = false;
                 guardAnimator.SetBool("caughtPlayer", true);
                 yield return new WaitForSeconds(1f);
                 getCaught.Invoke();
@@ -71,6 +82,8 @@ public class GuardKnocked : MonoBehaviour
                 yield return new WaitForSeconds(1f);
                 crossFade.SetActive(false);
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
+                dg.enabled = true;
+                npcInteract.enabled = true;
             }
             changeBackDialogue.Invoke();
             denyAccess.Invoke();
