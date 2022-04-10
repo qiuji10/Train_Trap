@@ -207,6 +207,26 @@
                 }
 
             ]
+        },
+        {
+            "npcName": "Cashier",
+            "options": [
+                {
+                    "conversation": [
+                        "Good morning!",
+                        "It cost a dollar for a newspaper."
+
+                    ],
+                    "readingMinds": [
+                        "What a poor guy"
+                    ],
+                    "specialDialogue": [
+                        "Thank you for the purchase!"
+
+                    ]
+                }
+
+            ]
         }
     ]
 }
