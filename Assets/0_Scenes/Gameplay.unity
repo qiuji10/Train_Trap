@@ -4587,6 +4587,7 @@ GameObject:
   - component: {fileID: 282069134}
   - component: {fileID: 282069133}
   - component: {fileID: 282069132}
+  - component: {fileID: 282069136}
   m_Layer: 0
   m_Name: newpaper-removebg-preview
   m_TagString: Newspaper
@@ -4703,6 +4704,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &282069136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282069131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c12c8229e3751940abae07008f65073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &292781027
 GameObject:
   m_ObjectHideFlags: 0
@@ -11243,7 +11256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741270294472114474, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1764.8091
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741270294472114474, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -11275,7 +11288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1132927624213102243, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
-      value: "Grandma Radio Clue\n- It\u2019s live broadcast news about the event
+      value: "Grandma Radio Clue:\n- It\u2019s live broadcast news about the event
         on the bridge. Although most of the message is messy and unclear in the following
         part. But it seems like the director of the bridge is having an interview
         on the bridge.\r\n\r\nRadio:\r\n\r\nWelcome to STR News. I\u2019m Shiro.\r\nCurrently,
@@ -11323,7 +11336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163949857422260901, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
-      value: "Dad Newspaper Clue\n- This is yesterday\u2019s newspaper. It\u2019s
+      value: "Dad Newspaper Clue:\n- This is yesterday\u2019s newspaper. It\u2019s
         about a funeral and there are two relatives who are having a big fight. According
         to the internet, some people recognized that one of the relatives is Mr.
         John, who is the director of the bridge."
@@ -11390,7 +11403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3578423878683450354, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
-      value: "Cashier Newspaper Clue \nThis is today\u2019s newspaper. According
+      value: "Cashier Newspaper Clue:\n\nThis is today\u2019s newspaper. According
         to the headline, A new train, AP-4869, has begun operating in an overwhelmingly
         popular  neighborhood. Another headline mentions a new statue on the bridge
         called \"Mary,\" which is currently being constructed."
@@ -11425,7 +11438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696314576841996204, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4813626355089231248, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_RootOrder
@@ -11433,11 +11446,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_SizeDelta.x
@@ -11449,11 +11462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 281.2608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4845751537666340501, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -170.56195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5103658066700025573, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_RootOrder
@@ -11557,7 +11570,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558453741901497256, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
-      value: Clue 5 555555555555555555555555555555555555555555555555555555
+      value: 'NewspaperB Clue:
+
+
+        This newspaper was published three years
+        ago. It announces that train AP-4869 is currently under construction. Another
+        news story is about Mary and John getting married at the church'
       objectReference: {fileID: 0}
     - target: {fileID: 5768567893091624666, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_RootOrder
@@ -11641,11 +11659,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7941511982317149122, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7941511982317149122, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7941511982317149122, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_SizeDelta.y
@@ -11653,11 +11671,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7941511982317149122, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 281.2608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7941511982317149122, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1533.4866
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8058211528045314015, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_RootOrder
@@ -11689,11 +11707,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_SizeDelta.y
@@ -11701,11 +11719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 281.2608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8194852885221216343, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -798.9204
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8250427304207260375, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_RootOrder
@@ -11713,19 +11731,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8250427304207260375, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8250427304207260375, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8250427304207260375, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 281.2608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8250427304207260375, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1339.3469
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8824323431603241976, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_IsActive
@@ -11737,19 +11755,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8835333729154376706, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8835333729154376706, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835333729154376706, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 394.545
       objectReference: {fileID: 0}
     - target: {fileID: 8835333729154376706, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 281.2608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8835333729154376706, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1704.9027
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8842041868204142696, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_Viewport
