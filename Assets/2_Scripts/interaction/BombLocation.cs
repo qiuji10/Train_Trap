@@ -88,7 +88,7 @@ public class BombLocation : MonoBehaviour
             PlayerCore.instance.KeyE = false;
             if (defuseBar != null)
             {
-                defuseBar.SetActive(true);
+                defuseBar.SetActive(false);
             }
         }
     }

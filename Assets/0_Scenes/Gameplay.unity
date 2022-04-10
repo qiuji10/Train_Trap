@@ -680,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3400128541510763823, guid: e9550d2f5fb63c84f89644483377e054, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3400128541510763823, guid: e9550d2f5fb63c84f89644483377e054, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5553,7 +5553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &319792223
 Transform:
   m_ObjectHideFlags: 0
@@ -12174,7 +12174,7 @@ Transform:
   - {fileID: 1428450771}
   - {fileID: 1086926823}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &738773210
 GameObject:
@@ -19332,7 +19332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505592, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3070695382688505592, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20041,7 +20041,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1209891910
 BoxCollider2D:
@@ -26882,7 +26882,7 @@ RectTransform:
   - {fileID: 27334347}
   - {fileID: 552990612}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -30415,7 +30415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9088466769411506749, guid: 8d7249a1cb142ff4b917df7eeb7be5ad, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d7249a1cb142ff4b917df7eeb7be5ad, type: 3}
@@ -32852,7 +32852,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1930244472
 GameObject:
