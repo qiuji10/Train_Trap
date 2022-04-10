@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class DistractGuard : MonoBehaviour
 {
     private int num;
-    private bool isInRange;
+    private bool isInRange, dialogueChanged;
     public UnityEvent changeGuardDialogue, allowAccess, denyAccess, getCaught, changeBackDialogue;
     public Animator guardAnimator;
     public Animator cfAnimator;
@@ -27,21 +27,29 @@ public class DistractGuard : MonoBehaviour
     {
         if (isInRange && PlayerCore.instance.ActivateDistract == true)
         {
-            changeGuardDialogue.Invoke();
+            if (!dialogueChanged)
+            {
+                changeGuardDialogue.Invoke();
+                dialogueChanged = true;
+            }
+
+
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log(dm.dialogueBox.activeInHierarchy);
                 gk.enabled = false;
                 pa.enabled = false;
                 hintText.SetActive(false);
-                if (!dm.dialogueBox.activeInHierarchy)
-                    StartDistract();
+                StartDistract();
             }
         }
     }
 
     private void StartDistract()
     {
-        StartCoroutine(StorySequence());
+        Debug.Log("StartDistract");
+        if (!dm.dialogueBox.activeInHierarchy)
+            StartCoroutine(StorySequence());
     }
 
     private IEnumerator StorySequence()

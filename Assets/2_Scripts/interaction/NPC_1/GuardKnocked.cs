@@ -28,6 +28,7 @@ public class GuardKnocked : MonoBehaviour
     {
         if (gotHit == true)
         {
+            gotHit = false;
             npcInteract.enabled = false;
             dg.enabled = false;
             StartWake();
@@ -42,7 +43,6 @@ public class GuardKnocked : MonoBehaviour
 
     private IEnumerator Wakey()
     {
-        gotHit = false;
         guardAnimator.SetBool("isKnocked", true);
         allowAccess.Invoke();
         yield return new WaitForSeconds(10f);
@@ -66,6 +66,7 @@ public class GuardKnocked : MonoBehaviour
                 yield return new WaitForSeconds(2f);
                 guardAnimator.SetBool("caughtPlayer", false);
                 player.transform.position = new Vector3(41.23f, player.transform.position.y, player.transform.position.z);
+                dm.isInteracted = false;
                 dm.dialogueBox.SetActive(false);
                 dm.slot.SetActive(true);
                 if (PlayerCore.instance.CheckItem(ref loopCount, "wrench"))
@@ -82,8 +83,8 @@ public class GuardKnocked : MonoBehaviour
                 yield return new WaitForSeconds(1f);
                 crossFade.SetActive(false);
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
-                dg.enabled = true;
                 npcInteract.enabled = true;
+                dg.enabled = true;
             }
             changeBackDialogue.Invoke();
             denyAccess.Invoke();
