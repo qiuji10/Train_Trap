@@ -41,6 +41,8 @@ public class CashierQuest : MonoBehaviour
                 {
                     inventory.slots[i].transform.GetComponentInChildren<Text>().text = PlayerCore.instance.inventoryName[i];
                 }
+
+                PlayerCore.instance.ChangeClueData(3);
             }
         }
     }
