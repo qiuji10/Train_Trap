@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class GuardPatrol : MonoBehaviour
 {
@@ -8,14 +10,23 @@ public class GuardPatrol : MonoBehaviour
     public int nextId;
     int idChangeValue = 1;
     public bool playerinRange;
-    public float WalkSpeed = 2;
+    float WalkSpeed = 2;
     public Locker playerUseKeypadLocker;
     public PryOpenLocker playerUseLocker;
     public EmptyLocker PlayerUseEmptyLocker;
     public EmptyLocker PlayerUseEmptyLocker2;
     // Start is called before the first frame update
+   
+    GuardPatrol gp;
+    NpcInteraction npcInteract1;
+    public UnityEvent  getCaught;
+    public GameObject player, crossFade;
+    DialogueManager dm;
 
-
+    private void Awake()
+    {
+        dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+    }
     private void Reset()
     {
         Init();
@@ -44,11 +55,12 @@ public class GuardPatrol : MonoBehaviour
     {
             Patrol();
 
-        if (playerinRange && playerUseKeypadLocker.usingLocker == true || playerinRange && playerUseLocker.usingLocker2 == true || playerinRange && PlayerUseEmptyLocker.usingLocker3 == true || playerinRange && PlayerUseEmptyLocker2.usingLocker3 == true)
+        if (playerinRange && (playerUseKeypadLocker.usingLocker ||  playerUseLocker.usingLocker2 || PlayerUseEmptyLocker.usingLocker3 || PlayerUseEmptyLocker2.usingLocker3 == true))
         {
             Debug.Log("Catch Player");
+            StartCoroutine(getcCaught());
         }
-    }
+    }  
 
     void Patrol()
     {
@@ -68,6 +80,33 @@ public class GuardPatrol : MonoBehaviour
         }
     }
 
+    private IEnumerator getcCaught()
+    {
+        GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+        WalkSpeed = 0;
+        dm.dialogueText.text = "HEYYYYYYY!!!!!!! YOu THEREEEE";
+        dm.nameText.text = "MAn Guard";
+        
+
+        yield return new WaitForSeconds(1f);
+        dm.dialogueBox.SetActive(true);
+        //cutscene animation
+        yield return new WaitForSeconds(3f);
+        crossFade.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        
+        player.transform.position = new Vector3(16.5f, player.transform.position.y, player.transform.position.z);
+        dm.dialogueBox.SetActive(false);
+        dm.slot.SetActive(true);
+ 
+
+        yield return new WaitForSeconds(1f);
+        crossFade.SetActive(false);
+        WalkSpeed = 2;
+        GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
+        
+        
+    }
   
 
 

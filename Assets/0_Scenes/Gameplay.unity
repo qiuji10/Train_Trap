@@ -21561,7 +21561,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.65, y: 0}
+  m_Offset: {x: -1.61, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -21572,7 +21572,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.87}
+  m_Size: {x: 3.85, y: 0.87}
   m_EdgeRadius: 0
 --- !u!212 &1256924384
 SpriteRenderer:
@@ -21658,11 +21658,27 @@ MonoBehaviour:
   - {fileID: 1130662043}
   nextId: 0
   playerinRange: 0
-  WalkSpeed: 2
   playerUseKeypadLocker: {fileID: 1881464397}
   playerUseLocker: {fileID: 1809181720}
   PlayerUseEmptyLocker: {fileID: 6692147371236335313}
   PlayerUseEmptyLocker2: {fileID: 1689546607}
+  getCaught:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  player: {fileID: 1005050758}
+  crossFade: {fileID: 1155613024}
 --- !u!1 &1257159961
 GameObject:
   m_ObjectHideFlags: 0
