@@ -4609,7 +4609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInRange: 0
   pdc: 0
-  itemButton: {fileID: 3842639552796602657, guid: 1069e3c2d4282ec438859058b536cb34, type: 3}
+  itemButton: {fileID: 1870818856170767205, guid: 6b00e3e24099ca24191a354c00092de9, type: 3}
   pickupAudio: {fileID: 11400000, guid: f90570ff1cbf1d84184a3602afd4b544, type: 2}
 --- !u!61 &282069133
 BoxCollider2D:
