@@ -5682,7 +5682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &319792223
 Transform:
   m_ObjectHideFlags: 0
@@ -10174,6 +10174,7 @@ GameObject:
   - component: {fileID: 647589435}
   - component: {fileID: 647589434}
   - component: {fileID: 647589433}
+  - component: {fileID: 647589436}
   m_Layer: 0
   m_Name: poorcar_ext (1)
   m_TagString: Untagged
@@ -10286,6 +10287,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &647589436
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647589431}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 311c16ae78ab5d146a338b5f766b25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &650708981 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 650708981, guid: 69b05b641ab23cf4ab889da0b9d306a7, type: 3}
@@ -11111,6 +11132,7 @@ GameObject:
   - component: {fileID: 686956451}
   - component: {fileID: 686956450}
   - component: {fileID: 686956449}
+  - component: {fileID: 686956452}
   m_Layer: 0
   m_Name: poorcar_ext
   m_TagString: Untagged
@@ -11223,6 +11245,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &686956452
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686956447}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 311c16ae78ab5d146a338b5f766b25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &689832431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15448,6 +15490,7 @@ GameObject:
   - component: {fileID: 943656598}
   - component: {fileID: 943656597}
   - component: {fileID: 943656596}
+  - component: {fileID: 943656599}
   m_Layer: 0
   m_Name: midcar_ext (4)
   m_TagString: Untagged
@@ -15560,6 +15603,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &943656599
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943656594}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 311c16ae78ab5d146a338b5f766b25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &949359244
 GameObject:
   m_ObjectHideFlags: 0
@@ -17345,6 +17408,7 @@ GameObject:
   - component: {fileID: 1043551096}
   - component: {fileID: 1043551095}
   - component: {fileID: 1043551094}
+  - component: {fileID: 1043551098}
   m_Layer: 0
   m_Name: midcar_ext
   m_TagString: Untagged
@@ -17457,6 +17521,26 @@ Transform:
   m_Father: {fileID: 319792223}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1043551098
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043551093}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 311c16ae78ab5d146a338b5f766b25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1046168151
 GameObject:
   m_ObjectHideFlags: 0
@@ -19986,6 +20070,7 @@ GameObject:
   - component: {fileID: 1177641871}
   - component: {fileID: 1177641870}
   - component: {fileID: 1177641869}
+  - component: {fileID: 1177641872}
   m_Layer: 0
   m_Name: midcar_ext (2)
   m_TagString: Untagged
@@ -20098,6 +20183,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1177641872
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177641867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 311c16ae78ab5d146a338b5f766b25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1193166427
 GameObject:
   m_ObjectHideFlags: 0
@@ -25613,6 +25718,7 @@ GameObject:
   - component: {fileID: 1482050217}
   - component: {fileID: 1482050216}
   - component: {fileID: 1482050215}
+  - component: {fileID: 1482050218}
   m_Layer: 0
   m_Name: midcar_ext (1)
   m_TagString: Untagged
@@ -25725,6 +25831,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1482050218
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482050213}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 311c16ae78ab5d146a338b5f766b25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1487725584
 GameObject:
   m_ObjectHideFlags: 0
@@ -25822,6 +25948,7 @@ GameObject:
   - component: {fileID: 1488504868}
   - component: {fileID: 1488504867}
   - component: {fileID: 1488504866}
+  - component: {fileID: 1488504869}
   m_Layer: 0
   m_Name: poorcar_ext (2)
   m_TagString: Untagged
@@ -25934,6 +26061,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1488504869
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488504864}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 311c16ae78ab5d146a338b5f766b25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1494100417
 GameObject:
   m_ObjectHideFlags: 0
@@ -27065,6 +27212,7 @@ GameObject:
   - component: {fileID: 1565604196}
   - component: {fileID: 1565604195}
   - component: {fileID: 1565604194}
+  - component: {fileID: 1565604197}
   m_Layer: 0
   m_Name: midcar_ext (5)
   m_TagString: Untagged
@@ -27177,6 +27325,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1565604197
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565604192}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 311c16ae78ab5d146a338b5f766b25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1580716310
 GameObject:
   m_ObjectHideFlags: 0
@@ -32531,6 +32699,7 @@ GameObject:
   - component: {fileID: 1867809954}
   - component: {fileID: 1867809953}
   - component: {fileID: 1867809952}
+  - component: {fileID: 1867809955}
   m_Layer: 0
   m_Name: midcar_ext (3)
   m_TagString: Untagged
@@ -32643,6 +32812,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1867809955
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867809950}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 311c16ae78ab5d146a338b5f766b25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1868389121
 GameObject:
   m_ObjectHideFlags: 0

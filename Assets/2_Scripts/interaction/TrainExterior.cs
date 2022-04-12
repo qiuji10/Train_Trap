@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class TrainExterior : MonoBehaviour
 {
-    SpriteRenderer sp;
+    Animator animator;
 
     void Awake()
     {
-        sp = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            sp.enabled = false;
+            animator.SetBool("playerIn", true);
+            animator.SetBool("playerOut", false);
         }
     }
 
@@ -23,7 +24,8 @@ public class TrainExterior : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            sp.enabled = true;
+            animator.SetBool("playerOut", true);
+            animator.SetBool("playerIn", false);
         }
     }
 }
