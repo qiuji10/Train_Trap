@@ -30,9 +30,8 @@ public class Ending : MonoBehaviour
     {
         if (isTriggered && Input.GetKeyDown(KeyCode.E) && Check())
         {
-            //haven't add anything yet, later do switch scene
             //extend time, hide time, wait until dialogue finish, switch to win screen
-            timerObj.timeValue = 1000f;
+            timerObj.timeValue = 2000f;
             timerText.enabled = false;
             objHint.SetActive(false);
             if (!dm.dialogueBox.activeInHierarchy)
