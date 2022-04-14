@@ -51,7 +51,7 @@
             ]
         },
         {
-            "npcName": "Bob",
+            "npcName": "Bob [Train Staff]",
             "options": [
                 {
                     "conversation": [
@@ -68,7 +68,7 @@
             ]
         },
         {
-            "npcName": "Thomas[Train Staff]",
+            "npcName": "Thomas [Train Staff]",
             "options": [
                 {
                     "conversation": [

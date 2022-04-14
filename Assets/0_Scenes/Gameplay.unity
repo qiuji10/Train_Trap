@@ -1977,6 +1977,22 @@ PrefabInstance:
       value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 5553285149017596330, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553285149017596330, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4203437190c860c49a06f563f137ef1c, type: 3}
+    - target: {fileID: 5553285149017596330, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be3c1545c99e068438b5557968141f36, type: 3}
+    - target: {fileID: 5553285149017596330, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be3c1545c99e068438b5557968141f36, type: 3}
+    - target: {fileID: 5553285149017596330, guid: 252257498531c0544a16873a072c202f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1822861731}
@@ -1984,6 +2000,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResumeGame
       objectReference: {fileID: 0}
+    - target: {fileID: 5553285149017596331, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553285149017596331, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b1a144f98e2a85e4ea7174a18cfe75a2, type: 3}
     - target: {fileID: 5553285149763182751, guid: 252257498531c0544a16873a072c202f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 187
@@ -2080,10 +2104,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5553285150336002648, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553285150336002648, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 47bac942129ce0a449b9cd9559bd496b, type: 3}
     - target: {fileID: 5553285150336002654, guid: 252257498531c0544a16873a072c202f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -157
       objectReference: {fileID: 0}
+    - target: {fileID: 5553285150336002655, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553285150336002655, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 94bc386ab6e8bfc44be4defa4640bd04, type: 3}
+    - target: {fileID: 5553285150336002655, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 52dfe33016edcef41826fbb521dc08d3, type: 3}
+    - target: {fileID: 5553285150336002655, guid: 252257498531c0544a16873a072c202f, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 52dfe33016edcef41826fbb521dc08d3, type: 3}
     - target: {fileID: 5553285150336002655, guid: 252257498531c0544a16873a072c202f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5186,7 +5234,6 @@ MonoBehaviour:
   dialogue:
     name: You
     sentences:
-    - ?????
     - "Am I\u2026dead?"
     - What just happened?
     - "What\u2019s happening in this train?!?!"
@@ -5195,8 +5242,7 @@ MonoBehaviour:
   readMinds:
     name: You
     sentences:
-    - "\u2026\u2026."
-    - W.T.F????
+    - WHAT JUST HAPPENED?
     - That is a timed and a remote bomb???
     - No way I could defuse it within a short time.
     - "But since it\u2019s a remote bomb too, means the bomber is not far away and
@@ -7302,7 +7348,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 473332013}
-  - {fileID: 800375547}
   m_Father: {fileID: 1549863535}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15946,12 +15991,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800375545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.818186, y: -1.3913431, z: 0}
+  m_LocalPosition: {x: 0.31, y: -1.3030573, z: 0}
   m_LocalScale: {x: 1, y: 0.89799255, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 404280135}
-  m_RootOrder: 1
+  m_Father: {fileID: 1425112573}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &802193988
 GameObject:
@@ -28557,6 +28602,7 @@ Transform:
   - {fileID: 6056111606652790725}
   - {fileID: 774965189}
   - {fileID: 795991346}
+  - {fileID: 800375547}
   m_Father: {fileID: 1549863535}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
