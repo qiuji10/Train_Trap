@@ -7207,7 +7207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fa2a073cc90d64787b00ceaaf4edec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newspaperPrefab: {fileID: 3842639552796602657, guid: 1069e3c2d4282ec438859058b536cb34, type: 3}
+  newspaperPrefab: {fileID: 3842639552796602657, guid: acfd47d457003d94b816586484812c89, type: 3}
   cashierQuest:
     m_PersistentCalls:
       m_Calls:
