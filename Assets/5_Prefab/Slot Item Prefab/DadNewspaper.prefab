@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43eefe0099c96b744aaaaa91222702f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewsPanel: {fileID: 2216203832507956718, guid: fd85c9952e6578848b326edcaab1a702, type: 3}
+  NewsPanel: {fileID: 2216203832507956718, guid: 89ae6ea4dcb796f4d91ce0f63f065261, type: 3}
 --- !u!114 &1793160975849908628
 MonoBehaviour:
   m_ObjectHideFlags: 0

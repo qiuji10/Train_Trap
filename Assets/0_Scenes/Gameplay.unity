@@ -5093,7 +5093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInRange: 0
   pdc: 0
-  itemButton: {fileID: 1870818856170767205, guid: 6b00e3e24099ca24191a354c00092de9, type: 3}
+  itemButton: {fileID: 1870818856170767205, guid: f3c04eca6bba19c41a3fe7c961bce962, type: 3}
   pickupAudio: {fileID: 11400000, guid: f90570ff1cbf1d84184a3602afd4b544, type: 2}
 --- !u!61 &282069133
 BoxCollider2D:
@@ -5112,7 +5112,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.66, y: 3.75}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 6.66, y: 3.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5162,7 +5162,7 @@ SpriteRenderer:
   m_SortingLayerID: -1367015787
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 056666eb8f45812428ceb3503e05088d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8c1aee96d1a3c34181500c5610e3975, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14209,7 +14209,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   coin: {fileID: 1110975790369985680, guid: 083ddc2ca1a39ba44b77cd5bb19621da, type: 3}
-  newspaper: {fileID: 3842639552796602657, guid: 1069e3c2d4282ec438859058b536cb34, type: 3}
+  newspaper: {fileID: 3842639552796602657, guid: ac9a501bdf6e23e46a5757b9905b57fa, type: 3}
   questInteracted: 0
   questDone: 0
 --- !u!114 &725859708
