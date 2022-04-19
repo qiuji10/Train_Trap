@@ -17,9 +17,12 @@ public class DadQuest : MonoBehaviour
     public bool questInteracted, questDone;
     private int loopCount = 0;
 
+    Vector3 spawnPos;
+
     private void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        spawnPos = new Vector3(transform.position.x, -4.1f, transform.position.z);
     }
     void Update()
     {
@@ -28,7 +31,7 @@ public class DadQuest : MonoBehaviour
             if (!questInteracted)
             {
                 dadQuest.Invoke();
-                Instantiate(coin);
+                Instantiate(coin, spawnPos, Quaternion.identity);
                 isInRange = false;
                 questInteracted = true;
             }
@@ -47,7 +50,7 @@ public class DadQuest : MonoBehaviour
                     PlayerCore.instance.inventoryName.Insert(loopCount, "");
                     PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);
                     inventory.isFull[loopCount] = false;
-                    Instantiate(newspaper);
+                    Instantiate(newspaper, spawnPos, Quaternion.identity);
                     isInRange = false;
                     takenOJ = true;
                     Destroy(GameObject.FindGameObjectWithTag("slot_orangejuice"));

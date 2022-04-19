@@ -6,7 +6,7 @@
                 {
                     "conversation": [
                         "Could you buy me a Cola?",
-                        "I haven't drank that for 30 mintues.",
+                        "I haven't drank that for 30 minutes.",
                         "I will exchange you this fancy upper-class ticket with a Cola"
                     ],
                     "readingMinds": [
@@ -51,37 +51,20 @@
             ]
         },
         {
-            "npcName": "Bob [Train Staff]",
+            "npcName": "Bob and Bill [Train Staffs]",
             "options": [
                 {
                     "conversation": [
-                        "Godamnit, I bought the wrong drink"
+                        "Bill: Bob, have you called the upper-class guard to check for the ventilation system yet?",
+                        "Bob: I- I did call him, perhaps he forgot it.",
+                        "Bill: It's YOU who forgot, isn't it? You always forget about everything.",
+                        "Bob: No?? I always remember everything.",
+                        "Bill: What is the password of the locker?",
+                        "Bob: Errr... "
                     ],
                     "readingMinds": [
-                        "...this job sucks",
-                        "Is it 6699#, 6969# or *6669??"
-                    ],
-                    "specialDialogue": [
-
-                    ]
-                }
-            ]
-        },
-        {
-            "npcName": "Thomas [Train Staff]",
-            "options": [
-                {
-                    "conversation": [
-                        "Hey, can you help me call the guard to here?",
-                        "There's someone suspicious",
-                        "He damm sus....",
-                        "Really really reallyyyyyy sus........",
-                        "He dressed like the winter soldier, carrying a black backpack and it does this weird ticking noise."
-                    ],
-                    "readingMinds": [
-                        "Where is the guard...",
-                        "I really need him now",
-                        "but i kinda forgot how he looks like"
+                        "Bill: Man... This job really sucks",
+                        "Bob: Is it 6699, 6969, or 6669??"
                     ],
                     "specialDialogue": [
 
@@ -187,23 +170,32 @@
             "options": [
                 {
                     "conversation": [
-                        "Hey, watch your steps."
+                        "Hope you enjoy your trip."
 
                     ],
-                    "readingMinds": [
-                        "Never gonna give you up",
-                        "Never gonna let you down",
-                        "Never gonna run around",
-                        "And deserve you."
-                    ],
-                    "specialDialogue": [
-                        "testing1",
-                        "testing2",
-                        "testing3",
-                        "testing4",
-                        "testing5"
-
-                    ]
+                  "readingMinds": [
+                      "Enjoy..."
+                  ],
+                  "specialDialogue": [
+                    "Could you figured it out?",
+                    "Well, I guess you deserve the truth.",
+                    "Don't worry, I disabled the bomb's timer, but the remote is still in my hand.",
+                    "My daughter... Mary, she was beautiful.",
+                    "But that scum, John, he killed my daughter!!",
+                    "Can you believe it? Her own lover killed her!",
+                    "John accused my daughter of dying from overworking. That jerk!!!",
+                    "How ridiculous, how is it possible that she dies from overworking.",
+                    "That's the reason why I'm going to take my revenge by destroying his dream bridge, that he has been working on for a long time.",
+                    "Once the train enters the tunnel, the bomb will explode and destroy the foundation of the bridge.",
+                    "I'm sorry young man, it was great knowing you.",
+                    "... WHAT???",
+                    "So you are saying that my daughter was constructing a statue on that bridge?",
+                    "Yes, I know that. Probably a statue of that jerk...",
+                    "WAIT- You are telling me that's a statue of me???",
+                    "So... my daughter was working on designing me on the statue? which caused her- No, It can't be!",
+                    "Basically I killed her...",
+                    "Mary... I'm sorry."
+                  ]
                 }
 
             ]
