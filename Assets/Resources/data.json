@@ -51,37 +51,20 @@
             ]
         },
         {
-            "npcName": "Bob [Train Staff]",
+            "npcName": "Bob and Bill [Train Staffs]",
             "options": [
                 {
                     "conversation": [
-                        "Godamnit, I bought the wrong drink"
+                        "Bill: Bob, have you called the upper-class guard to check for the ventilation system yet?",
+                        "Bob: I- I did call him, perhaps he forgot it.",
+                        "Bill: It's YOU who forgot, isn't it? You always forget about everything.",
+                        "Bob: No?? I always remember everything.",
+                        "Bill: What is the password of the locker?",
+                        "Bob: Errr... "
                     ],
                     "readingMinds": [
-                        "...this job sucks",
-                        "Is it 6699#, 6969# or *6669??"
-                    ],
-                    "specialDialogue": [
-
-                    ]
-                }
-            ]
-        },
-        {
-            "npcName": "Thomas [Train Staff]",
-            "options": [
-                {
-                    "conversation": [
-                        "Hey, can you help me call the guard to here?",
-                        "There's someone suspicious",
-                        "He damm sus....",
-                        "Really really reallyyyyyy sus........",
-                        "He dressed like the winter soldier, carrying a black backpack and it does this weird ticking noise."
-                    ],
-                    "readingMinds": [
-                        "Where is the guard...",
-                        "I really need him now",
-                        "but i kinda forgot how he looks like"
+                        "Bill: Man... This job really sucks",
+                        "Bob: Is it 6699, 6969, or 6669??"
                     ],
                     "specialDialogue": [
 
