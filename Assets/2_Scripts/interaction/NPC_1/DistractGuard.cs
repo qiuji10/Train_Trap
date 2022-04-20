@@ -14,11 +14,13 @@ public class DistractGuard : MonoBehaviour
     DialogueManager dm;
     GuardKnocked gk;
     PlayerAttack pa;
+    BoxCollider2D bc;
 
     private void Awake()
     {
         cfAnimator = crossFade.GetComponent<Animator>();
         gk = GetComponent<GuardKnocked>();
+        bc = GetComponent<BoxCollider2D>();
         pa = FindObjectOfType<PlayerAttack>();
         dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
     }
@@ -54,10 +56,11 @@ public class DistractGuard : MonoBehaviour
 
     private IEnumerator StorySequence()
     {
+        bc.enabled = false;
         PlayerCore.instance.ActivateDistract = false;
         guardAnimator.SetBool("activateDistract", true);
         allowAccess.Invoke();
-        yield return new WaitForSeconds(25f);
+        yield return new WaitForSeconds(24f);
         guardAnimator.SetBool("activateDistract", false);
         gk.enabled = true;
         pa.enabled = true;
@@ -84,11 +87,13 @@ public class DistractGuard : MonoBehaviour
                 yield return new WaitForSeconds(1f);
                 crossFade.SetActive(false);
                 GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
-                gk.enabled = true;
                 pa.enabled = true;
+                gk.enabled = true;
+                dm.isInteracted = false;
             }
             changeBackDialogue.Invoke();
             denyAccess.Invoke();
+            bc.enabled = true;
         }
     }
 
