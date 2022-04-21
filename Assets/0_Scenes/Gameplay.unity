@@ -35808,7 +35808,6 @@ MonoBehaviour:
   setTimer: 5
   toolbox: {fileID: 0}
   defuseBar: {fileID: 752387297}
-  MaryPic: {fileID: 1127885423824864201, guid: 193075bdf11a293438769b0efd84cf25, type: 3}
   db: {fileID: 0}
   psd: {fileID: 0}
   ExplosionAudio: {fileID: 11400000, guid: f90570ff1cbf1d84184a3602afd4b544, type: 2}
