@@ -14,7 +14,7 @@ public class BombLocation : MonoBehaviour
     private int j;
 
     public GameObject toolbox;
-    public GameObject defuseBar, MaryPic;
+    public GameObject defuseBar;
     public Slider db;
     public PlayerStartDialogue psd;
     Timer timerOBJ;
@@ -51,12 +51,11 @@ public class BombLocation : MonoBehaviour
                 {
                     AudioManager.instance.PlaySFX(ExplosionAudio, "Explosion");
                     PlayerPrefs.SetInt("MaryPicSpawned", 1);
-                    Instantiate(MaryPic, new Vector3(transform.position.x + 2, transform.position.y, transform.position.z), Quaternion.identity);
                     isCreated = true;
                     //Destroy(defuseBar);
                     if (timerOBJ.timeValue >= 10)
                     {
-                        timerOBJ.timeValue = 10f;
+                        timerOBJ.timeValue = 3f;
                     }
                     //timerOBJ.levelEnd = true;
                 }
