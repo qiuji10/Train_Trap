@@ -15399,7 +15399,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1756114580456471190, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
-      value: Found a picture of a woman named Mary inside the bomb
+      value: Found a picture of a woman named Mary Jane as written and an old man
+        beside her.
       objectReference: {fileID: 0}
     - target: {fileID: 2093376881227295405, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_IsActive
@@ -15665,7 +15666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558453741901497256, guid: 17da97e21df740b46a48546bf7ff3c40, type: 3}
       propertyPath: m_text
-      value: 'NewspaperB Clue:
+      value: 'Old Newspaper Clue:
 
 
         This newspaper was published three years
