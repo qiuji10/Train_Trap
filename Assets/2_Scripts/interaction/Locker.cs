@@ -39,6 +39,12 @@ public class Locker : MonoBehaviour
 
     }
 
+        public void SpawnToolBox()
+    {
+        Instantiate(toolbox, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity);
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
