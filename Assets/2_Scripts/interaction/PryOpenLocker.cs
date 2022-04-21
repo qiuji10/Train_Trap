@@ -44,7 +44,7 @@ public class PryOpenLocker : MonoBehaviour
                      if (hasObject == false)
                     {
                         LockerBar2.SetActive(false);
-                        Instantiate(Object);
+                        Instantiate(Object, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z) ,Quaternion.identity);
                         LockerOpen.SetActive(true);
                         LockerClose.SetActive(false);
                          usingLocker2 = false;

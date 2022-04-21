@@ -13,8 +13,8 @@ public class GuardPatrol : MonoBehaviour
     float WalkSpeed = 2;
     public Locker playerUseKeypadLocker;
     public PryOpenLocker playerUseLocker;
-    public EmptyLocker PlayerUseEmptyLocker;
-    public EmptyLocker PlayerUseEmptyLocker2;
+    public PryOpenLocker PlayerUseLocker2;
+    public PryOpenLocker PlayerUseLocker3;
     public bool isFacingLeft;
     // Start is called before the first frame update
    
@@ -57,7 +57,7 @@ public class GuardPatrol : MonoBehaviour
     {
             Patrol();
 
-        if (playerinRange && (playerUseKeypadLocker.usingLocker ||  playerUseLocker.usingLocker2 || PlayerUseEmptyLocker.usingLocker3 || PlayerUseEmptyLocker2.usingLocker3 == true))
+        if (playerinRange && (playerUseKeypadLocker.usingLocker ||  playerUseLocker.usingLocker2 || PlayerUseLocker2.usingLocker2 || PlayerUseLocker3.usingLocker2 == true))
         {
             Debug.Log("Catch Player");
             StartCoroutine(getcCaught());

@@ -133,6 +133,7 @@ public class DigitalDisplay : MonoBehaviour
         if (codeSequence == "6969")
         {
             //spawn toolBoX HERE
+            
             Instantiate(toolbox);
             Debug.Log("IS OPEN");
             Keypad.SetActive(false);
