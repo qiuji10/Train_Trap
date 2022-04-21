@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Ending : MonoBehaviour
 {
-    public bool isTriggered;
+    public bool isTriggered, isInRange;
 
     public UnityEvent ChangeDialogue;
     public GameObject crossfade, objHint;
@@ -31,7 +31,7 @@ public class Ending : MonoBehaviour
 
     void Update()
     {
-        if (isTriggered && Input.GetKeyDown(KeyCode.E) && Check())
+        if (isInRange && isTriggered && Input.GetKeyDown(KeyCode.E) && Check())
         {
             //extend time, hide time, wait until dialogue finish, switch to win screen
             anim.SetBool("faceReveal", true);
@@ -85,6 +85,7 @@ public class Ending : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            isInRange = true;
             UpdateData();
 
             if (Check())
@@ -93,6 +94,14 @@ public class Ending : MonoBehaviour
                 isTriggered = true;
             }
             
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isInRange = false;
         }
     }
 }
