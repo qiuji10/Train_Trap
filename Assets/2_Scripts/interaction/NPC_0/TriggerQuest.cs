@@ -14,10 +14,13 @@ public class TriggerQuest : MonoBehaviour
     private Inventory inventory;
     public GameObject ticketPrefab;
     public UnityEvent triggerQuest;
+    Animator anim;
+
     Vector3 spawnPos;
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         spawnPos = new Vector3(transform.position.x, -4.1f, transform.position.z);
     }
@@ -29,6 +32,7 @@ public class TriggerQuest : MonoBehaviour
             hasCoke = PlayerCore.instance.CheckItem(ref loopCount, "coke");
             if (hasCoke)
             {
+                anim.SetBool("noCry", true);
                 triggerQuest.Invoke();
                 PlayerCore.instance.inventoryName.Insert(loopCount, "");
                 PlayerCore.instance.inventoryName.RemoveAt(loopCount + 1);

@@ -16,6 +16,7 @@ public class Ending : MonoBehaviour
     Timer timerObj;
     GameSceneManager gsm;
     Text timerText;
+    Animator anim;
 
     private void Awake()
     {
@@ -24,6 +25,8 @@ public class Ending : MonoBehaviour
         timerText = timerObj.GetComponent<Text>();
         gsm = FindObjectOfType<GameSceneManager>();
         dm = FindObjectOfType<DialogueManager>();
+        anim = GetComponent<Animator>();
+        
     }
 
     void Update()
@@ -31,6 +34,7 @@ public class Ending : MonoBehaviour
         if (isTriggered && Input.GetKeyDown(KeyCode.E) && Check())
         {
             //extend time, hide time, wait until dialogue finish, switch to win screen
+            anim.SetBool("faceReveal", true);
             timerObj.timeValue = 2000f;
             timerText.enabled = false;
             objHint.SetActive(false);
@@ -69,7 +73,8 @@ public class Ending : MonoBehaviour
 
     IEnumerator Endgame()
     {
-        Debug.Log("Activate Crossfade, Switch Scene to Win");
+        anim.SetBool("isSad", true);
+        yield return new WaitForSeconds(0.5f);
         crossfade.SetActive(true);
         yield return new WaitForSeconds(1);
         gsm.SwitchScene(4);
