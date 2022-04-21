@@ -70,18 +70,29 @@ public class PlayerCore : MonoBehaviour
 
     public void ChangeClueData(int num)
     {
-        int counter = 0;
+        //int counter = 0;
         string cluesText = File.ReadAllText(Application.dataPath + "/Resources/clueBool.json");
+        Debug.Log(cluesText);
         Collected collected = JsonUtility.FromJson<Collected>(cluesText);
-        foreach (int clue in collected.collectedClue.ToArray())
+        Debug.Log(collected);
+        collected.collectedClue[num] = 1;
+        if(collected.collectedClue[num] == 0)
+        {
+            Debug.Log("Could not find");
+        }
+        
+
+       /* foreach (int clue in collected.collectedClue.ToArray())
         {
             if (counter < num)
                 counter++;
             else
                 collected.collectedClue[num] = 1;
-        }
+        }*/
         string json = JsonUtility.ToJson(collected);
         File.WriteAllText(Application.dataPath + "/Resources/clueBool.json", json);
         clueUpdated = false;
     }
+
+  
 }

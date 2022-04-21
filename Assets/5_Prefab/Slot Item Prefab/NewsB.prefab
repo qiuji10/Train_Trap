@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7938066062070194923}
   - component: {fileID: -4144583197201002545}
   - component: {fileID: 1793160975849908628}
+  - component: {fileID: 8668538614156429651}
   m_Layer: 5
   m_Name: NewsB
   m_TagString: Newspaper
@@ -162,3 +163,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 3842639552796602657, guid: 221e35b62f2a4d7488827bd69dc8917c, type: 3}
   player: {fileID: 0}
+--- !u!114 &8668538614156429651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870818856170767205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c12c8229e3751940abae07008f65073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

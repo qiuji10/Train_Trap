@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using TMPro;
 
 [System.Serializable]
 public class Collected
@@ -13,6 +14,9 @@ public class CluesInPanel : MonoBehaviour
 {
     public Collected collected;
     public TextAsset booleanJson;
+    [SerializeField] TextMeshProUGUI clueCountText;
+
+    private int clueCount;
 
     private void Start()
     {
@@ -24,8 +28,13 @@ public class CluesInPanel : MonoBehaviour
             {
                 clueText.gameObject.SetActive(false);
             }
+            else
+            {
+                clueCount++;
+            }
             i++;
         }
+        clueCountText.text = clueCount.ToString();
     }
 
     private void Update()
@@ -33,17 +42,25 @@ public class CluesInPanel : MonoBehaviour
         int i = 0;
         if (!PlayerCore.instance.ClueUpdated)
         {
+            clueCount = 0;
             string cluesText = File.ReadAllText(Application.dataPath + "/Resources/clueBool.json");
             collected = JsonUtility.FromJson<Collected>(cluesText);
             Debug.Log(cluesText);
             foreach (Transform clueText in transform.GetChild(1).GetChild(0)) 
             {
                 if (!IntToBool(collected.collectedClue[i]))
+                {
                     clueText.gameObject.SetActive(false);
+                }      
                 else
+                {
                     clueText.gameObject.SetActive(true);
+                    clueCount++;
+                }
+
                 i++;
             }
+            clueCountText.text = clueCount.ToString();
             PlayerCore.instance.ClueUpdated = true;
         }        
     }
