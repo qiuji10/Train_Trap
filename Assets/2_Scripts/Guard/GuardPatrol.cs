@@ -15,6 +15,7 @@ public class GuardPatrol : MonoBehaviour
     public PryOpenLocker playerUseLocker;
     public EmptyLocker PlayerUseEmptyLocker;
     public EmptyLocker PlayerUseEmptyLocker2;
+    public bool isFacingLeft;
     // Start is called before the first frame update
    
     GuardPatrol gp;
@@ -22,9 +23,10 @@ public class GuardPatrol : MonoBehaviour
     public UnityEvent  getCaught;
     public GameObject player, crossFade;
     DialogueManager dm;
-
+    Animator anim;
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         dm = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
     }
     private void Reset()
@@ -66,9 +68,18 @@ public class GuardPatrol : MonoBehaviour
     {
         Transform goalPoint = points[nextId];
         if (goalPoint.transform.position.x > transform.position.x)
-            transform.localScale = new Vector3(-1, 1, 1);
-        else
+        {
+            Debug.Log("FLIP");
+            anim.SetBool("walkright",true);
             transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            Debug.Log("left");
+            anim.SetBool("walkright", false);
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+
         transform.position = Vector2.MoveTowards(transform.position, goalPoint.position, WalkSpeed * Time.deltaTime);
         if (Vector2.Distance(transform.position, goalPoint.position) < 0.2f)
         {
@@ -108,7 +119,7 @@ public class GuardPatrol : MonoBehaviour
         
     }
   
-
+  
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
