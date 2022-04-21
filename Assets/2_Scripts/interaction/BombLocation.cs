@@ -51,7 +51,7 @@ public class BombLocation : MonoBehaviour
                 {
                     AudioManager.instance.PlaySFX(ExplosionAudio, "Explosion");
                     PlayerPrefs.SetInt("MaryPicSpawned", 1);
-                    Instantiate(MaryPic);
+                    Instantiate(MaryPic, new Vector3(transform.position.x + 2, transform.position.y, transform.position.z), Quaternion.identity);
                     isCreated = true;
                     //Destroy(defuseBar);
                     if (timerOBJ.timeValue >= 10)
