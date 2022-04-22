@@ -32,15 +32,16 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("PlayerDieCount", 0);
         PlayerPrefs.SetInt("GetAllClues", 0);
         PlayerPrefs.SetInt("MaryPicSpawned", 0);
-        Collected collected = JsonUtility.FromJson<Collected>(booleanJson.text);
+        string json = File.ReadAllText(Application.dataPath + "/Resources/clueBool.json");
+        Collected collected = JsonUtility.FromJson<Collected>(json);
         int num = 0;
         foreach (int clue in collected.collectedClue.ToArray())
         {
             collected.collectedClue[num] = 0;
             num++;
         }
-        string json = JsonUtility.ToJson(collected);
-        File.WriteAllText(Application.dataPath + "/Resources/clueBool.json", booleanJson.text);
+        string updatedJson = JsonUtility.ToJson(collected);
+        File.WriteAllText(Application.dataPath + "/Resources/clueBool.json", updatedJson);
         GameSceneManager.instance.SwitchScene(2);
     }
 

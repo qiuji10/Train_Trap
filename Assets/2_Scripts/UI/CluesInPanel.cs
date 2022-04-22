@@ -21,16 +21,19 @@ public class CluesInPanel : MonoBehaviour
     private void Start()
     {
         int i = 0;
-        collected = JsonUtility.FromJson<Collected>(booleanJson.text);
+        string json = File.ReadAllText(Application.dataPath + "/Resources/clueBool.json");
+        collected = JsonUtility.FromJson<Collected>(json);
         foreach (Transform clueText in transform.GetChild(1).GetChild(0))
         {
-            if (!IntToBool(collected.collectedClue[i]))
+            if (collected.collectedClue[i] == 0)
             {
                 clueText.gameObject.SetActive(false);
             }
-            else
+            else if (collected.collectedClue[i] == 1)
             {
-                clueCount++;
+              
+                clueCount++;  
+                clueText.gameObject.SetActive(true);
             }
             i++;
         }
