@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour
         }
         string updatedJson = JsonUtility.ToJson(collected);
         File.WriteAllText(Application.dataPath + "/Resources/clueBool.json", updatedJson);
-        GameSceneManager.instance.SwitchScene(2);
+        
     }
 
     public void ContinueGame()
