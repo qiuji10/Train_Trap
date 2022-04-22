@@ -26,23 +26,30 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Game is closed");
     }
 
+    //public void json()
+    //{
+    //    string json = File.ReadAllText(Application.dataPath + "/Resources/clueBool.json");
+    //    Collected collected = JsonUtility.FromJson<Collected>(json);
+    //    int num = 0;
+    //    foreach (int clue in collected.collectedClue.ToArray())
+    //    {
+    //        collected.collectedClue[num] = 0;
+    //        num++;
+    //    }
+    //    string updatedJson = JsonUtility.ToJson(collected);
+    //    File.WriteAllText(Application.dataPath + "/Resources/clueBool.json", updatedJson);
+    //}
+
     public void NewGame()
     {
         PlayerPrefs.SetInt("GetMaryPic", 0);
         PlayerPrefs.SetInt("PlayerDieCount", 0);
         PlayerPrefs.SetInt("GetAllClues", 0);
         PlayerPrefs.SetInt("MaryPicSpawned", 0);
-        string json = File.ReadAllText(Application.dataPath + "/Resources/clueBool.json");
-        Collected collected = JsonUtility.FromJson<Collected>(json);
-        int num = 0;
-        foreach (int clue in collected.collectedClue.ToArray())
-        {
-            collected.collectedClue[num] = 0;
-            num++;
-        }
-        string updatedJson = JsonUtility.ToJson(collected);
+
+        string updatedJson = "{\"collectedClue\":[0, 0, 0, 0, 0] }";
         File.WriteAllText(Application.dataPath + "/Resources/clueBool.json", updatedJson);
-        
+        GameSceneManager.instance.SwitchScene(2);
     }
 
     public void ContinueGame()
